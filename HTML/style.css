@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
 .img-fluid{
     background-image: url("Images/group-35.png");
     width: 100%;
@@ -30,7 +32,7 @@
 }
 
 .head{
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     font-size: 40px;
     font-weight: bold;
     font-stretch: normal;
@@ -51,7 +53,6 @@
     padding: 10px;
     font-size: 17px;
     width: 200px;
-    font-weight: bold;;
     background-color: #006072;
     text-align: center;
     color: #fff;
@@ -206,30 +207,33 @@ img.home-img6 {
 
 .hed1{
     text-align: center; 
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     margin-left: 10px;
     margin-right: 60px;
     color: #4f4f4f;
+    font-weight: bold;
 }
 .hed2{
     text-align: center; 
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     margin-left: 20px;
     margin-right: 60px;
     color: #4f4f4f;
+    font-weight: bold;
 }
 .hed3{
     text-align: center; 
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     margin-left: 35px;
     margin-right: 60px;
     color: #4f4f4f;
+    font-weight: bold;
 }
 .pp1{
     text-align: normal;
     margin-left: 10px;
     margin-right: 60px;
-     font-family: Roboto-Bold;
+     font-family: Roboto;
      font-size: 17px;
 }
 .pp2{
@@ -237,7 +241,7 @@ img.home-img6 {
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 60px;
-     font-family: Roboto-Bold;
+     font-family: Roboto;
      font-size: 17px;
 }
 
@@ -245,7 +249,7 @@ img.home-img6 {
     text-align: left;
     margin-left: 40px;
     margin-right: 60px;
-     font-family: Roboto-Bold;
+     font-family: Roboto;
      font-size: 17px;
 }
 
@@ -270,7 +274,7 @@ img.Group-21{
 }
 
 .navbar-nav{
-    font-family: Roboto-Regular;
+    font-family: Roboto;
     text-decoration-color: #000;
     text-align: right;
     font-size: 17px;
@@ -321,7 +325,7 @@ img.Group-21{
 }
 
 .txt3{
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     margin-left: 80px;
     /*color: */
     color:#4f4f4f;
@@ -329,7 +333,7 @@ img.Group-21{
 }
 
 .tx3{
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     margin-left: 80px;
     margin-right: 50%;
     color: #4f4f4f;
@@ -358,7 +362,7 @@ img.img36{
     margin-top: 10px;
     margin-bottom: 0px;
     color: #4f4f4f;
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     font-weight: bold;
    
 }
@@ -373,7 +377,7 @@ img.img36{
 }
 
 .head3{
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     font-size: 40px;
     font-weight: bold;
     font-stretch: normal;
@@ -388,12 +392,10 @@ img.img36{
 }
 
 .rect1 {
-    width: 320px;
+    width: 325px;
     height: 380px;
     border-radius: 4px;
     box-shadow: -5px 0px 0px 0px rgba(29,122,140,1);
--webkit-box-shadow: -5px 0px 0px 0px rgba(29,122,140,1);
--moz-box-shadow: -5px 0px 0px 0px rgba(29,122,140,1);
     background-color: #fff;
     margin: 59px 44px 42px 43px;
     padding: 6px 19px 0 0;
@@ -409,13 +411,13 @@ img.img36{
     margin-left: 125px;
     margin-bottom: -5px;
     margin-top: -60px;
-    font-family: Roboto-Bold;
-    font-size: 24px;
+    font-family: Roboto;
+    font-size: 20px;
     color: #4F4F4F;
     font-weight: bold;
 }
 .head4{
-    font-family: Roboto-Bold;
+    font-family: Roboto;
     font-size: 21px;
     font-weight: bold;
     font-stretch: normal;
@@ -440,7 +442,6 @@ img.img36{
     text-align: left;
     color: #565656;
     margin: auto;
-    margin-top: 1%;
     margin-left: 450px;
     padding: 10px;
 }
