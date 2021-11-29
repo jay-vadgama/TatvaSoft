@@ -156,21 +156,24 @@ img.home-img6 {
 
 
 .parent {
-  position: relative;
-  margin-left: 740px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
 }
 .image1 {
-  position: relative;
-  top: 0;
-  left: 0;
+  margin: auto;
+    position: absolute;
+    text-align: center;
+    display: block;
 
 }
 .image2 {
-  position: absolute;
-  top: 10px;
-  left: 12px;
+ position: absolute;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
 }
 
 .h1{
