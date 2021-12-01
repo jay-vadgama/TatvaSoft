@@ -29,20 +29,24 @@
 
 .nav-link{
     color: white !important;
-    margin-left: 0px;
+    margin-left: 25px;
 
 }
 
 
 .Rounded-Rectangle{
-   border: 1px solid #fff;
+    border: 1px solid #fff;
     border-radius: 22px;
     width: auto;
     background-color: #29626d;
     line-height: 20px;
-    padding-left: 19px;
-    padding-right: 19px;
-    text-align: center;
+    letter-spacing: 0.2px;
+}
+.Rounded-Rectangle-3{
+    border: 1px solid #fff;
+    border-radius: 22px;
+    width: auto;
+    line-height: 20px;
     letter-spacing: 0.2px;
 }
 
@@ -52,9 +56,6 @@
     width: auto;
     background-color: #29626d;
     line-height: 20px;
-    padding-left: 22px;
-    padding-right: 22px;
-    text-align: center;
     letter-spacing: 0.2px;
 }
 .Rounded-Rectangle-2{
@@ -63,9 +64,6 @@
     width: auto;
     background-color: #29626d;
     line-height: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
-    text-align: center;
     letter-spacing: 0.2px;
 }
 div p a{
@@ -107,4 +105,26 @@ a:hover{
     -ms-flex-align: center;
     align-items: center;
     position: relative;
+}
+
+.dot {
+  height: 108px;
+  width: 108px;
+  background-color: 0;
+  border-radius: 50%;
+  border: 1px solid #B0C9CE;
+  display: inline-block;
+}
+.circle{
+    background:#525252;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-left: 50px;
+}
+.img10{
+    width:60px;
+    height: 60px;
+    margin-right: 50px;
+    margin-top: -50px;
 }
