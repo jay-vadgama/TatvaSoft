@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.helperhand-logo{
+    height: 130px;
+    width: 175px;
+}
+
+.nav-link{
+    color:white;
+    text-align: left;
+    letter-spacing: 0.5px;
+    
+}
+
+ul li{
+    margin: 0px 2px ;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.41;
+    letter-spacing: normal;
+    text-align: right;
+    color: white;
+    margin-bottom: 5px;
+}
+
+ul li a:hover{
+    color: white;
+}
+
+.Rounded-Rectangle{
+    border: 1px solid #FFFFFF80;
+    border-radius: 20px;
+    padding-left: 5px;
+}
+.Rounded-Rectangle:hover{
+    background-color: white;
+}
+.Rounded-Rectangle a:hover{
+    color: black ;
+}
+.banner-section{
+    margin-top: 170px;
+    margin-left: 55px;
+}
+.inner-Lorem-ipusm-text{
+    font-size: 16px;
+    color: white;
+}
+.btn-section{
+    margin-top: 35px;
+}
+.blue-btn{
+    color: white;
+    display: inline-block; 
+    background-color: rgba(0, 96, 114, 0.6); 
+    border-radius: 27px; 
+    border: 1px solid #FFFFFF; 
+    height: 54px; 
+    line-height: 52px; 
+    text-decoration: none; 
+    min-width: 225px; 
+    font-size: 18px; 
+    transition: all 0.3s ease;
+}
+
+.blue-btn:hover{
+    background-color: white;
+    color: rgba(0, 59, 70, 0.6);
+}
+span img{
+    margin-right: 5px;
+}
+
+.become-pro-background {
+    background-image: url(Images/BG-Beacome.png);
+    position: center;
+    width: 100%;
+    height: 100%;
+    /* background-repeat: repeat; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.become-pro-section{
+    margin-top: 67px;
+}
+
+.become-pro-form{
+    background-color: white;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 2px;
+    padding-bottom: 19px;
+    margin-top: -50px;
+}
+
+.register-now{
+    font-size: 24px;
+    font-family: Roboto;
+    color: #4F4F4F;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 24px;
+}
+
+.form-btn{
+    border: none;
+    margin-top: 20px;
+    font-family: Roboto;
+    font-weight: bold;
+    color: white;
+    border-radius: 23px;
+    background-color: #1D7A8C;
+    width: 163px;
+    height: 46px;
+}
+
+.downarrow{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+
+
+.scroller{
+    margin-top: 44px;
+}
+
+.how-it-works div p{
+    position: relative;
+    color: #4f4f4f;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Roboto;
+    text-align: center;
+    padding-top: 68px;
+    margin-bottom: 73px;
+}
+
+
+.how-it-works-services-title{
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 30px;
+    color: #4F4F4F;
+}
+
+.how-it-works-services-content{
+    font-family: Roboto;
+    font-size: 18px;
+    color: #4F4F4F;
+}
+
+div p a{
+    color: white;
+}
+
+div p a:hover{
+    color: white;
+}
+
+.parent {
+    text-align: center;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+  }
+  .image1 {
+    margin: auto;
+      position: absolute;
+      text-align: center;
+      display: block;
+  
+  }
+  .image2 {
+   position: absolute;
+      margin: auto;
+      display: block;
+      padding-top: 10px;
+  }
+
+  .text-head{
+      font-size: 31px;
+  }
