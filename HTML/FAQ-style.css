@@ -13,7 +13,7 @@
     background-color: #525252;
     position: relative;
     display: flex;
-    flex-wrap: wrap; // allow us to do the line break for collapsing content
+    flex-wrap: wrap; /*allow us to do the line break for collapsing content*/
     align-items: center;
     padding-bottom: 0px;
     padding-top: 0px;
