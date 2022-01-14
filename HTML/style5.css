@@ -94,18 +94,7 @@ div.text{
       
   }
   
-  
-  .right{
-      background-color: #1FB6FF !important;
-      color: white !important;
-      font-size: 14px;
-      font-family: roboto;
-      display: inline;
-      float: right;
-  }
-  .right:hover{
-    background-color: #29aaeb !important;
-  }
+
 
   .filter{
     height: 84px;
@@ -157,14 +146,15 @@ div.text{
 .form-control{
   height: 46px;
 }
+.box1{
+    width: 110px !important;
+}
 .select{
   height: 46px !important;
-  width: 205px !important;
+  width: auto !important;
 }
-.select1{
-  height: 46px !important;
-  width: 215px !important;
-}
+
+
 .table{
   color: #646464;
   font-family: roboto !important;

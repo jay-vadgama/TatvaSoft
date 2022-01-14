@@ -15,7 +15,7 @@
     <!-- <script type="text/javascript" src="script.js"></script> -->
     <title>Admin | User Management</title>
 </head>
-<body style="height: 100% !important;  background-color: #E1E1E1 !important;">
+<body style="height: 100% !important;  background-color: #f9f9f9 !important;">
 
 
     <nav class="navbar navbar-expand-md navbar-default fixed-top">
@@ -40,8 +40,8 @@
 
 
     <div class="sidebar">
-      <a href="#" >Service Requests</a>
-      <a href="#" class="active">User Management</a>
+      <a href="Admin-Service_Request.html" >Service Requests</a>
+      <a href="Admin-User_Management.html" class="active">User Management</a>
     </div>
 
       <div class="content">
@@ -66,9 +66,9 @@
                   <div class="form-group">                
                     <select class="form-control select1">
                       <option value="" hidden>User Type</option>
-                        <option value="Service" >Admin</option>
-                        <option value="Contact">Customer</option>
-                        <option value="Inquiry">Service Provider</option>
+                        <option value="Admin" >Admin</option>
+                        <option value="Customer">Customer</option>
+                        <option value="Service">Service Provider</option>
                       </select>
                   </div>
                   <div class="form-group">
@@ -310,12 +310,14 @@
   <td>9624527786</td>
   <td style="text-align: center;">3622</td>
   <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-  <td><div class="dropdown-container" tabindex="-1">
-                      <div class="three-dots"></div>
-                      <div class="dropdown">
-                        <a href="#"><div>Delete</div></a>
-                      </div>
-                    </div></td>
+  <td>
+    <div class="dropdown-container" tabindex="-1">
+    <div class="three-dots"></div>
+    <div class="dropdown">
+      <a href="#"><div>Delete</div></a>
+    </div>
+  </div>
+</td>
   
 </tr>
   
@@ -328,10 +330,10 @@
         </div> 
 
 
-        <script>
-          $(document).ready(function() {
-          $('#example').DataTable();
-      } );
-      </script>
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  } );
+</script>
 </body>
 </html>
