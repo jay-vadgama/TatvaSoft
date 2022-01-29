@@ -20,11 +20,11 @@
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-				  <li class="nav-item round" >
+				  <li class="nav-item round">
 					  <a class="nav-link" href="#">Book now</a>
 					</li>
-					<li class="nav-item r">
-					  <a class="nav-link" href="#">Prices & Services</a>
+					<li class="nav-item r ">
+					  <a class="nav-link active" href="#">Prices & Services</a>
 					</li>
 					<li class="nav-item r1">
 					  <a class="nav-link" href="#">Warrenty</a>
@@ -55,7 +55,7 @@
 <!-- Price Heading Starts -->
 <div class="container-fluid">
 	<p class="txt">Set up your cleaning service</p>
-  </div>
+</div>
 	<div class="line-div">
 	  <hr class="left-line">
 		<img src="Images/separator.png" class="img-sep">
@@ -164,7 +164,7 @@
 	<div class="container">
 	<div class="price-blogs d-flex justify-content-center">
 		<div class="blog1">
-			<img class="p-blog" src="Images/price-blog-1.png">
+			<img class="p-blog img-responsive" src="Images/price-blog-1.png">
 			<p class="blog-head" >Bedroom and Living Room</p>
 			<p class="blog-body"> 
 				<img class="blog-img" src="Images/check-price.png">Dust all accessible surfaces</p>
@@ -259,20 +259,43 @@
 
 <!-- Footer Started -->
 <section class="footer-part">
-
+	<div class="container-fluid footer" id="mainFooter">
+	  <div class="row f-row">
+		<div class="col-sm-3 logo_position">
+		  <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
+		</div>
+		  <div class="col-sm-6 footer_links">
+			<p class="footer_p">
+			  <a href="#" class="footer_link_decoration">HOME</a>   
+			  <a href="#" class="footer_link_decoration">ABOUT</a>   
+			  <a href="#" class="footer_link_decoration">TESTIMONIALS</a>   
+			  <a href="#" class="footer_link_decoration">FAQS</a>  
+			  <a href="#" class="footer_link_decoration">INSURANCE</a>   
+			  <a href="#" class="footer_link_decoration">POLICY</a>   
+			  <a href="#" class="footer_link_decoration">IMPRESSUM</a>  
+			</p>
+		  </div>
+			<div class="col-sm-3 footer_media_icon" >
+				<a href=#><img src="Images/fb.png" class="footer_media_logo"></a>
+				<a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
+			</div>
+	  </div>
+	</div>     
+  
   <!-- footer-policy starts-->
-	<div class="container-fluid footer_policy">
+	<div class="container-fluid footer_policy" id="privacyPolicy">
 	  <p class="policy_p">©2018 Helperland. All rights reserved. 
 		<a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a> </p>
 	  <div class="okay-btn">
-		<button type="submit" class="btn btn2">OK!</button>
+		<button type="submit" onclick="footerPolicy()" class="btn btn2">OK!</button>
 	  </div>
 	</div>
   <!-- footer-policy ends -->
-
-</section>
+  
+  </section>
   <!-- Footer Ended -->
-
+  
+  	<script src="JS/main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      

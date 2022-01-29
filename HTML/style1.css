@@ -239,7 +239,12 @@
   .parent:hover{
     transform: translateY(15px);
   }
-
+.right-left-img{
+    padding: 0px !important;
+}
+.steps{
+    padding-bottom:50px;
+}
 .step1{
     display: flex;
     margin-bottom: 30px;
@@ -247,7 +252,7 @@
 }
 
 .step1-left{
-    padding: 50px 0px;
+    padding: 50px 10px;
     max-width: 450px;
 }
 .step-img{
@@ -266,7 +271,7 @@
 
 .step2-right{
     max-width: 450px;
-    padding: 50px 0px;
+    padding: 50px 10px;
 }
 .step3{
     display: flex;
@@ -274,7 +279,7 @@
     column-gap: 30px;
 }
 .step3-left{
-    padding: 50px 0px;
+    padding: 50px 10px;
     max-width: 450px;
 }
 
@@ -371,6 +376,53 @@
   
 /* Footer CSS Starts*/
  
+
+.footer{
+    background-color: black !important;
+    padding: 30px 0px; 
+    margin-bottom: 60px;
+}
+.f-row{
+    margin-right: 0px !important;
+}
+.logo_position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_logo{
+    width: 120px;
+    height: 92px;
+}
+.footer_p{
+    word-spacing: 15px;
+    margin-bottom: 0px!important;
+}
+.footer_links{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_link_decoration{
+    text-decoration: none !important;
+    color: white !important
+}
+.footer_link_decoration:hover{
+    color:yellow !important;
+}
+.footer_media_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_media_logo{
+    display: block;
+    padding:10px !important;
+}
+.footer_media_logo:hover{
+    filter: invert(0.2) sepia(1) saturate(2.8) hue-rotate(0deg) brightness(1);
+}
 .footer_policy{
     background-color: #292929;
     position: fixed;
@@ -404,4 +456,3 @@
         margin-top: 40px;
     }
 }
-  

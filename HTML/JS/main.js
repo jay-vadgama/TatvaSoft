@@ -1,6 +1,5 @@
 $(window).scroll(function(){
     $('navbar').toggleClass('scrolled',$(this).scrollTop()>60);
-    console.log("Hello");
 });
 
 const toTop = document.querySelector(".to-top");
@@ -15,6 +14,7 @@ window.addEventListener("scroll", () => {
 
   function footerPolicy(){
     document.getElementById("privacyPolicy").style.display="none";
+    document.getElementById("mainFooter").style.marginBottom="0px";
   }
 
   
