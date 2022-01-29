@@ -1,106 +1,206 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
 
-.helperhand-logo{
-    height: 120px;
-    width: 156px;
-}
-
-.nav-link{
-    color:white;
-    text-align: left;
-    letter-spacing: 0.5px;
-    
-}
-
-ul li{
-    margin: 0px 2px ;
-    font-family: Roboto;
-    font-size: 17px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.41;
-    letter-spacing: normal;
-    text-align: right;
-    color: white;
-    margin-bottom: 5px;
-}
-
-ul li a:hover{
-    color: white;
-}
-
-.Rounded-Rectangle{
-    border: 1px solid #FFFFFF80;
-    border-radius: 20px;
-    padding-left: 5px;
-}
-.Rounded-Rectangle:hover{
-    background-color: white;
-}
-.Rounded-Rectangle a:hover{
-    color: black ;
-}
-.banner-section{
-    margin-top: 170px;
-    margin-left: 55px;
-}
-.inner-Lorem-ipusm-text{
-    font-size: 16px;
-    color: white;
-}
-.btn-section{
-    margin-top: 35px;
-}
-.blue-btn{
-    color: white;
-    display: inline-block; 
-    background-color: rgba(0, 96, 114, 0.6); 
-    border-radius: 27px; 
-    border: 1px solid #FFFFFF; 
-    height: 54px; 
-    line-height: 52px; 
-    text-decoration: none; 
-    min-width: 225px; 
-    font-size: 18px; 
-    transition: all 0.3s ease;
-}
-
-.blue-btn:hover{
-    background-color: white;
-    color: rgba(0, 59, 70, 0.6);
-}
-span img{
-    margin-right: 5px;
-}
-
-.become-pro-background {
+.img-fluid {
     background-image: url(Images/BG-Beacome.png);
-    position: center;
+    position: relative;
     width: 100%;
     height: 100%;
-    /* background-repeat: repeat; */
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+}
+.logo{
+    max-height: 130px;
+    max-width: 175px;
+}
+.navbar{
+    background-color: transparent;
 }
 
-.become-pro-section{
-    margin-top: 67px;
+.navbar-nav{
+    font-family: Roboto;
+    text-decoration-color: #000;
+    text-align: right;
+    font-size: 17px;
+  
+}
+.navbar-toggler{
+    border: 1px solid white !important;
 }
 
+.navbar-nav .nav-link{
+    color: #FFFFFF!important;
+    font-size: 17px !important;
+    padding: 8px 23px !important;
+}
+@media(max-width:1200px) {
+    .navbar-nav .nav-link{
+        padding: 8px 15px !important;
+    }
+}
+@media(max-width:1030px) {
+    .navbar-nav .nav-link{
+        padding: 8px 10px !important;
+    }
+}
+.navbar-light .navbar-toggler{
+    border: 2px solid white !important;
+}
+.bgcolor.scrolled{
+    background-color: rgb(63, 63, 63);
+    transition: ease .3s;
+    height: auto;
+    opacity: 0.9;
+}
+.bgcolor.scrolled .navbar-brand img{
+    height: 50%;
+    width: 50%;
+    transition: ease .3s;
+} 
+.round{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+.round:hover{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    background-color: #29626D !important;
+    transition: 0.4s;
+}
+.r1:hover{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+.r2:hover{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+
+}
+.r3:hover{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+.r4:hover{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+
+@media(max-width:992px) {
+    .navbar{
+        height: auto ;
+        background-color:rgb(115, 112, 108);
+        opacity: 0.9;
+    }
+    .right-text{
+        padding-top: auto;
+    }
+}
+@media(max-width:1015px){
+    .logo{
+        height: 60% !important;
+        width: 60% !important;
+    }
+}
+
+@media(max-width:991px){
+    .logo{
+        max-height: 80px !important;
+        max-width: 125px !important;
+    }
+    .round{
+        border:transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        margin-right: 0px !important;
+    }
+    .round:hover{
+        border: transparent !important;
+        background-color: transparent !important;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    }
+    .r1:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    
+    }
+    .r2:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    
+    
+    }
+    .r3:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    
+    }
+    .r4:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    }
+    .navbar-nav .nav-link{
+        color: #FFFFFF!important;
+        font-size: 17px !important;
+        background-color: transparent;
+    }
+}
+
+.txt{
+    text-align: center;
+    color: #4F4F4F; 
+    font-weight: 900;
+    font-family:Roboto; 
+    font-size: 36px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0px !important; 
+}
+
+.form-check-label{
+    font-family: roboto;
+}
+
+.register{
+    padding-top: 180px;
+    padding-bottom: 100px;
+}
 .become-pro-form{
     background-color: white;
     padding-left: 35px;
     padding-right: 35px;
     border-radius: 2px;
     padding-bottom: 19px;
-    margin-top: -50px;
 }
 
 .register-now{
@@ -111,6 +211,7 @@ span img{
     text-align: center;
     padding-top: 19px;
     padding-bottom: 24px;
+    margin: 0px !important;
 }
 
 .form-btn{
@@ -125,31 +226,129 @@ span img{
     height: 46px;
 }
 
-.downarrow{
+.parent {
     text-align: center;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px !important;
+      transition: transform 250ms;
+      padding-bottom: 35px !important;
+  }
+
+  .parent:hover{
+    transform: translateY(15px);
+  }
+
+.step1{
     display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    
+    margin-bottom: 30px;
+    column-gap: 30px;
 }
 
-
-.scroller{
-    margin-top: 44px;
+.step1-left{
+    padding: 50px 0px;
+    max-width: 450px;
+}
+.step-img{
+    transition: transform .2s;
+}
+.step-img:hover{
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.1); 
+}
+.step2{
+    display: flex;
+    margin-bottom: 30px;
+    column-gap: 30px;
 }
 
-.how-it-works div p{
-    position: relative;
-    color: #4f4f4f;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: Roboto;
-    text-align: center;
-    padding-top: 68px;
-    margin-bottom: 73px;
+.step2-right{
+    max-width: 450px;
+    padding: 50px 0px;
+}
+.step3{
+    display: flex;
+    margin-bottom: 30px;
+    column-gap: 30px;
+}
+.step3-left{
+    padding: 50px 0px;
+    max-width: 450px;
 }
 
+@media(max-width:884px) {
+    .step1{
+        column-gap: 15px;
+    }
+    .step2{
+        column-gap: 15px;
+    }
+    .step3{
+        column-gap: 15px;
+    }
+}
+@media(max-width:860px) {
+    .step1{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .step1-right{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+    .step1-left{
+        flex:auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .step2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .step2-right{
+        text-align: center;
+    }
+    .step3{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .step3-right{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+    .step3-left{
+        flex:auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
+}
+.left-img{
+    float: left;
+}
+.right-img{
+    float: right;
+}
+@media(max-width:500px) {
+    .left-img{
+        display: none;
+    }
+    .right-img{
+        display: none;
+    }
+}
 .how-it-works-services-title{
     font-weight: bold;
     font-family: Roboto;
@@ -162,15 +361,6 @@ span img{
     font-size: 18px;
     color: #4F4F4F;
 }
-
-div p a{
-    color: white;
-}
-
-div p a:hover{
-    color: white;
-}
-
 .parent {
     text-align: center;
       margin: auto;
@@ -178,20 +368,40 @@ div p a:hover{
       justify-content: center;
       padding-top: 20px;
   }
-  .image1 {
-    margin: auto;
-      position: absolute;
-      text-align: center;
-      display: block;
   
-  }
-  .image2 {
-   position: absolute;
-      margin: auto;
-      display: block;
-      padding-top: 10px;
-  }
+/* Footer CSS Starts*/
+ 
+.footer_policy{
+    background-color: #292929;
+    position: fixed;
+    bottom: 0;
+}
 
-  .text-head{
-      font-size: 31px;
-  }
+.policy_p{
+    margin: 0px !important;
+    padding: 20px 0px !important;
+    font-family: roboto;
+    font-size: 14px;
+    text-align: center;
+    color:white;
+}
+.btn2{
+    border-radius: 27px !important;
+    border: 1px solid  #F1F1F1;
+    background-color: #EED507;
+    color: black;
+    margin-top: -50px !important;
+    width: 100px;
+    height: 40px;
+    float: right !important; 
+    justify-content: center !important;
+}
+@media(max-width:768px){
+    .okay-btn{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+  

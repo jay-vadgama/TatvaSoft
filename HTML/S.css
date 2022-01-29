@@ -5,7 +5,7 @@
 }
 
 .img-fluid{
-    background-image: url("Images/Home_BG.png");
+    background-image: url("./Images/Home_BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -39,11 +39,12 @@
 .navbar-light .navbar-toggler{
     border: 2px solid white !important;
 }
+
 .bgcolor.scrolled{
-    background-color: rgb(43,43,43);
+    background-color: rgb(63, 63, 63);
     transition: ease .3s;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .bgcolor.scrolled .navbar-brand img{
     height: 50%;
@@ -102,7 +103,8 @@
 @media(max-width:992px) {
     .navbar{
         height: auto ;
-        background-color: #73706C ;
+        background-color: #73706C;
+        opacity: 0.2;
     }
     .right-text{
         padding-top: auto;
@@ -115,7 +117,7 @@
     }
 }
 
-@media(max-width:992px){
+@media(max-width:991px){
     .logo{
         max-height: 80px !important;
         max-width: 125px !important;
@@ -184,6 +186,33 @@
     color: #FFFFFF !important;
     padding-left: 55px !important;
     font: roboto !important;
+}
+@media(max-width:992px){
+    .right-text{
+        padding-top: 100px !important;
+        color: #FFFFFF !important;
+        padding-left: 55px !important;
+        padding-right: 55px !important ;
+        font: roboto !important;
+        text-align: left;
+    }
+    ol, ul{
+        text-align: left;
+    }
+    .btn-home{
+        margin-top: 30px;
+    }
+}
+@media(max-width:614px){
+    .right-text{
+        padding:100px 30px 30px 30px !important;
+    }
+
+}
+@media(max-width:564px){
+    .right-text{
+       justify-content: center;
+    }
 }
 
 ol, ul{
@@ -309,7 +338,7 @@ ol, ul{
       justify-content: center;
       padding-top: 40px !important;
       transition: transform 250ms;
-      padding-bottom: 33px !important;
+      padding-bottom: 35px !important;
   }
 
   .parent:hover{
@@ -529,7 +558,7 @@ ol, ul{
 
 .footer{
     background-color: black !important;
-    padding: 15px 0px; 
+    padding: 30px 0px; 
     margin-bottom: 0px;
 }
 .logo_position{
@@ -572,6 +601,8 @@ ol, ul{
 }
 .footer_policy{
     background-color: #292929;
+    position: fixed;
+    bottom: 0;
 }
 
 .policy_p{
