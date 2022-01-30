@@ -36,7 +36,7 @@ if(isset($_POST['submit']))
 	$uploads_dir = 'Uploads/';
 
 	//moving from temp to permanent
-	move_uploaded_file($tname,$uploads_dir.'/'.$pname);
+	move_uploaded_file($tname, $uploads_dir.'/'.$pname);
 
 	// inserting into database
 	$query =  "INSERT INTO contactus (`Firstname`, `Lastname`, `Email`, `Subject`, `PhoneNumber`, `Message`,`UploadFileName`) VALUES ('$firstname','$lastname','$email','$subject','$MobileNo','$message','$pname')";
