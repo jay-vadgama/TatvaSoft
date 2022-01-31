@@ -190,17 +190,30 @@
 .form-check-label{
     font-family: roboto;
 }
+.left-side-text{
+    padding: 250px 40px 0px 60px;
+}
+.left-side-text-head{
+    font-size: 40px;
+    color: white;
+    font-family: roboto;
+}
+ul, li{
+    list-style: none;
+    font-family: roboto;
+    color: white;
+    padding-left: 0px !important;
+}
 
 .register{
-    padding-top: 250px;
+    padding-top: 200px;
     padding-bottom: 100px;
 }
+
 .become-pro-form{
     background-color: white;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 25px 20px;
     border-radius: 2px;
-    padding-bottom: 19px;
 }
 
 .register-now{
@@ -209,11 +222,28 @@
     color: #4F4F4F;
     font-weight: bold;
     text-align: center;
-    padding-top: 19px;
-    padding-bottom: 24px;
+    padding: 5px 0px 25px 0px;
     margin: 0px !important;
 }
 
+@media(max-width:991px) {
+    .left-side-text{
+        padding-top: 100px;
+        padding-left:60px;
+    }
+    .left-side-text-head{
+        text-align: center;
+    }
+    .register{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .left-ul{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
 .form-btn{
     border: none;
     margin-top: 20px;
@@ -242,6 +272,42 @@
 .right-left-img{
     padding: 0px !important;
 }
+.left-img{
+    position: absolute;
+    z-index: -1;
+}
+.right-img{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.to-top {
+    background-color: rgb(69 69 69);
+    border: 1px solid white;
+    position: fixed;
+    left:35px;
+    width:48px;
+    height:48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out .2s;
+  }
+.to-top:hover{
+      background-color: #1D7A8C !important;
+  }
+  .to-top.active {
+    bottom:65px;
+    pointer-events: auto;
+    opacity:1;
+  }
+
+
+
+
+
+
 .steps{
     padding-bottom:50px;
 }
@@ -374,6 +440,10 @@
       padding-top: 20px;
   }
   
+
+
+
+
 /* Footer CSS Starts*/
  
 
@@ -381,6 +451,8 @@
     background-color: black !important;
     padding: 30px 0px; 
     margin-bottom: 60px;
+    position: sticky;
+    bottom: 0;
 }
 .f-row{
     margin-right: 0px !important;

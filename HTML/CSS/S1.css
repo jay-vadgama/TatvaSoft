@@ -550,6 +550,47 @@
     width: 163px;
     height: 46px;
 }
+.btn-submit:hover{
+    background-color: #29626D;
+}
+
+/* Customer-Registration CSS starts */
+
+.btn-center{
+    text-align: center;
+    padding: 50px 0px;
+}
+.btn-center-submit{
+    background-color: #1D7A8C;
+    border: none;
+    font-family: Roboto;
+    font-weight: bold;
+    color: white;
+    border-radius: 23px;
+    font-size: 20px;
+    width: 163px;
+    height: 46px;
+}
+.btn-center-submit:hover{
+    background-color: #29626D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

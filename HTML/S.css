@@ -423,9 +423,17 @@ ol, ul{
 }
 .right-left-img{
     padding: 0px !important;
-    position: relative;
+ 
 }
-
+.left-img{
+    position: absolute;
+    z-index: -1;
+}
+.right-img{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
 
 
 
@@ -445,6 +453,9 @@ ol, ul{
     }
 }
 @media(max-width:1150px){
+    .part3{
+        padding-top: 50px;
+    }
     .what-makes-happy{
         display: flex;
         flex-wrap: wrap-reverse;

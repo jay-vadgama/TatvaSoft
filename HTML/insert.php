@@ -46,12 +46,14 @@ if(isset($_POST['submit']))
 		?>
 		<script>
 			alert("Data Inserted Successfully!");
+			window.location='Contact.php';
 			</script>
 			<?php
 	}else{
 		?>
 		<script>
 			alert("Data Not Inserted");
+			window.location='Contact.php';
 			</script>
 			<?php
 	}
