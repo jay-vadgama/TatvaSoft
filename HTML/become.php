@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#">Contact us</a>
                     </li>
                     <li class="nav-item round">
-                        <a class="nav-link " href="#">Login</a>
+                        <a class="nav-link li-modal" href="Home.html" >Login</a>
                     </li>
                     <li class="nav-item round">
                         <a class="nav-link " href="#">Beacome a Helper</a>
@@ -219,10 +219,16 @@
   
   </section>
   <!-- Footer Ended -->
-  
 
-    <script src="JS/main3.js"></script>
+  
+    <script >
+        $('.li-modal').on('click', function(e){
+    e.preventDefault();
+    $('#loginModal').modal('show').find('.modal').load($(this).attr('href'));
+  });
+    </script>
     <script src="JS/main.js"></script>
+    <script src="JS/main3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
