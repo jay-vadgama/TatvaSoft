@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if(isset($_SESSION['FirstName'])){
+    header("Location: Customer-Service-History.php");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,15 +76,15 @@
           <button type="button" class="btn close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
           <div class="row justify-content-center">
             <div class="col-10">
-              <form>
+              <form action="loginCheck.php" method="post">
 
                 <div class="form-group">
                   <span class="input-icon"><i class="fa fa-user"></i></span>
-                  <input type="email" class="form-control" placeholder="Enter email">
+                  <input type="email" class="form-control" value="" name="email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <span class="input-icon"><i class="fas fa-key"></i></span>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" class="form-control" value="" name="pass" placeholder="Password">
                 </div>
                 <div class="after-form">
                   <div class="form-check">
@@ -88,10 +96,10 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button class="btn btn-login">Login</button>  
+                  <button class="btn btn-login" name="login">Login</button>  
                 </div>
                 <div class="after-btn">
-                  <p>Don't have an account?<a href=""> Create an account</a></p>  
+                  <p>Don't have an account?<a href="Customer-Registration.php"> Create an account</a></p>  
                 </div>
               </form>
             </div>
@@ -119,7 +127,7 @@
             <button type="button" class="btn close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
             <div class="row justify-content-center">
               <div class="col-10">
-                <form>
+                <form action="" method="post">
 
                   <div class="form-group">
                     <span class="input-icon"><i class="fa fa-user"></i></span>
@@ -127,7 +135,7 @@
                   </div>
                   
                   <div class="d-flex justify-content-center">
-                    <button class="btn btn-send">Send</button>
+                    <button class="btn btn-send" name="send">Send</button>
                   </div>
                   <div class="after-btn">
                     <a href=""><p>Login Now!</p></a>  

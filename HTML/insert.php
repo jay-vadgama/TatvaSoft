@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 if(isset($_POST['submit']))
 {
 	$firstname = $_POST['firstname']; 
-	$lastname = $_POST['lasttname']; 
+	$lastname = $_POST['lastname']; 
 	$MobileNo = $_POST['MobileNo']; 
 	$email = $_POST['email']; 
 	$subject = $_POST['subject'];

@@ -1,3 +1,8 @@
+<?php
+  $base_url = "http://localhost/TatvaSoft/Helperland/";
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="stylesheet" type="text/css" href="CSS/S1.css">
-	<script src="Js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="../assets/CSS/S1.css">
+	<script src="../assets/JS/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
@@ -18,7 +23,7 @@
 <section class="header">
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg fixed-top">
-			  <a class="navbar-brand" href="Home.html"><img class="logo" src="Images/Logo_Helperland.png"></a>
+			  <a class="navbar-brand" href=""><img class="logo" src="../assets/Images/Logo_Helperland.png"></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 			  </button>
@@ -53,7 +58,7 @@
 <!-- Navbar Ends -->
 
 <div class="bg-price">
-  <img src="Images/contact_BG.png" class="img-responsive price-bg" alt="faq" >
+  <img src="../assets/Images/contact_BG.png" class="img-responsive price-bg" alt="faq" >
 </div>
 
 <!-- Contact Heading Starts -->
@@ -62,7 +67,7 @@
       </div>
       <div class="line-div">
         <hr class="left-line">
-        <img src="Images/separator.png" class="img-sep">
+        <img src="../assets/Images/separator.png" class="img-sep">
         <hr class="right-line">
       </div>
 <!-- Contact Heading Ends -->
@@ -71,15 +76,15 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-4 col-sm-4 text-center">
-      <img src="Images/Location_Contact.png" class="group-img">
+      <img src="../assets/Images/Location_Contact.png" class="group-img">
       <p class="contact-body">1111 Lorem ipsum text 100,<br>Lorem ipsum AB </p>
     </div>
     <div class="col-lg-4 col-sm-4 text-center">
-      <img src="Images/phone-call_Contact.png" class="group-img">
+      <img src="../assets/Images/phone-call_Contact.png" class="group-img">
       <p class="contact-body" >+49 (40) 123 56 7890<br>+49 (40) 987 56 0000</p>
     </div>
     <div class="col-lg-4 col-sm-4 text-center">
-      <img src="Images/Email_Contact.png" class="group-img">
+      <img src="../assets/Images/Email_Contact.png" class="group-img">
       <p class="contact-body3" >info@helperland.com</p>
     </div>
   </div>  
@@ -96,7 +101,7 @@
 
 <section class="form-section">
   <div class="container">
-    <form action="insert.php" method="post" enctype="multipart/form-data">
+    <form action="http://localhost/TatvaSoft/Helperland/?controller=Contact&function=Contact" method="post" enctype="multipart/form-data">
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="form-group">
@@ -171,7 +176,7 @@
 </section>
 
 <div class="bg-faq">
-  <img src="Images/Location.png" class="img-responsive" alt="faq" style="padding-top: 50px;width: 100%; height:auto;padding-bottom: 50px;">
+  <img src="../assets/Images/Location.png" class="img-responsive" alt="faq" style="padding-top: 50px;width: 100%; height:auto;padding-bottom: 50px;">
 </div>
 
 
@@ -180,7 +185,7 @@
 	<div class="container-fluid footer" id="mainFooter">
 	  <div class="row f-row">
 		<div class="col-sm-3 logo_position">
-		  <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
+		  <a href=#><img src="../assets/Images/logo1.png" class="footer_logo"></a>
 		</div>
 		  <div class="col-sm-6 footer_links">
 			<p class="footer_p">
@@ -194,8 +199,8 @@
 			</p>
 		  </div>
 			<div class="col-sm-3 footer_media_icon" >
-				<a href=#><img src="Images/fb.png" class="footer_media_logo"></a>
-				<a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
+				<a href=#><img src="../assets/Images/fb.png" class="footer_media_logo"></a>
+				<a href=#><img src="../assets/Images/insta.png" class="footer_media_logo"></a>
 			</div>
 	  </div>
 	</div>     

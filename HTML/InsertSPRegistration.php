@@ -17,35 +17,50 @@ if ($conn->connect_error) {
 }
 
 
+
 if(isset($_POST['btnStart']))
 {
 	$firstname = $_POST['firstname']; 
 	$lastname = $_POST['lastname']; 
 	$email = $_POST['email']; 
-	$Pass = $_POST['Pass'];
+	$Pass = ($_POST['Pass']);
+	$ChangePass = ($_POST['ChangePass']);
 	$MobileNo = $_POST['MobileNo'];
 
 
+	if($Pass == $ChangePass){
 
-	// inserting into database
+		// inserting into database
 	$query =  "INSERT INTO user (`FirstName`, `Lastname`, `Email`, `Password`, `Mobile`) VALUES ('$firstname','$lastname','$email','$Pass','$MobileNo')";
 
 	$res = mysqli_query($conn,$query);
 	if($res){
 		?>
 		<script>
-			alert("Data Inserted Successfully!");
+			alert("User Registration Successfully!");
 			window.location='become.php';
 			</script>
 			<?php
 	}else{
 		?>
 		<script>
-			alert("Data Not Inserted");
+			alert("Oops! Something Went Wrong.");
 			window.location='become.php';
 			</script>
 			<?php
 	}
+
+
+
+	}else{
+		echo 
+		"<script>
+		alert('Password Not Matched.');
+		window.location='become.php';
+		</script>";
+	}
+
+	
 }
 
  

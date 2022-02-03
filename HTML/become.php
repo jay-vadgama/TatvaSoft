@@ -65,10 +65,10 @@
                 <form action="InsertSPRegistration.php" method="post" class="was-validated become-pro-form"> 
                     <p class="register-now">Register as Helper!</p>
                     <div class="form-group">
-                        <input class="form-control" type="text" id="fname" name="firstname" placeholder="First Name" required>
+                        <input class="form-control" type="text" id="fname" name="firstname" value="" placeholder="First Name" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" id="lname" name="lastname" placeholder="Last Name" required>
+                        <input class="form-control" type="text" id="lname" name="lastname" value="" placeholder="Last Name" required>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" required>
@@ -86,7 +86,7 @@
                         <input type="password" class="form-control" name="Pass" id="Password1" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="Password2" placeholder="Confirm Password" required>
+                        <input type="password" class="form-control" name="ChangePass"  id="Password2" placeholder="Confirm Password" required>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="Check1">

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['FirstName'])){
+  header("Location: Home.php");
+  
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +61,7 @@
             </a>
           </li>
           <li class="nav-item remove">
-            <a href="">
+            <a href="logout.php">
                 <img src="Images/user_logo.png" alt=""> 
             </a>
           </li>	  
@@ -60,7 +71,7 @@
   </nav>
 
 <div class="container-fluid welcome"> 
-<p class="head-title">Welcome, <b>Customer!</b></p>
+<p class="head-title"> <?php echo "Welcome, " . $_SESSION['FirstName'];?></p>
 </div>
 
 <div class="container modal-menu">

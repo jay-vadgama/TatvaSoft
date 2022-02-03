@@ -249,6 +249,7 @@ ul, li{
     
 }
 .form-btn{
+    outline: none !important;
     border: none;
     margin-top: 20px;
     font-family: Roboto;
@@ -259,7 +260,12 @@ ul, li{
     width: 163px;
     height: 46px;
 }
-
+.form-control:invalid {
+    border-color: #ffe0e4 !important;
+}
+.form-control:valid {
+    border-color: #b3ffc5 !important;
+}
 .parent {
     text-align: center;
       margin: auto;
