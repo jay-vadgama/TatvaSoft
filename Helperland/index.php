@@ -1,7 +1,7 @@
 <?php
 
 $controller='Contact';
-$function='Contactus';
+$function='ContactUs';
 $parameter='';
 
 if(isset($_GET['controller']) && $_GET['controller'] !=''){

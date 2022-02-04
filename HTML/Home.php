@@ -19,20 +19,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+
     <title>Helperland | Welcome to homepage.</title>
+    <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
 </head>
 <body>
   <div class="img-fluid">
       <!-- Navbar Started -->
       <section class="Header">
-        
+
         <nav class="navbar navbar-expand-lg bgcolor fixed-top">
             <a class="navbar-brand" href="#"><img class="logo" src="Images/Logo_Helperland.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white;font-size: 28px;"></i></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item round" >
@@ -96,16 +97,16 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button class="btn btn-login" name="login">Login</button>  
+                  <button class="btn btn-login" name="login">Login</button>
                 </div>
                 <div class="after-btn">
-                  <p>Don't have an account?<a href="Customer-Registration.php"> Create an account</a></p>  
+                  <p>Don't have an account?<a href="Customer-Registration.php"> Create an account</a></p>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -115,7 +116,7 @@
 
 <!-- Forgot-Modal Starts -->
 <section class="Forgot-Modal">
-    
+
   <!-- The Modal -->
     <div class="modal fade" id="ForgotModal" >
       <div class="modal-dialog modal-md modal-dialog-centered">
@@ -133,19 +134,19 @@
                     <span class="input-icon"><i class="fa fa-user"></i></span>
                     <input type="email" class="form-control" name="email" placeholder="Enter email">
                   </div>
-                  
+
                   <div class="d-flex justify-content-center">
                     <button class="btn btn-send" name="send">Send</button>
                   </div>
                   <div class="after-btn">
-                    <a href=""><p>Login Now!</p></a>  
+                    <a href=""><p>Login Now!</p></a>
                   </div>
-                  
+
                 </form>
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -198,18 +199,18 @@
               </div>
 
             </div>
-            
-            
-            
+
+
+
           </div>
           <!-- Image Steps: Ends -->
-         
+
           <div class="parent">
             <a href="#part2">
               <img src="Images/Scroll_Down_Arrow.png" alt="Scroll_Down_Arrow">
             </a>
           </div>
-          
+
         </section>
       </div>
 
@@ -218,7 +219,7 @@
   <p class="heading">Why Helperland</p>
 
   <div class="container d-flex mx-auto">
- 
+
   <div class="center-content">
     <div class="class1">
       <img src="Images/group-21.png" class="Group-21">
@@ -230,14 +231,14 @@
     <p class="h-text"> Secure Online Payment</p>
     <p class="p-text">Payment is proccessed securely online. Customers pay safely online and manage the booking.</p>
   </div>
-  
+
   <div class="class3">
       <img src="Images/group-24.png" class="Group-21">
       <p class="h-text"> Dedicated Customer Service</p>
       <p class="p-text">to our customers and are guided in all we do by their needs. The team is always happy to support you and offer all the information.</p>
   </div>
   </div>
-     
+
 </div>
 </div>
 
@@ -260,7 +261,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
 <section class="home-blogs">
@@ -274,7 +275,7 @@
         <p class="blog-text">January 28, 2019</p>
         <p class="blog-sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum metus pulvinar aliquet.</p>
       </div>
-      
+
     </div>
     <div class="blog2">
       <img class="img-responsive blog-img" src="Images/group-29.png">
@@ -319,7 +320,7 @@
           <p class="rect-sub-head">Manchester</p>
             <p class="rect-feedback">It is a wonderful service, that makes our lives much more manageable. Their attention to detail is excellent, as is their personnel and attention to our needs.<p class="rect-feedback">A really impressive result!</p></p>
       </div>
-   
+
       <div class="rect">
         <img class="rect-img" src="Images/group-33.png">
         <a href="#"><img class="rect-msg" src="Images/message.png" ></a>
@@ -327,7 +328,7 @@
           <p class="rect-sub-head">Manchester</p>
             <p class="rect-feedback">Thanks for a great job cleaning the exterior of our home in readiness for the painter. The house came up so good that we didn’t need as much painting as we thought.<p class="rect-feedback">Thanks for a great job!</p>
       </div>
-    
+
     </div>
 
   </div>
@@ -344,13 +345,13 @@
       </div>
         <div class="col-sm-6 footer_links">
           <p class="footer_p">
-            <a href="#" class="footer_link_decoration">HOME</a>   
-            <a href="#" class="footer_link_decoration">ABOUT</a>   
-            <a href="#" class="footer_link_decoration">TESTIMONIALS</a>   
-            <a href="#" class="footer_link_decoration">FAQS</a>  
-            <a href="#" class="footer_link_decoration">INSURANCE</a>   
-            <a href="#" class="footer_link_decoration">POLICY</a>   
-            <a href="#" class="footer_link_decoration">IMPRESSUM</a>  
+            <a href="#" class="footer_link_decoration">HOME</a>
+            <a href="#" class="footer_link_decoration">ABOUT</a>
+            <a href="#" class="footer_link_decoration">TESTIMONIALS</a>
+            <a href="#" class="footer_link_decoration">FAQS</a>
+            <a href="#" class="footer_link_decoration">INSURANCE</a>
+            <a href="#" class="footer_link_decoration">POLICY</a>
+            <a href="#" class="footer_link_decoration">IMPRESSUM</a>
           </p>
         </div>
           <div class="col-sm-3 footer_media_icon" >
@@ -358,11 +359,11 @@
               <a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
           </div>
     </div>
-  </div>     
+  </div>
 
 <!-- footer-policy starts-->
   <div class="container-fluid footer_policy" id="privacyPolicy">
-    <p class="policy_p">©2018 Helperland. All rights reserved. 
+    <p class="policy_p">©2018 Helperland. All rights reserved.
       <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a> </p>
     <div class="okay-btn">
       <button type="submit" onclick="footerPolicy()" class="btn btn2">OK!</button>
@@ -374,7 +375,7 @@
 <!-- Footer Ended -->
 
 
-    
+
 <script>
     $(function () {
   $(document).scroll(function () {

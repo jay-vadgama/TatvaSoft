@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style6.css">
+    <link rel="stylesheet" href="style7.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Helperland | Book Now</title>
@@ -113,8 +114,10 @@
           <label class="form-label">When do you need the cleaner?</label>
             <div class="row">
               <div class="col-sm-6">
-                <input class="form-control form-check-inline date" id="datepicker" type="date">
-              </div>
+                <div class="form-group">
+                  <input class="form-control form-check-inline date" id="datepicker" type="date">
+                </div>
+                </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <select class="form-control" id="date">
@@ -176,6 +179,45 @@
     
       <hr>
         <label class="form-label">Extra Services</label>
+        <div class="justify-content-center custom-checkboxes">
+          <div class="Cust-checkbox">
+              <input type="checkbox" class="CustomBox" id="Check1" onclick="Check1();">
+              <label for="Check1" class="label1">
+                  <img src="Images\price-1.png" id="CheckImg1" >
+              </label>
+              <p class="check-text">inside cabinets</p>
+          </div>
+          <div class="Cust-checkbox">
+              <input type="checkbox" class="CustomBox" id="Check2" onclick="Check2();">
+              <label for="Check2" class="label1">
+                  <img src="Images\price-2.png" id="CheckImg2" >
+              </label>
+              <p class="check-text">inside Fridge</p>
+          </div>
+          <div class="Cust-checkbox">
+              <input type="checkbox" class="CustomBox" id="Check3" onclick="Check3();">
+              <label for="Check3" class="label1">
+                  <img src="Images\price-3.png" id="CheckImg3" >
+              </label>
+              <p class="check-text">inside Oven</p>
+          </div>
+          <div class="Cust-checkbox">
+              <input type="checkbox" class="CustomBox" id="Check4" onclick="Check4();">
+              <label for="Check4" class="label1">
+                  <img src="Images\price-4.png" id="CheckImg4" >
+              </label>
+              <p class="check-text">Laundry Wash & Dry</p>
+          </div>
+          <div class="Cust-checkbox">
+              <input type="checkbox" class="CustomBox" id="Check5" onclick="Check5();">
+              <label for="Check5" class="label1">
+                  <img src="Images\price-5.png" id="CheckImg5" >
+              </label>
+              <p class="check-text">interior Windows</p>
+          </div>
+      </div>
+
+
       <hr>
         <label class="form-label">Comments</label>
 
@@ -523,6 +565,7 @@
 
 
 <script src="JS/main2.js"></script>
+<script src="JS/main3.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      

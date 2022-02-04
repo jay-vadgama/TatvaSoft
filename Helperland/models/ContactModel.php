@@ -1,6 +1,7 @@
 <?php 
 class ContactModel{
-    function __construct(){
+	
+    public function __construct(){
 
             $servername = "localhost";
             $username = "root";

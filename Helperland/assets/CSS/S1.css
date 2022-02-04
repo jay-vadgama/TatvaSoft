@@ -523,6 +523,9 @@
     padding-top: 20px;
     padding-bottom: 30px;
 }
+.custom-file{
+    z-index: -1 !important;
+}
 .btn-submit{
     background-color: #1D7A8C;
     border: none;

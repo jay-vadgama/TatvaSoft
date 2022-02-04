@@ -100,7 +100,6 @@
 .setup-btn{
     background-color: #F3F3F3;
     color: #4F4F4F;
-    border: none;
     text-align: center;
     font-family: roboto;
     font-weight: 500;
@@ -108,11 +107,16 @@
     max-width: 200px;
     height: 66px;
     padding: 10px;
+    border: 1px solid white;
+}
+button:focus{
+    outline: none !important;
 }
 .setup-btn1{
     background-color: #1D7A8C !important;
     color: white;
-    border: none;
+    border: 1px solid white;
+
     text-align: center;
     font-family: roboto;
     font-weight: 500;
@@ -299,6 +303,9 @@
     font-weight: 700;
 
 }
+
+
+
 .check-pet{
     margin-top: 7px !important;
 }
