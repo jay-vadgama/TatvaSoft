@@ -43,6 +43,15 @@ var rotate = document.getElementsByClassName('r-arrow');
   }
 
   function show1(){
+    document.getElementById("tabbtn2").style.backgroundColor="#F3F3F3";
+    document.getElementById("tabtxt2").style.color="#4F4F4F";
+    document.getElementById("tabimg2").src="Images/schedule.png";
+    document.getElementById("tabbtn3").style.backgroundColor="#F3F3F3";
+    document.getElementById("tabtxt3").style.color="#4F4F4F";
+    document.getElementById("tabimg3").src="Images/details.png";
+    document.getElementById("tabbtn4").style.backgroundColor="#F3F3F3";
+    document.getElementById("tabtxt4").style.color="#4F4F4F";
+    document.getElementById("tabimg4").src="Images/payment.png";
     document.getElementById("body1").style.display="block";
     document.getElementById("body2").style.display="none";
     document.getElementById("body3").style.display="none";
@@ -52,6 +61,12 @@ var rotate = document.getElementsByClassName('r-arrow');
     document.getElementById("tabbtn2").style.backgroundColor="#1D7A8C";
     document.getElementById("tabtxt2").style.color="white";
     document.getElementById("tabimg2").src="Images/schedule-white.png";
+    document.getElementById("tabbtn3").style.backgroundColor="#F3F3F3";
+    document.getElementById("tabtxt3").style.color="#4F4F4F";
+    document.getElementById("tabimg3").src="Images/details.png";
+    document.getElementById("tabbtn4").style.backgroundColor="#F3F3F3";
+    document.getElementById("tabtxt4").style.color="#4F4F4F";
+    document.getElementById("tabimg4").src="Images/payment.png";
     document.getElementById("body1").style.display="none";
     document.getElementById("body2").style.display="block";
     document.getElementById("body3").style.display="none";
@@ -59,15 +74,27 @@ var rotate = document.getElementsByClassName('r-arrow');
     
   }
   function show3(){
+    document.getElementById("tabbtn2").style.backgroundColor="#1D7A8C";
+    document.getElementById("tabtxt2").style.color="white";
+    document.getElementById("tabimg2").src="Images/schedule-white.png";
     document.getElementById("tabbtn3").style.backgroundColor="#1D7A8C";
     document.getElementById("tabtxt3").style.color="white";
     document.getElementById("tabimg3").src="Images/details-white.png";
+    document.getElementById("tabbtn4").style.backgroundColor="#F3F3F3";
+    document.getElementById("tabtxt4").style.color="#4F4F4F";
+    document.getElementById("tabimg4").src="Images/payment.png";
     document.getElementById("body1").style.display="none";
     document.getElementById("body2").style.display="none";
     document.getElementById("body3").style.display="block";
     document.getElementById("body4").style.display="none";
   }
   function show4(){
+    document.getElementById("tabbtn2").style.backgroundColor="#1D7A8C";
+    document.getElementById("tabtxt2").style.color="white";
+    document.getElementById("tabimg2").src="Images/schedule-white.png";
+    document.getElementById("tabbtn3").style.backgroundColor="#1D7A8C";
+    document.getElementById("tabtxt3").style.color="white";
+    document.getElementById("tabimg3").src="Images/details-white.png";
     document.getElementById("tabbtn4").style.backgroundColor="#1D7A8C";
     document.getElementById("tabtxt4").style.color="white";
     document.getElementById("tabimg4").src="Images/payment-white.png";

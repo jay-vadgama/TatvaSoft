@@ -92,6 +92,7 @@
 
 .tabs{
     display: flex;
+    flex-direction: column;
     margin-right: 30px;
 }
 .tab-img{
@@ -116,7 +117,6 @@ button:focus{
     background-color: #1D7A8C !important;
     color: white;
     border: 1px solid white;
-
     text-align: center;
     font-family: roboto;
     font-weight: 500;
@@ -127,7 +127,87 @@ button:focus{
 }
 .setup{
     margin: 0px !important;
+    display: inline;
 }
+
+@media(max-width:731px){
+    .setup{
+        display: none;
+    }
+    .tab-img{
+        padding: 0px;
+    }
+    
+    .tab1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .setup-btn1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+    .setup-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+    
+}
+@media(max-width:631px){
+    .setup-btn1{
+        width: 120px;
+    }
+    .setup-btn{
+        width: 120px;
+    }
+}
+@media(max-width:512px){
+    .setup-btn1{
+        width: 100px;
+    }
+    .setup-btn{
+        width: 100px;
+    }
+}
+@media(max-width:430px){
+    .setup-btn1{
+        width: 80px;
+    }
+    .setup-btn{
+        width: 80px;
+    }
+}
+@media(max-width:350px){
+    .setup-btn1{
+        width: 70px;
+    }
+    .setup-btn{
+        width: 70px;
+    }
+}
+
+
+
+
 
 .tabs-body{
     padding-top: 30px;
@@ -172,6 +252,7 @@ button:focus{
 }
 .form-check-label{
     margin-left: 30px !important;
+    border: none !important;
 }
 
 .p-address{
@@ -446,6 +527,23 @@ button:focus{
 .btn-close{
     background-color: transparent !important;
 }
+
+
+
+/* Modal for Payment Summary CSS */
+.payment-modal{
+    display: none;
+}
+
+@media(max-width:1200px){
+    .payment-modal{
+        font-family: roboto;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
 
 
                             /* FAQ-CSS Starts */

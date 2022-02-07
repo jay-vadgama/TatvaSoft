@@ -3,11 +3,10 @@ session_start();
 
 if(!isset($_SESSION['FirstName'])){
   header("Location: Home.php");
-  
+
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +19,7 @@ if(!isset($_SESSION['FirstName'])){
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+
     <title>Customer-Service-History</title>
 </head>
 <body>
@@ -48,29 +47,29 @@ if(!isset($_SESSION['FirstName'])){
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Warranty</a>
-          </li>		
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
-          <li class="nav-item vertical-line remove"> 
+          <li class="nav-item vertical-line remove">
             <a href="#">
-                <img src="Images/notification_logo.png" alt="">              
+                <img src="Images/notification_logo.png" alt="">
             </a>
           </li>
           <li class="nav-item remove">
             <a href="logout.php">
-                <img src="Images/user_logo.png" alt=""> 
+                <img src="Images/user_logo.png" alt="">
             </a>
-          </li>	  
-        </ul>		  
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
-<div class="container-fluid welcome"> 
+<div class="container-fluid welcome">
 <p class="head-title"> <?php echo "Welcome, " . $_SESSION['FirstName'];?></p>
 </div>
 
@@ -79,7 +78,7 @@ if(!isset($_SESSION['FirstName'])){
   <div class="modal fade" id="collapsiblemodal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
-      
+
         <!-- Modal Header -->
         <div class="modal-header">
             <div class="container">
@@ -107,14 +106,14 @@ if(!isset($_SESSION['FirstName'])){
                       <a href="#"></a>
             </div>
         </div>
-        
+
         <!-- Modal footer -->
         <div  class="modal-footer">
           <div class="container">
           <a href="#" >Prices & Services</a>
           <a href="#">Warranty</a>
           <a href="#">Blog</a>
-          <a href="#">Content</a>  
+          <a href="#">Content</a>
           </div>
         </div>
         <div  class="modal-footer">
@@ -132,7 +131,7 @@ if(!isset($_SESSION['FirstName'])){
 <div class="container">
   <div class="row d-flex">
     <div class="col-lg-3 ">
-      <div class="sidebar">   
+      <div class="sidebar">
         <a href="#home">Dashboard</a>
         <a class="active" href="#">Service History</a>
         <a href="#">Service Schedule</a>
@@ -141,7 +140,7 @@ if(!isset($_SESSION['FirstName'])){
         <a href="#">Notifications</a>
       </div>
     </div>
-    
+
 
     <div class="col-lg-9 table-responsive">
       <div class="left">
@@ -154,7 +153,7 @@ if(!isset($_SESSION['FirstName'])){
 
       <table class="table table-hover ">
         <thead>
-          <tr>    
+          <tr>
             <th>Service Details<img src="Images/sort.png" style="margin-left: 5px;"> </th>
             <th>Service Provider<img src="Images/sort.png" style="margin-left: 5px;"></th>
             <th style="text-align: center;">Payment<img src="Images/sort.png" style="margin-left: 5px;"></th>
@@ -168,7 +167,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -192,7 +191,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -216,7 +215,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -240,7 +239,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -264,7 +263,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -289,7 +288,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -313,7 +312,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -337,7 +336,7 @@ if(!isset($_SESSION['FirstName'])){
           <td>
           <div class="row">
             <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;"> 
+              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
             </div>
             <div class="col-md-6">
               <p class="text-table">Lyum Watson</p>
@@ -355,12 +354,12 @@ if(!isset($_SESSION['FirstName'])){
           <td style="text-align: center;"><button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button></td>
           <td style="text-align: center;"> <button class="btn btn-rate">Rate SP</button> </td>
         </tr>
-      
-  
- 
 
- 
-  
+
+
+
+
+
 </tbody>
 </table>
 </div>
@@ -377,12 +376,12 @@ if(!isset($_SESSION['FirstName'])){
   <div class="col-sm-6" style="text-decoration: none ;text-align: center;display: flex;justify-content: center;align-items: center;">
       <p style="word-spacing: 15px;color: #f1f1f1;">
 
-          <a href="#" style="text-decoration: none ;">HOME</a>   
-          <a href="#" style="text-decoration: none ;">ABOUT</a>   
-          <a href="#" style="text-decoration: none ;">TESTIMONIALS</a>   
-          <a href="#" style="text-decoration: none ;">FAQS</a>  
-          <a href="#" style="text-decoration: none ;">INSURANCE</a>   
-          <a href="#" style="text-decoration: none ;">POLICY</a>   
+          <a href="#" style="text-decoration: none ;">HOME</a>
+          <a href="#" style="text-decoration: none ;">ABOUT</a>
+          <a href="#" style="text-decoration: none ;">TESTIMONIALS</a>
+          <a href="#" style="text-decoration: none ;">FAQS</a>
+          <a href="#" style="text-decoration: none ;">INSURANCE</a>
+          <a href="#" style="text-decoration: none ;">POLICY</a>
           <a href="#" style="text-decoration: none ;">IMPRESSUM</a>
 
       </p>
@@ -402,7 +401,7 @@ if(!isset($_SESSION['FirstName'])){
 </div>
 </div>
 
-  
+
 
 </body>
 </html>
