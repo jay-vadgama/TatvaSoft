@@ -42,6 +42,9 @@ var rotate = document.getElementsByClassName('r-arrow');
     document.getElementById("newAdd").style.display="none";
   }
 
+
+  
+
   function show1(){
     document.getElementById("tabbtn2").style.backgroundColor="#F3F3F3";
     document.getElementById("tabtxt2").style.color="#4F4F4F";

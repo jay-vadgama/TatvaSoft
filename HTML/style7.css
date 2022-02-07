@@ -4,7 +4,7 @@
 .custom-checkboxes{
     display: flex;
     flex-wrap: wrap;
-    padding-top: 30px;
+    margin-top: 50px;
 }
 
 input[type=checkbox].CustomBox{
@@ -35,3 +35,4 @@ input[type=checkbox].CustomBox{
     margin-bottom: 0px !important;
     padding: 16px 0px;
 }
+

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style6.css">
-    <link rel="stylesheet" href="style7.css">
+    <!-- <link rel="stylesheet" href="style7.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Helperland | Book Now</title>
@@ -47,8 +47,8 @@
           </div>
         </nav>
     </div>
-</section>
-<!-- Navbar Ends -->
+  </section>
+  <!-- Navbar Ends -->
 
 <!-- Book-now BG img  -->
 <div class="bg-book">
@@ -74,7 +74,7 @@
 <div class="container-fluid">
   <div class=" d-flex justify-content-center">
     
-    <!-- right-side starts -->
+    <!-- left-side starts -->
     <section class="left-side">
       <!-- tabs-div starts -->
       <div class="tabs">
@@ -196,52 +196,42 @@
 
               <label class="form-label">Extra Services</label>
               <div class="justify-content-center custom-checkboxes">
-
-                <!-- checkbox-1 -->
                 <div class="Cust-checkbox">
-                  <input type="checkbox" class="CustomBox" id="Check1" onclick="Check1();">
-                    <label for="Check1" class="label1">
-                      <img src="Images\price-1.png" id="CheckImg1" >
+                    <input type="checkbox" class="CustomBox" id="Check1" onclick="Check1();" value="30 minutes">
+                    <label for="Check1" class="label1" onclick="Check1();">
+                        <img src="Images\price-1.png" id="CheckImg1" >
                     </label>
-                  <p class="check-text">inside cabinets</p>
+                    <p class="check-text">inside cabinets</p>
                 </div>
-
-                <!-- checkbox-2 -->
                 <div class="Cust-checkbox">
-                  <input type="checkbox" class="CustomBox" id="Check2" onclick="Check2();">
-                    <label for="Check2" class="label1">
-                      <img src="Images\price-2.png" id="CheckImg2" >
+                    <input type="checkbox" class="CustomBox" id="Check2" onclick="Check2();">
+                    <label for="Check2" class="label1" onclick="Check2();">
+                        <img src="Images\price-2.png" id="CheckImg2" >
                     </label>
-                  <p class="check-text">inside Fridge</p>
+                    <p class="check-text">inside Fridge</p>
                 </div>
-
-                <!-- checkbox-3 -->
                 <div class="Cust-checkbox">
-                  <input type="checkbox" class="CustomBox" id="Check3" onclick="Check3();">
-                    <label for="Check3" class="label1">
+                    <input type="checkbox" class="CustomBox" id="Check3" onclick="Check3();">
+                    <label for="Check3" class="label1" onclick="Check3();">
                         <img src="Images\price-3.png" id="CheckImg3" >
                     </label>
-                  <p class="check-text">inside Oven</p>
+                    <p class="check-text">inside Oven</p>
                 </div>
-
-                <!-- checkbox-4 -->
                 <div class="Cust-checkbox">
-                  <input type="checkbox" class="CustomBox" id="Check4" onclick="Check4();">
-                    <label for="Check4" class="label1">
-                      <img src="Images\price-4.png" id="CheckImg4" >
+                    <input type="checkbox" class="CustomBox" id="Check4" onclick="Check4();">
+                    <label for="Check4" class="label1" onclick="Check4();">
+                        <img src="Images\price-4.png" id="CheckImg4" >
                     </label>
-                  <p class="check-text">Laundry Wash & Dry</p>
+                    <p class="check-text">Laundry Wash & Dry</p>
                 </div>
-
-                <!-- checkbox-5 -->
                 <div class="Cust-checkbox">
-                  <input type="checkbox" class="CustomBox" id="Check5" onclick="Check5();">
-                    <label for="Check5" class="label1">
-                      <img src="Images\price-5.png" id="CheckImg5" >
+                    <input type="checkbox" class="CustomBox" id="Check5" onclick="Check5();">
+                    <label for="Check5" class="label1" onclick="Check5();">
+                        <img src="Images\price-5.png" id="CheckImg5" >
                     </label>
-                  <p class="check-text">interior Windows</p>
+                    <p class="check-text">interior Windows</p>
                 </div>
-              </div>
+            </div>
         
               <hr>
           
@@ -448,10 +438,10 @@
       </div>
       <!-- tabs-div ends -->
     </section>
-    <!-- right-side ends -->
+    <!-- left-side ends -->
 
     
-    <!-- left-side starts -->
+    <!-- right-side starts -->
     <section class="right-side">
       <div class="payment">
         
@@ -462,7 +452,30 @@
             <div class="card-body">
               <p class="body-text">19/01/2022 08:00</p>
               <p class="body-text1">Duration</p>
-              <p class="body-text">Basic<span class="body-right">3 Hrs</span></p>
+              
+              <p class="body-text" >Basic<span class="body-right">3 Hrs</span></p>
+              <p class="body-text" id="extra"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService1"></p>
+                <p class="body-right" id="extraRight1"></p>
+              </div>
+              <p class="body-text" id="extra"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService2"></p>
+                <p class="body-right" id="extraRight2"></p>
+              </div>
+              <div class="extraS">
+                <p class="body-text" id="extraService3"></p>
+                <p class="body-right" id="extraRight3"></p>
+              </div>
+              <div class="extraS">
+                <p class="body-text" id="extraService4"></p>
+                <p class="body-right" id="extraRight4"></p>
+              </div>
+              <div class="extraS">
+                <p class="body-text" id="extraService5"></p>
+                <p class="body-right" id="extraRight5"></p>
+              </div>
               <hr>
               <p class="body-text"><b>Total Service Time<span class="body-right">3 Hrs</b></span></p>
               <hr>
@@ -583,7 +596,7 @@
 
       </div>
     </section>
-    <!-- left-side ends -->
+    <!-- right-side ends -->
   
   </div>
 </div>
@@ -605,12 +618,42 @@
             <div class="card-body">
               <p class="body-text">19/01/2022 08:00</p>
               <p class="body-text1">Duration</p>
-              <p class="body-text">Basic<span class="body-right">3 Hrs</span></p>
-                <hr>
+              
+              <p class="body-text" >Basic<span class="body-right">3 Hrs</span></p>
+              <p class="body-text" id="extra1"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService11"></p>
+                <p class="body-right" id="extraRight11"></p>
+              </div>
+              <p class="body-text" id="extra1"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService22"></p>
+                <p class="body-right" id="extraRight22"></p>
+              </div>
+              <p class="body-text" id="extra1"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService33"></p>
+                <p class="body-right" id="extraRight33"></p>
+              </div>
+              <p class="body-text" id="extra1"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService44"></p>
+                <p class="body-right" id="extraRight44"></p>
+              </div>
+              <p class="body-text" id="extra1"></p>
+              <div class="extraS">
+                <p class="body-text" id="extraService55"></p>
+                <p class="body-right" id="extraRight55"></p>
+              </div>
+              <hr>
+              <div class="extraS">
+                <p class="body-text" id="totalService"><b></b></p>
+                <p class="body-right" id="totalSeriveRight"><b></b></p>
+              </div>
               <p class="body-text"><b>Total Service Time<span class="body-right">3 Hrs</b></span></p>
-                <hr>
+              <hr>
               <p class="body-text">Per Cleaning<span class="body-right"><b>60.00 €</b></span></p>
-                <hr>
+              <hr>
               <p class="body-head">Total Payment<span class="body-head-right">60.00 €</span></h6>
             </div>
             <div class="card-footer" data-toggle="modal" data-target="#IncludeServices1">
