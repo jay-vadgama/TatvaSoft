@@ -179,6 +179,7 @@ button:focus{
     .setup-btn{
         width: 120px;
     }
+        
 }
 @media(max-width:512px){
     .setup-btn1{
@@ -213,6 +214,7 @@ button:focus{
     padding-top: 30px;
 }
 
+
 .postal-label{
     font-size: 16px;
     margin-bottom: 15px;
@@ -220,6 +222,7 @@ button:focus{
     font-family: roboto;
     color: #4F4F4F;
 }
+
 .btn-check{
     color: white;
     font-family: roboto;
@@ -253,6 +256,7 @@ button:focus{
 .form-check-label{
     margin-left: 30px !important;
     border: none !important;
+
 }
 
 .p-address{
@@ -299,7 +303,7 @@ button:focus{
     padding: 10px 15px;
 }
 .lable-text{
-    color: #4F4F4F;
+    color: #4F4F4F !important;
     font-weight: 400;
     font-family: roboto;
     font-size: 16px;
@@ -385,13 +389,11 @@ button:focus{
 
 }
 
-
-
 .check-pet{
     margin-top: 7px !important;
 }
 .label-txt{
-    color: #4F4F4F;
+    color: #4F4F4F !important;
     font-family: roboto;
 }
 .form-comment{
@@ -402,7 +404,7 @@ button:focus{
     text-align: justify;
     display: flex;
     font-family: roboto;
-    color: #4F4F4F;
+    color: #4F4F4F !important;     
 }
 
 .svgImg{
@@ -466,6 +468,7 @@ button:focus{
     margin-bottom: 0px !important;
 }
 .body-text1{
+    font-weight: 700;
     font-size: 18px;
     color: #4F4F4F;
     line-height: 26px;
@@ -479,17 +482,22 @@ button:focus{
 .extraS{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 .body-head{
     font-size: 18px;
     font-family: roboto;
     color: #1d7a8c;
     line-height: 36px;
+    margin-bottom: 0px !important;
 }
 .body-head-right{
     float: right;
+    color: #1d7a8c;
     font-size: 42px;
     font-family: roboto;
+    margin-bottom: 0px !important;
 }
 .card-footer{
     background-color: #F3F3F3 !important;
@@ -556,7 +564,7 @@ button:focus{
 .custom-checkboxes{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 input[type=checkbox].CustomBox{

@@ -1,0 +1,663 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+.body{
+    height: 100% !important;
+}
+.logo{
+    max-height: 54px !important;
+    max-width:74px !important;
+    margin-left: 15px !important;
+}
+
+.navbar{
+    background-color: #525252;
+    padding: 0px !important;
+    opacity: 0.9;
+}
+.navbar-nav{
+    font-family: Roboto;
+    text-align: right;
+    font-size: 17px;
+}
+.navbar-toggler{
+    border: 1px solid white !important;
+    margin-right: 10px !important;
+}
+.fa-bars{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link{
+    color: #FFFFFF!important;
+    font-size: 17px !important;
+    padding:  8px 23px!important;
+}
+
+@media(max-width:1200px){
+    .navbar-nav .nav-link{
+        padding:  8px 15px!important;
+    }
+}
+.navbar-light .navbar-toggler{
+    border: 2px solid white !important;
+}
+.round{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    background-color: #29626D !important;
+    /* padding:0px 5px !important; */
+    margin:0px 5px !important;
+}
+.r1:hover{
+    border: 1px solid white !important;
+    border-radius: 22px;
+    text-align: center;
+    background-color: transparent !important;
+    margin:0px 5px !important;
+    transition: transform 0.5s;
+}
+.txt{
+    text-align: center;
+    color: #4F4F4F; 
+    font-family:Roboto; 
+    font-size: 36px;
+    margin-top: 30px; 
+    margin-bottom: 10px;
+}
+.line-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.left-line{
+    background-color: #CCCCCC;
+    margin-right: 8px;
+    border: #CCCCCC 1px solid;
+    width: 62px;
+}
+.right-line{
+    background-color: #CCCCCC;
+    margin-left: 8px;
+    border: #CCCCCC 1px solid;
+    width: 62px;
+}
+.book-img{
+    width: 100%; 
+    height:auto;
+    padding-top:64px; 
+}
+
+.tabs{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.tab-img{
+    padding-right: 8px;
+}
+.setup-btn{
+    background-color: #F3F3F3;
+    color: #4F4F4F;
+    text-align: center;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 18px;
+    max-width: 200px;
+    height: 66px;
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+button:focus{
+    outline: none !important;
+}
+.setup-btn1{
+    background-color: #1D7A8C !important;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 18px;
+    max-width: 200px;
+    height: 66px;
+    padding: 10px;
+    cursor: pointer;
+}
+.setup{
+    margin: 0px !important;
+    display: inline;
+}
+
+@media(max-width:731px){
+    .setup{
+        display: none;
+    }
+    .tab-img{
+        padding: 0px;
+    }
+    
+    .tab1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .setup-btn1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+    .setup-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+    
+}
+@media(max-width:631px){
+    .setup-btn1{
+        width: 120px;
+    }
+    .setup-btn{
+        width: 120px;
+    }
+}
+@media(max-width:512px){
+    .setup-btn1{
+        width: 100px;
+    }
+    .setup-btn{
+        width: 100px;
+    }
+}
+@media(max-width:430px){
+    .setup-btn1{
+        width: 80px;
+    }
+    .setup-btn{
+        width: 80px;
+    }
+}
+@media(max-width:350px){
+    .setup-btn1{
+        width: 70px;
+    }
+    .setup-btn{
+        width: 70px;
+    }
+}
+
+
+
+
+
+.tabs-body{
+    padding-top: 30px;
+}
+
+.postal-label{
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: roboto;
+    color: #4F4F4F;
+}
+.btn-check{
+    color: white;
+    font-family: roboto;
+    height: 46px;
+    border: 1px solid white !important;
+    border-radius: 27px !important;
+    padding: 5px 20px !important;
+    background-color: #1D7A8C;
+}
+.btn-check:hover{
+    background-color:#29626D;
+}
+
+.head-text{
+    font-size: 16px;
+    font-family: roboto;
+    color: #4F4F4F;
+    font-weight: 700;
+}    
+.was-validated .form-control:invalid {
+    border-color: none !important;
+}
+
+.form-address{
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    padding: 20px 10px 20px 60px;
+}
+.input[type=checkbox], input[type=radio]{
+    margin: 15px;
+}
+.form-check-input{
+    margin-left: 0px !important;
+}
+.form-check-label{
+    margin-left: 30px !important;
+    border: none !important;
+}
+
+.p-address{
+    margin-bottom: 0px !important;
+    color: #4F4F4F;
+    font-family: roboto;
+}
+.add-btn{
+    padding-top: 30px;
+}
+.btn-address{
+    background-color: white;
+    border: 1px solid #1D7A8C !important;
+    border-radius: 27px !important;
+    color: #1D7A8C !important;
+    font-family: roboto;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    padding: 10px 15px !important;
+}
+.btn-address:hover{
+    color:white !important;
+    background-color: #1D7A8C;
+}
+
+.newAdd{
+    display: none;
+    border: 1px solid #c8c8c8;
+    padding: 25px;
+    background-color: #f9f9f9;
+}
+
+.text-pad-top{
+    padding-top:20px;
+}
+.btn-save{
+    color:white;
+    background-color: #1D7A8C;
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #1D7A8C;
+    border-radius: 27px;
+    padding: 10px 15px;
+}
+.lable-text{
+    color: #4F4F4F;
+    font-weight: 400;
+    font-family: roboto;
+    font-size: 16px;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-cancel{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #4F4F4F;
+    border-radius: 27px;
+    color: #4F4F4F;
+    font-family: roboto;
+    font-size: 16px;
+}
+.btn-cancel:hover{
+    border: 1px solid #1D7A8C !important;
+    color: #1D7A8C !important;
+}
+.head-text1{
+    font-size: 16px;
+    font-family: roboto;
+    color: #4F4F4F;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.fvrt{
+    font-size: 16px;
+    font-family: roboto;
+    color: #4F4F4F;
+}
+
+.btn-cnt{
+    float: right;
+    background-color: #1D7A8C;
+    color: white;
+    font-family: roboto;
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 27px;
+    padding: 10px 25px;
+}
+.btn-cnt:hover{
+    background-color: #29626D;
+}
+.sp-fvrt{
+    flex-direction: row;
+    text-align: center;
+    column-gap: 30px;
+}
+.sp-img{
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
+    padding: 20px;
+}
+.sp-txt{
+    font-family: roboto;
+    color: #4F4F4F;
+    text-align: center;
+}
+.btn-select{
+    background-color: transparent;
+    color: #1D7A8C;
+    font-family: roboto;
+    border: 1px solid #1D7A8C;
+
+    padding: 6px 12px;
+}
+.btn-select:hover{
+    background-color: #29626D;
+    color: white;
+}
+
+.date{
+    padding-left: 10px !important;
+}
+.form-label{
+    font-family: roboto;
+    color: #4F4F4F;
+    font-weight: 700;
+
+}
+
+
+
+.check-pet{
+    margin-top: 7px !important;
+}
+.label-txt{
+    color: #4F4F4F;
+    font-family: roboto;
+}
+.form-comment{
+    height: 150px;
+}
+.checkbox-lable{
+    max-width: 600px;
+    text-align: justify;
+    display: flex;
+    font-family: roboto;
+    color: #4F4F4F;
+}
+
+.svgImg{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+#body2{
+    display: none;
+}
+#body3{
+    display: none;
+}
+#body4{
+    display: none;
+}
+
+@media(max-width:1200px){
+    .payment{
+        display: none;
+    }
+    .tabs{
+        margin-right: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+                        /* payment card css starts */
+.card{
+    max-width: 360px;
+    width: auto;
+    box-shadow: 0px 0px 10px 0px rgba(158, 156, 156, 0.75);
+}
+.card-header{
+    background-color: #29626D !important;
+    color: white;
+    font-family: roboto;
+    font-size: 18px;
+    height: 66px;
+    text-align: left;
+    padding: 20px 20px !important;
+}
+.card-body{
+    padding: 20px !important;
+}
+#extra1{
+    font-weight: bold;
+}
+.body-text{
+    font-size: 16px;
+    color: #4F4F4F;
+    line-height: 26px;
+    font-family: roboto;
+    margin-bottom: 0px !important;
+}
+.body-text1{
+    font-size: 18px;
+    color: #4F4F4F;
+    line-height: 26px;
+    font-family: roboto;
+    margin-bottom: 0px !important;
+}
+.body-right{
+    float: right;
+    margin-bottom: 0px;
+}
+.extraS{
+    display: flex;
+    justify-content: space-between;
+}
+.body-head{
+    font-size: 18px;
+    font-family: roboto;
+    color: #1d7a8c;
+    line-height: 36px;
+}
+.body-head-right{
+    float: right;
+    font-size: 42px;
+    font-family: roboto;
+}
+.card-footer{
+    background-color: #F3F3F3 !important;
+    padding: 12px 20px !important;
+}
+.footer-img{
+    margin-right: 8px;
+}
+.footer-text{
+    margin-bottom: 0px !important;
+    font-family: roboto;
+    font-size: 14px;
+    color: #8d8d8d;
+    cursor: pointer;
+}
+
+
+.modal-title{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: roboto;
+    color: #4F4F4F;
+}
+.ul-head{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: roboto;
+    color: #4F4F4F;
+}
+.modal-ul{
+    list-style: none;
+    padding: 0px !important;
+}
+.li-img{
+    margin-right: 8px;
+}
+.modal-ul li{
+    font-family: roboto;
+    font-size: 16px;
+    color: #4F4F4F;
+    padding:8px 0px;
+}
+.btn-close{
+    background-color: transparent !important;
+}
+
+
+
+/* Modal for Payment Summary CSS */
+.payment-modal{
+    display: none;
+}
+
+@media(max-width:1200px){
+    .payment-modal{
+        font-family: roboto;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+/* CSS For Custom Checkbox */
+.custom-checkboxes{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+input[type=checkbox].CustomBox{
+    display: none;
+} 
+
+.label1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 108px;
+    border: 1px solid #C8C8C8;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0px 15px;
+}
+
+:checked + label {
+    border: 3px solid #1d7a8c;
+}
+
+.check-text{
+    display: flex;
+    justify-content: center;
+    font-family: roboto;
+    text-align: center;
+    margin-bottom: 0px !important;
+    padding: 16px 0px;
+}
+
+
+
+
+                            /* FAQ-CSS Starts */
+
+.Questions{
+    margin-top:20px ;
+}
+.que-heading{
+    text-align: center;
+    font-family: roboto; 
+    font-size: 19px;
+    font-weight: bold;
+    color: #4F4F4F;  
+}
+
+.r-arrow{
+    margin-right: 8px;
+}
+.que{
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px 0px;
+    width: 360px;
+}
+.que-text{
+    text-decoration: none;
+    color: #4F4F4F !important;
+    font-family: roboto;
+    font-size: 14px;
+}
+.que-text:hover{
+    text-decoration: none;
+}
+.ans{
+    width: 330px;    
+}
+.ans-text{
+    padding-top: 15px;
+    padding-right: 15px;
+    font-family: roboto;
+    font-size: 16px;
+    color:#646464;
+}
+
+#q1{
+    padding-left: 30px;
+}
+#q2{
+    padding-left: 30px;
+}
+#q3{
+    padding-left: 30px;
+}
+.q-footer{
+    padding-top: 15px;
+}
+.que-footer{
+    text-decoration: none;
+    color: #1d7a8c;
+    font-family: roboto;
+    font-weight: bold;
+    
+}
+.que-footer:hover{
+    text-decoration: none;
+    color: rgb(106, 189, 206);
+}

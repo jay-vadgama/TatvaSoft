@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+.navbar{
+    background-color: #525252;
+    font-family: Roboto;
+    position: relative;
+    display: flex;
+    font-size: 17px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.navbar navbar-expand-sm navbar-light{
+    padding: 0;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.welcome{
+    border-block-end: #CCCCCC 1px solid; 
+    writing-mode: horizontal-tb;
+    background-color: #f9f9f9;
+}
+.head-title{
+    text-align: center; 
+    font-family:Roboto; 
+    font-size: 30px;
+    padding-top: 38px; 
+    padding-bottom: 43px;
+    color: #4F4F4F;
+
+}
+.sidebar {
+    margin-top: 30px;
+    padding: 0;
+    width: 260px;
+    background-color: #1D7A8C;
+    position: relative;
+    height: 95%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    font-family: Roboto;
+    font-size: 18px;
+    text-decoration: none;
+
+  }
+   
+  .sidebar a.active {
+    background-color: #146371;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #146371;
+    color: white;
+
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  .table{
+    font-family:Roboto; 
+    position: relative;
+    margin-top: 30px;
+    overflow: auto;
+    color: #646464;
+    border: 2px solid #f9f9f9;
+  }
+  .thead{
+    background-color: #f9f9f9;
+  }
+.btn-cancel{
+    background-color: #FF6B6B;
+    border: none;
+    font-family: Roboto;
+    color: white;
+    border-radius: 23px;
+    font-size: 16px;
+    width: 80px;
+    height: 34px;
+}
+
+
+
+
+.vertical-line{
+  border-left: 1px solid white;
+  border-right:  1px solid white;
+  height: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+
+@media(max-width:767px){
+
+    .remove{
+        display: none;
+    }
+}
+
+
+  @media screen and (max-width: 1200px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+
+
+  
+  @media screen and (max-width: 576px) {
+    .sidebar {
+      display: none;
+    }
+    /* .table{
+      display: none;
+    } */
+  }

@@ -20,9 +20,10 @@
             header("Location: Customer-Service-History.php");
             
         }else{
-            ?>
+           ?>
             <script> 
             alert("Username or Password is Wrong.");
+            
 			window.location='Home.php';
             </script>
             <?php

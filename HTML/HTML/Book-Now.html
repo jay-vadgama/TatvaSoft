@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style6.css">
-    <!-- <link rel="stylesheet" href="style7.css"> -->
+    <link rel="stylesheet" href="CSS/Style61.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Helperland | Book Now</title>
 </head>
-<body style="height: 1500px;">
+<body style="height: auto;">
 
 <!-- Navbar Starts -->
   <section class="header">
@@ -129,14 +128,14 @@
                   <label class="form-label">When do you need the cleaner?</label>
                     <!-- sub-row class -->
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-8">
                         <div class="form-group">
                           <input class="form-control form-check-inline date" id="datepicker" type="date">
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-4">
                         <div class="form-group">
-                          <select class="form-control" id="date">
+                          <select class="form-control" onclick="" id="date">
                             <option>8:00</option>
                             <option>8:30</option>
                             <option>9:00</option>
@@ -167,26 +166,26 @@
                 <div class="col-lg-6">
                   <label class="form-label">How long do you need your cleaner to stay?</label>
                   <div class="form-group">
-                    <select class="form-control" id="hours" >
-                      <option>3.0 Hrs</option>
-                      <option>3.5 Hrs</option>
-                      <option>4.0 Hrs</option>
-                      <option>4.5 Hrs</option>
-                      <option>5.0 Hrs</option>
-                      <option>5.5 Hrs</option>
-                      <option>6.0 Hrs</option>
-                      <option>6.5 Hrs</option>
-                      <option>7.0 Hrs</option>
-                      <option>7.5 Hrs</option>
-                      <option>8.0 Hrs</option>
-                      <option>8.5 Hrs</option>
-                      <option>9.0 Hrs</option>
-                      <option>9.5 Hrs</option>
-                      <option>10.0 Hrs</option>
-                      <option>10.5 Hrs</option>
-                      <option>11.0 Hrs</option>
-                      <option>11.5 Hrs</option>
-                      <option>12.0 Hrs</option>
+                    <select class="form-control" id="HourSelected" onclick="Hour()">
+                      <option value="3">3.0 Hrs</option>
+                      <option value="3.5">3.5 Hrs</option>
+                      <option value="4">4.0 Hrs</option>
+                      <option value="4.5">4.5 Hrs</option>
+                      <option value="5">5.0 Hrs</option>
+                      <option value="5.5">5.5 Hrs</option>
+                      <option value="6">6.0 Hrs</option>
+                      <option value="6.5">6.5 Hrs</option>
+                      <option value="7">7.0 Hrs</option>
+                      <option value="7.5">7.5 Hrs</option>
+                      <option value="8">8.0 Hrs</option>
+                      <option value="8.5">8.5 Hrs</option>
+                      <option value="9">9.0 Hrs</option>
+                      <option value="9.5">9.5 Hrs</option>
+                      <option value="10">10.0 Hrs</option>
+                      <option value="10.5">10.5 Hrs</option>
+                      <option value="11">11.0 Hrs</option>
+                      <option value="11.5">11.5 Hrs</option>
+                      <option value="12">12.0 Hrs</option>
                     </select>
                   </div>
                 </div>
@@ -197,35 +196,35 @@
               <label class="form-label">Extra Services</label>
               <div class="justify-content-center custom-checkboxes">
                 <div class="Cust-checkbox">
-                    <input type="checkbox" class="CustomBox" id="Check1" onclick="Check1();" value="30 minutes">
+                    <input type="checkbox" value="0.5" class="CustomBox" id="Check1" onclick="Check1();">
                     <label for="Check1" class="label1" onclick="Check1();">
                         <img src="Images\price-1.png" id="CheckImg1" >
                     </label>
                     <p class="check-text">inside cabinets</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" class="CustomBox" id="Check2" onclick="Check2();">
+                    <input type="checkbox" value="0.5" class="CustomBox" id="Check2" onclick="Check2();">
                     <label for="Check2" class="label1" onclick="Check2();">
                         <img src="Images\price-2.png" id="CheckImg2" >
                     </label>
                     <p class="check-text">inside Fridge</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" class="CustomBox" id="Check3" onclick="Check3();">
+                    <input type="checkbox" value="0.5" class="CustomBox" id="Check3" onclick="Check3();">
                     <label for="Check3" class="label1" onclick="Check3();">
                         <img src="Images\price-3.png" id="CheckImg3" >
                     </label>
                     <p class="check-text">inside Oven</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" class="CustomBox" id="Check4" onclick="Check4();">
+                    <input type="checkbox" value="0.5" class="CustomBox" id="Check4" onclick="Check4();">
                     <label for="Check4" class="label1" onclick="Check4();">
                         <img src="Images\price-4.png" id="CheckImg4" >
                     </label>
                     <p class="check-text">Laundry Wash & Dry</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" class="CustomBox" id="Check5" onclick="Check5();">
+                    <input type="checkbox" value="0.5" class="CustomBox" id="Check5" onclick="Check5();">
                     <label for="Check5" class="label1" onclick="Check5();">
                         <img src="Images\price-5.png" id="CheckImg5" >
                     </label>
@@ -350,11 +349,11 @@
             <label class="form-label">Pay securely with Helperland payment gateway!</label>
             
             <hr>
-              
+            <form method="post" class="was-validated">
             <div class="row">
               <div class="col-lg-6">
                 <label class="form-label">Card Number</label>
-                <input class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" id="cardNum" pattern="[0-9]" type="tel" name="cardNumber" minlength="16" maxlength="16">
+                <input class="form-control cardNo" placeholder="xxxx-xxxx-xxxx-xxxx" id="cardNum" pattern="[0-9]" type="tel" name="cardNumber" minlength="19" maxlength="19" required>
               </div>
               <div class="col-lg-6">
 
@@ -363,7 +362,8 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="form-label">Month</label>
-                      <select class="form-control" id="Expmonth" >
+                      <select class="form-control" id="Expmonth" required>
+                        <option value="" hidden>--</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -382,7 +382,8 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="form-label">Expiry year</label>
-                      <select class="form-control" id="Expmonth" >
+                      <select class="form-control" id="Expmonth" required>
+                        <option value="" hidden>--</option>
                         <option>2022</option>
                         <option>2023</option>
                         <option>2024</option>
@@ -403,7 +404,7 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="form-label">CVV/CVC</label>
-                      <input type="password" pattern="[0-9]" class="form-control" placeholder="123" minlength="3" maxlength="3"/>
+                      <input type="password" pattern="[0-9]" class="form-control" placeholder="123" minlength="3" maxlength="3" required>
                     </div>
                   </div>
                 </div>
@@ -429,6 +430,9 @@
             </div>
           
             <button class="btn-cnt">Complete Booking</button>
+            
+              
+          </form>
           </div>
           <!-- tab-body 4 ends -->
     
@@ -450,16 +454,20 @@
           <div class="card">
             <div class="card-header">Payment Summary</div>
             <div class="card-body">
-              <p class="body-text">19/01/2022 08:00</p>
+              <div class="extraS">
+                <p class="body-text" id="newDate">19/01/2022</p>
+                <p class="body-right" id="newTime">08:00</p>
+              </div>
               <p class="body-text1">Duration</p>
-              
-              <p class="body-text" >Basic<span class="body-right">3 Hrs</span></p>
-              <p class="body-text" id="extra"></p>
+              <div class="extraS">
+                <p class="body-text" id="Basic">Basic</p>
+                <p class="body-right" id="BasicNewHour">3 Hrs</p>
+              </div>
+              <p class="body-text" id="extraaa"><b>Extra</b></p>
               <div class="extraS">
                 <p class="body-text" id="extraService1"></p>
                 <p class="body-right" id="extraRight1"></p>
               </div>
-              <p class="body-text" id="extra"></p>
               <div class="extraS">
                 <p class="body-text" id="extraService2"></p>
                 <p class="body-right" id="extraRight2"></p>
@@ -477,11 +485,20 @@
                 <p class="body-right" id="extraRight5"></p>
               </div>
               <hr>
-              <p class="body-text"><b>Total Service Time<span class="body-right">3 Hrs</b></span></p>
+              <div class="extraS">
+                <p class="body-text" id="TotalSerivice"><b>Total Service Time</b></p>
+                <p class="body-right" id="TotalSeriviceTime">3 Hrs</p>
+              </div>
               <hr>
-              <p class="body-text">Per Cleaning<span class="body-right"><b>60.00 €</b></span></p>
+              <div class="extraS">
+                <p class="body-text" id="">Per Cleaning</p>
+                <p class="body-right" id="">20.00 €</p>
+              </div>
               <hr>
-              <p class="body-head">Total Payment<span class="body-head-right">60.00 €</span></h6>
+              <div class="extraS">
+                <p class="body-head" id=""><b>Total Payment</b></p>
+                <p class="body-head-right" id="TotalCost">60.00 €</p>
+              </div>
             </div>
             <div class="card-footer" data-toggle="modal" data-target="#IncludeServices">
               <p class="footer-text"><img class="footer-img" src="Images/smiley.png">See What is always included</p> 
@@ -616,8 +633,13 @@
         <div class="card-header">Payment Summary <button type="button" class="btn close" data-dismiss="modal">&times;</button></div>
           <div class="modal-body">
             <div class="card-body">
-              <p class="body-text">19/01/2022 08:00</p>
-              <p class="body-text1">Duration</p>
+
+              <div class="extraS">
+                <p class="body-text" id="Date-Selected">19/01/2022</p>
+                <p class="body-right" id="time-Selected" >8:00</p>
+              </div>
+              
+              <p class="body-text" id="duration"><b>Duration</b></p>
               
               <p class="body-text" >Basic<span class="body-right">3 Hrs</span></p>
               <p class="body-text" id="extra1"></p>
@@ -647,10 +669,9 @@
               </div>
               <hr>
               <div class="extraS">
-                <p class="body-text" id="totalService"><b></b></p>
-                <p class="body-right" id="totalSeriveRight"><b></b></p>
+                <p class="body-text" id="totalServiceTime"><b>Total Service Time</b></p>
+                <p class="body-right" id="totalSeriveHours"><b>3 Hrs</b></p>
               </div>
-              <p class="body-text"><b>Total Service Time<span class="body-right">3 Hrs</b></span></p>
               <hr>
               <p class="body-text">Per Cleaning<span class="body-right"><b>60.00 €</b></span></p>
               <hr>
@@ -725,10 +746,19 @@
 
 
 
-<script src="JS/main2.js"></script>
-<script src="JS/main3.js"></script>
+    <script src="JS/main2.js"></script>
+    <script src="JS/main3.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
-</body>
+    <script>
+      $('.cardNo').on('keyup', function() {
+      var foo = $(this).val().split(" ").join(""); 
+      if (foo.length > 0) {
+        foo = foo.match(new RegExp('.{1,4}', 'g')).join(" ");
+      }
+      $(this).val(foo);
+    });
+    </script>
+  </body>
 </html>

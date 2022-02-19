@@ -18,20 +18,20 @@ class ContactModel{
             }
     }
 
-    public function Contactus($array){
+    public function insert($array){
         $firstname = $array['firstname']; 
-	    $lastname = $array['lasttname']; 
+	    $lastname = $array['lastname']; 
 	    $MobileNo = $array['MobileNo']; 
 	    $email = $array['email']; 
 	    $subject = $array['subject'];
 	    $message = $array['message']; 
-	    $file = $array['file'];
+	    $file = $array['tname'];
 
             
         // inserting into database
-	$query =  "INSERT INTO contactus (`Firstname`, `Lastname`, `Email`, `Subject`, `PhoneNumber`, `Message`,`UploadFileName`) VALUES ('$firstname','$lastname','$email','$subject','$MobileNo','$message','$file')";
-
-	$res = mysqli_query($conn,$query);
+	$query =  "INSERT INTO contactus (`Firstname`, `Lastname`, `Email`, `Subject`, `PhoneNumber`, `Message`,`UploadFileName`) VALUES ('$firstname','$lastname','$email','$subject','$MobileNo','$message','$tname')";
+	$stmt= $conn->prepare($query);
+	$stmt->execute($array);
 	if($res){
 		?>
 		<script>

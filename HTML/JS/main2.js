@@ -62,6 +62,7 @@ var rotate = document.getElementsByClassName('r-arrow');
   }
   function show2(){
     document.getElementById("tabbtn2").style.backgroundColor="#1D7A8C";
+    
     document.getElementById("tabtxt2").style.color="white";
     document.getElementById("tabimg2").src="Images/schedule-white.png";
     document.getElementById("tabbtn3").style.backgroundColor="#F3F3F3";
@@ -74,6 +75,7 @@ var rotate = document.getElementsByClassName('r-arrow');
     document.getElementById("body2").style.display="block";
     document.getElementById("body3").style.display="none";
     document.getElementById("body4").style.display="none";
+
     
   }
   function show3(){
