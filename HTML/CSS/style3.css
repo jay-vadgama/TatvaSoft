@@ -48,7 +48,7 @@
     padding: 16px;
     font-family: Roboto;
     font-size: 18px;
-    text-decoration: none;
+    text-decoration: none !important;
     border-top: 0.5px solid white;
     border-bottom: 0.5px solid white;
   }
@@ -62,7 +62,7 @@
   .sidebar a:hover:not(.active) {
     background-color: #146371;
     color: white;
-
+    text-decoration: none !important;
   }
   
   div.content {

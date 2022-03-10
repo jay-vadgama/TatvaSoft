@@ -19,7 +19,7 @@
 <section class="header">
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg fixed-top">
-			  <a class="navbar-brand" href="Home.html"><img class="logo" src="Images/Logo_Helperland.png"></a>
+			  <a class="navbar-brand" href="Home.php"><img class="logo" src="Images/Logo_Helperland.png"></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 			  </button>
@@ -29,7 +29,7 @@
                 <a class="nav-link" href="Book-Now.php">Book now</a>
               </li>
               <li class="nav-item r1">
-                <a class="nav-link" href="Price.html">Prices & Services</a>
+                <a class="nav-link" href="Price.php">Prices & Services</a>
               </li>
               <li class="nav-item r1">
                 <a class="nav-link" href="#">Warrenty</a>
@@ -58,14 +58,14 @@
 </div>
 
 <!-- Contact Heading Starts -->
-    <div class="container-fluid">
-      <p class="txt1">Contact us</p>
-      </div>
-      <div class="line-div">
-        <hr class="left-line">
-        <img src="Images/separator.png" class="img-sep">
-        <hr class="right-line">
-      </div>
+<div class="container-fluid">
+  <p class="txt1">Contact us</p>
+</div>
+<div class="line-div">
+  <hr class="left-line">
+    <img src="Images/separator.png" class="img-sep">
+  <hr class="right-line">
+</div>
 <!-- Contact Heading Ends -->
 
 <!-- Contact-us Starts -->
@@ -97,16 +97,16 @@
 
 <section class="form-section">
   <div class="container">
-    <form action="insert.php" method="post" enctype="multipart/form-data">
+    <form action="insert.php" class="was-validated" method="post" enctype="multipart/form-data">
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="form-group">
-         <input class="form-control" type="text" id="fname" name="firstname" placeholder="First Name">
+         <input class="form-control" type="text" id="fname" name="firstname" placeholder="First Name" required>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="form-group">
-         <input class="form-control" type="text" id="lname" name="lastname" placeholder="Last Name">
+         <input class="form-control" type="text" id="lname" name="lastname" placeholder="Last Name" required>
         </div>
       </div>
     </div>
@@ -118,13 +118,13 @@
               <div class="input-group-prepend">
                 <div class="input-group-text">+91</div>
               </div>
-                <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number" minlength="10" maxlength="10">
+                <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number" minlength="10" maxlength="10" required>
             </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="form-group text-pad-top" >
-          <input class="form-control" type="email" id="email" name="email" placeholder="Email address">
+          <input class="form-control" type="email" id="email" name="email" placeholder="Email address" required>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@
     <div class="row justify-content-center" >
       <div class="col-lg-8 col-md-12 col-sm-12">
         <div class="form-group text-pad-top">
-          <select class="form-control" name="subject">
+          <select class="form-control" name="subject" required>
             <option value="" hidden>Subject</option>
             <option value="Service">Service</option>
             <option value="Contact">Contact</option>
@@ -176,44 +176,7 @@
 </div>
 
 
-<!-- Footer Started -->
-<section class="footer-part">
-	<div class="container-fluid footer" id="mainFooter">
-	  <div class="row f-row">
-		<div class="col-sm-3 logo_position">
-		  <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
-		</div>
-		  <div class="col-sm-6 footer_links">
-			<p class="footer_p">
-			  <a href="#" class="footer_link_decoration">HOME</a>   
-			  <a href="#" class="footer_link_decoration">ABOUT</a>   
-			  <a href="#" class="footer_link_decoration">TESTIMONIALS</a>   
-			  <a href="#" class="footer_link_decoration">FAQS</a>  
-			  <a href="#" class="footer_link_decoration">INSURANCE</a>   
-			  <a href="#" class="footer_link_decoration">POLICY</a>   
-			  <a href="#" class="footer_link_decoration">IMPRESSUM</a>  
-			</p>
-		  </div>
-			<div class="col-sm-3 footer_media_icon" >
-				<a href=#><img src="Images/fb.png" class="footer_media_logo"></a>
-				<a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
-			</div>
-	  </div>
-	</div>     
-  
-  <!-- footer-policy starts-->
-	<div class="container-fluid footer_policy" id="privacyPolicy">
-	  <p class="policy_p">©2018 Helperland. All rights reserved. 
-		<a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a> </p>
-	  <div class="okay-btn">
-		<button type="submit" onclick="footerPolicy()" class="btn btn2">OK!</button>
-	  </div>
-	</div>
-  <!-- footer-policy ends -->
-  
-  </section>
-  <!-- Footer Ended -->
-
+<?php include 'include/comman_footer.php' ?>
   <script>
     $('#File1').on('change',function(){
         //get the file name

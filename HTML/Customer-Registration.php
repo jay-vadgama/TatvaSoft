@@ -3,10 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome to Price Page.</title>
+	<title>Helperland | Customer's Registration</title>
+  <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" type="text/css" href="CSS/S1.css">
+  <script src="JS/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
 </head>
 <body>
 
@@ -24,7 +29,7 @@
                   <a class="nav-link" href="#">Book now</a>
                 </li>
                 <li class="nav-item r1 ">
-                  <a class="nav-link active" href="#">Prices & Services</a>
+                  <a class="nav-link" href="#">Prices & Services</a>
                 </li>
                 <li class="nav-item r1">
                   <a class="nav-link" href="#">Warrenty</a>
@@ -47,6 +52,7 @@
     </div>
 </section>
 <!-- Navbar Ends -->
+
 <div class="price-bg">
     <div class="container-fluid">
         <p class="txt">Create an Account</p>
@@ -59,146 +65,82 @@
 </div>
 
 
+<!-- Registration-Form starts -->
 <section class="form-section">
-    <div class="container-fluid">
-      <form action="InsertRegistration.php" method="post">
+  <div class="container-fluid">
+    <form action="InsertRegistration.php" class="was-validated" method="post">
       <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="form-group">
-           <input class="form-control" type="text" id="fname" name="firstname" placeholder="First Name">
+            <input class="form-control" type="text" id="fname" name="firstname" placeholder="First Name" required>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="form-group">
-           <input class="form-control" type="text" id="lname" name="lastname" placeholder="Last Name">
+           <input class="form-control" type="text" id="lname" name="lastname" placeholder="Last Name" required>
           </div>
         </div>
       </div>
-  
       <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="form-group text-pad-top" >
-            <input class="form-control" type="email" id="email" name="email" placeholder="Email address">
+            <input class="form-control" type="email" id="email" name="email" placeholder="Email address" required>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="form-group text-pad-top">
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">+91</div>
-                  </div>
-                    <input class="form-control" type="tel" id="MobileNo" name="MobileNo" minlength="10" maxlength="10" placeholder="Mobile Number">
-                </div>
+          <div class="form-group text-pad-top">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">+91</div>
+              </div>
+              <input class="form-control" type="tel" id="MobileNo" name="MobileNo" minlength="10" maxlength="10" placeholder="Mobile Number" required>
             </div>
           </div>
+        </div>
       </div>
-  
       <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-6 ">
           <div class="form-group">
-           <input class="form-control" type="password" id="password" name="password" placeholder="Enter Password">
+           <input class="form-control" type="password" id="password" name="password" placeholder="Enter Password" required>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 ">
           <div class="form-group">
-           <input class="form-control" type="password" id="re-password" name="re-password" placeholder="Repeat Password">
+           <input class="form-control" type="password" id="re-password" name="re-password" placeholder="Repeat Password" required>
           </div>
         </div>
       </div>
-
-
-    <div class="row justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-lg-8 col-md-6 col-sm-6 ">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Check1">
-                <label class="form-check-label" for="Check1">
-                    I have read the <a href=""> privacy policy.</a>
-                </label>
+              <input class="form-check-input" type="checkbox" value="" id="Check1">
+              <label class="form-check-label" for="Check1">
+                I have read the <a href=""> privacy policy.</a>
+              </label>
             </div>
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
+          </div>
+      </div>
+      <div class="row justify-content-center">
         <div class="col-lg-8 col-md-6 col-sm-6 ">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Check2">
-                <label class="form-check-label" for="Check2">
-                    I agree with the <a href=""> terms and conditions</a> of Helperland.
-                </label>
-            </div>
-        </div>
-    </div>
-
-      <div class="btn-center">
-        <div >
-          <button type="submit" name="registerBtn" class="btn btn-center-submit" >Register</button>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Check2">
+            <label class="form-check-label" for="Check2">
+              I agree with the <a href="#"> terms and conditions</a> of Helperland.
+            </label>
+          </div>
         </div>
       </div>
-  
-     </form>
-    </div>
+      <div class="btn-center">
+        <button type="submit" name="registerBtn" class="btn btn-center-submit" >Register</button>
+      </div>
+    </form>
+  </div>
 </section>
+<!-- Registration-Form Ends -->
 
 
+<?php include 'include/comman_footer.php' ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Footer Started -->
-<section class="footer-part">
-	<div class="container-fluid footer" id="mainFooter">
-	  <div class="row f-row">
-		<div class="col-sm-3 logo_position">
-		  <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
-		</div>
-		  <div class="col-sm-6 footer_links">
-			<p class="footer_p">
-			  <a href="#" class="footer_link_decoration">HOME</a>   
-			  <a href="#" class="footer_link_decoration">ABOUT</a>   
-			  <a href="#" class="footer_link_decoration">TESTIMONIALS</a>   
-			  <a href="#" class="footer_link_decoration">FAQS</a>  
-			  <a href="#" class="footer_link_decoration">INSURANCE</a>   
-			  <a href="#" class="footer_link_decoration">POLICY</a>   
-			  <a href="#" class="footer_link_decoration">IMPRESSUM</a>  
-			</p>
-		  </div>
-			<div class="col-sm-3 footer_media_icon" >
-				<a href=#><img src="Images/fb.png" class="footer_media_logo"></a>
-				<a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
-			</div>
-	  </div>
-	</div>     
-  
-  <!-- footer-policy starts-->
-	<div class="container-fluid footer_policy" id="privacyPolicy">
-	  <p class="policy_p">©2018 Helperland. All rights reserved. 
-		<a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a> </p>
-	  <div class="okay-btn">
-		<button type="submit" onclick="footerPolicy()" class="btn btn2">OK!</button>
-	  </div>
-	</div>
-  <!-- footer-policy ends -->
-  
-  </section>
-  <!-- Footer Ended -->
-    <script src="JS/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+    
 </body>
 </html>

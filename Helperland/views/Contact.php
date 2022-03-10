@@ -101,7 +101,7 @@
 
 <section class="form-section">
   <div class="container">
-    <form action="<?=  $base_url.'?controller=Contact&function=ContactUs' ?>" method="post" enctype="multipart/form-data">
+    <form action="<?php $base_url.'?controller=Contact&function=ContactUs' ?>" method="post" enctype="multipart/form-data">
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="form-group">

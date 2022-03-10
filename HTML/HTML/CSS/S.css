@@ -3,7 +3,7 @@
 .body *{
     font-family: roboto !important;
 }
-/* .HTML/Images/Home_BG.png */
+
 .img-fluid{
     background-image: url("../Images/Home_BG.png");
     background-repeat: no-repeat;

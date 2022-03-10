@@ -23,45 +23,10 @@
     <title>Helperland | Welcome to homepage.</title>
     <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
 </head>
-<body>
+<body style="scroll-behavior: smooth !important;">
   <div class="img-fluid">
-      <!-- Navbar Started -->
-      <section class="Header">
 
-        <nav class="navbar navbar-expand-lg bgcolor fixed-top">
-            <a class="navbar-brand" href="#"><img class="logo" src="Images/Logo_Helperland.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white;font-size: 28px;"></i></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item round" >
-                    <a class="nav-link" href="#">Book a Cleaner</a>
-                  </li>
-                  <li class="nav-item r1">
-                    <a class="nav-link" href="Price.html">Prices</a>
-                  </li>
-                  <li class="nav-item r2">
-                    <a class="nav-link" href="#">Our Guarrantee</a>
-                  </li>
-                  <li class="nav-item r3">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li>
-                  <li class="nav-item r4">
-                    <a class="nav-link" href="#">Contact us</a>
-                  </li>
-                  <li class="nav-item round">
-                    <a class="nav-link" id="logModal" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
-                  </li>
-                  <li class="nav-item round">
-                    <a class="nav-link " href="#">Beacome a Helper</a>
-                  </li>
-              </ul>
-            </div>
-          </nav>
-        </section>
-        <!-- Navbar Ends -->
+  <?php include 'include/home_navbar.php' ?>
 
 <!-- Login-Modal Starts -->
 <section class="Login-Modal">
@@ -336,43 +301,9 @@
 
 
 
-<!-- Footer Started -->
-<section class="footer-part">
-  <div class="container-fluid footer" id="mainFooter">
-    <div class="row">
-      <div class="col-sm-3 logo_position">
-        <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
-      </div>
-        <div class="col-sm-6 footer_links">
-          <p class="footer_p">
-            <a href="#" class="footer_link_decoration">HOME</a>
-            <a href="#" class="footer_link_decoration">ABOUT</a>
-            <a href="#" class="footer_link_decoration">TESTIMONIALS</a>
-            <a href="#" class="footer_link_decoration">FAQS</a>
-            <a href="#" class="footer_link_decoration">INSURANCE</a>
-            <a href="#" class="footer_link_decoration">POLICY</a>
-            <a href="#" class="footer_link_decoration">IMPRESSUM</a>
-          </p>
-        </div>
-          <div class="col-sm-3 footer_media_icon" >
-              <a href=#><img src="Images/fb.png" class="footer_media_logo"></a>
-              <a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
-          </div>
-    </div>
-  </div>
-
-<!-- footer-policy starts-->
-  <div class="container-fluid footer_policy" id="privacyPolicy">
-    <p class="policy_p">©2018 Helperland. All rights reserved.
-      <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a> </p>
-    <div class="okay-btn">
-      <button type="submit" onclick="footerPolicy()" class="btn btn2">OK!</button>
-    </div>
-  </div>
-<!-- footer-policy ends -->
-
-</section>
-<!-- Footer Ended -->
+<?php 
+  include 'include/home_footer.php';
+?>
 
 
 

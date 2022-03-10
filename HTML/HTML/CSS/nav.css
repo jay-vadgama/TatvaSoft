@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+.logo{
+    max-height: 54px !important;
+    max-width:74px  !important;
+    margin-left: 15px !important;
+}
+
+.navbar{
+    background-color: #525252;
+    padding: 0px !important;
+    opacity: 0.9;
+}
+.navbar-nav{
+    font-family: Roboto;
+    text-align: right;
+    font-size: 17px;
+}
+.navbar-toggler{
+    border: 1px solid white !important;
+    margin-right: 15px !important;
+}
+.fa-bars{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.nav-item{
+    margin-right: 10px;
+}
+.nav-link{
+    margin: auto !important;
+    font-size: 17px !important;
+    padding:  8px 23px!important;
+}
+/* .navbar-nav .nav-link:hover{
+    color: #29626D !important;
+} */
+.link1:hover{
+    color: #29626D !important;
+}
+
+
+@media(max-width:1200px){
+    .navbar-nav .nav-link{
+        padding:  8px 15px!important;
+    }
+}
+.navbar-light .navbar-toggler{
+    border: 2px solid white !important;
+}
+
+.round{
+    border:  1px solid rgba(255,255,255,.5);
+    border-radius: 22px;
+    text-align: center;
+    background-color: #29626D ;
+}
+
+.round:hover{
+    border: 1px solid #29626D ;
+    border-radius: 22px;
+    text-align: center;
+    color: #29626D !important;
+    background-color: white;
+}
+
+.r{
+    border: 1px solid rgba(255,255,255,.5) !important;
+    border-radius: 22px;
+    text-align: center;
+    background-color: transparent !important;
+}
+.r1:hover{
+    border: 1px solid rgba(255,255,255,.5) !important;
+    border-radius: 22px;
+    color: white !important;
+    text-align: center;
+    background-color: transparent;   
+}
+@media(max-width:991px){
+    .active{
+        text-decoration: underline;
+    }
+    .round{
+        border: transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+        
+    }
+    .r{
+        border: transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+    }
+    .r1:hover{
+        border: transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+    }
+}

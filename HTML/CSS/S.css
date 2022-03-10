@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
-.body *{
-    font-family: roboto !important;
-}
 
 .img-fluid{
     background-image: url("../Images/Home_BG.png");
@@ -52,49 +49,49 @@
 
 .bgcolor.scrolled{
     background-color: rgb(63, 63, 63);
-    transition: ease-in-out .5s;
+    transition: ease-in-out .2s;
     height: auto;
     opacity: 0.9;
 }
 .bgcolor.scrolled .navbar-brand img{
     height: 50%;
     width: 50%;
-    transition:ease-in-out .9s;
+    transition:ease-in-out .5s;
 } 
 .round{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 }
 .round:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     background-color: #29626D !important;
     transition: ease-out 0.8s;
 }
 .r1:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 }
 .r2:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 
 }
 .r3:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 }
 .r4:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
@@ -455,9 +452,7 @@ ol, ul{
     transform: translateY(15px);
   }
 
-  #part2{
-    transition: ease-in-out .1s;
-  }
+
   .heading{
     color: #4F4F4F ;
     text-align: center !important;
@@ -853,6 +848,11 @@ ol, ul{
 
 
 
+
+
+
+
+/* Footer CSS Starts */
 .footer{
     background-color: black !important;
     padding: 20px 0px; 
@@ -881,10 +881,11 @@ ol, ul{
 }
 .footer_link_decoration{
     text-decoration: none !important;
-    color: white !important
+    color: white;
 }
 .footer_link_decoration:hover{
-    color:yellow !important;
+    color: #007bff;
+    transition: ease-out 0.3s;
 }
 .footer_media_icon{
     padding: 10px 0px;
@@ -897,7 +898,7 @@ ol, ul{
     padding:10px !important;
 }
 .footer_media_logo:hover{
-    filter: invert(0.2) sepia(1) saturate(2.8) hue-rotate(0deg) brightness(1);
+    filter: brightness(0) saturate(100%) invert(30%) sepia(35%) saturate(5332%) hue-rotate(201deg) brightness(105%) contrast(103%) !important;
 }
 .footer_policy{
     background-color: #292929;

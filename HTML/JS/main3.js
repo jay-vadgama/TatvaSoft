@@ -14,7 +14,6 @@ function Check1(){
   var addR1 = document.getElementById("extraRight1");
   var addS11 = document.getElementById("extraService11");
   var addR11 = document.getElementById("extraRight11");
-  var addd = document.getElementById("extra1");
   if(!c1.checked){
     
     // console.log(addS1);

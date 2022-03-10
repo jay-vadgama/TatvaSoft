@@ -11,8 +11,9 @@ class ContactController{
     public function ContactUs(){
         if (isset($_POST)) 
         {
-            $base_url = "http://localhost/TatvaSoft/Helperland/?controller=Contact&function=insert";
+            $base_url = "http://localhost/TatvaSoft/Helperland/";
             
+                
                 $firstname = $_POST['firstname']; 
                 $lastname = $_POST['lastname']; 
                 $MobileNo = $_POST['MobileNo'];
@@ -31,17 +32,9 @@ class ContactController{
             
                 //moving from temp to permanent
                 move_uploaded_file($tname, $uploads_dir.'/'.$pname);
-                $array = [
-                    'firstname' => $firstname,
-                    'lastname' => $lastname,
-                    'MobileNo' => $MobileNo,
-                    'email' => $email,
-                    'subject' => $subject,
-                    'message' => $message,
-                    'tname' => $tname,
-                ];
+                
             
-            $res = $this->model->insert($array);
+            $res = $this->model->insert($firstname,$lastname,$MobileNo,$email,$subject,$message,$file);
             header('Location:' . $base_url);
         }else {
             echo 'Error Occured Try Again';

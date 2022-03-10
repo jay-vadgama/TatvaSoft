@@ -1,7 +1,3 @@
-<?php
-  include 'config.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +19,7 @@
   <section class="header">
     <div class="container-fluid">  
       <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#"><img class="logo" src="Images/Logo_Helperland.png"></a>
+        <a class="navbar-brand" href="Home.php"><img class="logo" src="Images/Logo_Helperland.png"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
@@ -55,7 +51,7 @@
         </nav>
     </div>
   </section>
-  <!-- Navbar Ends -->
+<!-- Navbar Ends -->
 
 <!-- Book-now BG img  -->
 <div class="bg-book">
@@ -89,16 +85,16 @@
         <!-- tabs-Header Starts -->
         <div class="d-flex justify-content-center flex-nowrap">
           <div class="tab1">
-            <button class="setup-btn1" id="tabbtn1" onclick="show1()"><img id="tabimg1" class="tab-img" src="Images/setup-service-white.png" alt=""><p id="tabtxt1" class="setup">Setup Service</p></button>
+            <button class="setup-btn1" id="tabbtn1" onclick="show1();"><img id="tabimg1" class="tab-img" src="Images/setup-service-white.png" alt=""><p id="tabtxt1" class="setup">Setup Service</p></button>
           </div>
           <div class="tab2">
-            <button class="setup-btn" id="tabbtn2" onclick="show2()" disabled><img id="tabimg2" class="tab-img" src="Images/schedule.png" alt=""><p id="tabtxt2" class="setup">Schedule & Plan</p></button>
+            <button class="setup-btn" id="tabbtn2" onclick="show2();" disabled><img id="tabimg2" class="tab-img" src="Images/schedule.png" alt=""><p id="tabtxt2" class="setup">Schedule & Plan</p></button>
           </div>
           <div class="tab3">
-            <button class="setup-btn" id="tabbtn3" onclick="show3()" disabled><img id="tabimg3" class="tab-img" src="Images/details.png" alt=""><p id="tabtxt2" class="setup"><p id="tabtxt3" class="setup">Your Details</p></button>
+            <button class="setup-btn" id="tabbtn3" onclick="show3();" disabled><img id="tabimg3" class="tab-img" src="Images/details.png" alt=""><p id="tabtxt2" class="setup"><p id="tabtxt3" class="setup">Your Details</p></button>
           </div>
           <div class="tab4">
-            <button class="setup-btn" id="tabbtn4" onclick="show4()" disabled><img id="tabimg4" class="tab-img" src="Images/payment.png" alt=""><p id="tabtxt4" class="setup">Make Payment</p></button>
+            <button class="setup-btn" id="tabbtn4" onclick="show4();" disabled><img id="tabimg4" class="tab-img" src="Images/payment.png" alt=""><p id="tabtxt4" class="setup">Make Payment</p></button>
           </div>
         </div>
         <!-- tabs-Header Ends -->
@@ -300,6 +296,8 @@
                   success:function(res){
                     console.log(res);
                     if(res=='true'){
+                      document.getElementById("tabbtn2").removeAttribute('disabled');
+                      document.getElementById("tabbtn3").removeAttribute('disabled');
                       show3();
                     }
                     else{
@@ -319,7 +317,7 @@
 
           <!-- tab-body 3 starts -->
           <div class="tab-body3" id="body3">
-            <form action="" method="post">
+            <form action="" method="post" class="was-validated">
               <p class="head-text">Enter your contact details, so we can serve you in better way!</p>
               <div class="form-check form-address">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
@@ -372,14 +370,14 @@
                         <div class="input-group-prepend">
                           <div class="input-group-text">+91</div>
                         </div>
-                        <input class="form-control" type="tel" id="MobileNo" name="mobileNo" placeholder="Mobile Number" >
+                        <input class="form-control" type="tel" id="MobileNo" name="mobileNo" maxlength="10" placeholder="Mobile Number" required>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="btns">
-                  <button class="btn-save" onclick="">Save</button>
-                  <button class="btn-cancel" name="tab-btn3" onclick="btnclose()">Cancel</button>
+                  <button class="btn-save" name="tab-btn3" onclick="">Save</button>
+                  <button class="btn-cancel"  onclick="btnclose()">Cancel</button>
                 </div>
               </form>
             </div>
@@ -414,18 +412,21 @@
                   url:"http://localhost/TatvaSoft/HTML/insertBooknow.php",
                   method:"post",
                   data:$('#tab-form3').serialize(),
-                  success:function(res){
-                    if(res=='true'){
+                  success:function(data){
+                    if(data=='true'){
+                      document.getElementById("tabbtn4").removeAttribute('disabled');
                       show4();                    
                     }
                     else{
-                      console.log(res);
+                      console.log(data);
                       alert('Something went Wrong!');
                     }
                   }
                 });
               });
-            </script>      
+            </script>   
+            
+            
           <!-- tab-body 4 starts -->
           <div class="tab-body4" id="body4">
             <label class="form-label">Pay securely with Helperland payment gateway!</label>
@@ -526,7 +527,10 @@
                   data:$('#tab-form4').serialize(),
                   success:function(res){
                     if(res=='true'){
-                      show4();                    
+                      document.getElementById("tabbtn2").removeAttribute('disabled');
+                      document.getElementById("tabbtn3").removeAttribute('disabled');
+                      document.getElementById("tabbtn4").removeAttribute('disabled');
+                      console.log(res);                    
                     }
                     else{
                       console.log(res);

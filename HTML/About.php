@@ -6,8 +6,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" type="text/css" href="CSS/S1.css">
-	<title>About us</title>
+	<title>Helperland | About us</title>
   <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
+  <script src="JS/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+
 </head>
 <body>
 
@@ -93,49 +98,9 @@
   </div>
 </div>
 
-<!-- Footer Started -->
-<section class="footer-part">
-  <div class="container-fluid footer" id="mainFooter">
-    <div class="row f-row">
-      <div class="col-sm-3 logo_position">
-        <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
-      </div>
-        <div class="col-sm-6 footer_links">
-          <p class="footer_p">
-            <a href="#" class="footer_link_decoration">HOME</a>   
-            <a href="#" class="footer_link_decoration">ABOUT</a>   
-            <a href="#" class="footer_link_decoration">TESTIMONIALS</a>   
-            <a href="#" class="footer_link_decoration">FAQS</a>  
-            <a href="#" class="footer_link_decoration">INSURANCE</a>   
-            <a href="#" class="footer_link_decoration">POLICY</a>   
-            <a href="#" class="footer_link_decoration">IMPRESSUM</a>  
-          </p>
-        </div>
-          <div class="col-sm-3 footer_media_icon" >
-              <a href=#><img src="Images/fb.png" class="footer_media_logo"></a>
-              <a href=#><img src="Images/insta.png" class="footer_media_logo"></a>
-          </div>
-    </div>
-  </div>     
-
-<!-- footer-policy starts-->
-  <div class="container-fluid footer_policy" id="privacyPolicy">
-    <p class="policy_p">©2018 Helperland. All rights reserved. 
-      <a href=# style="color: #9ba0a3;">Terms and Conditions</a> | <a href=# style="color: #9ba0a3;">Privacy Policy</a> </p>
-    <div class="okay-btn">
-      <button type="submit" onclick="footerPolicy()" class="btn btn2">OK!</button>
-    </div>
-  </div>
-<!-- footer-policy ends -->
-
-</section>
-<!-- Footer Ended -->
 
 
+<?php include 'include/comman_footer.php' ?>
 
-    <script src="JS/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
 </body>
 </html>

@@ -25,10 +25,14 @@ include 'config.php';
         $HasPet = isset($_POST['HasPet'])!=""? $_POST['HasPet'] : '';
         $check = isset($_POST['check'])!=""? $_POST['check']: [];
         $checksum = count($check);
+        $charge_extra = $checksum* 10;
+        $total = $charge_extra + $ServiceHour*20;
         $temp_date = strtotime($ServiceDate.' '.$ServiceStartTime);
         $date = date('Y-m-d h:i:s', $temp_date);
 
-        $sql =  "INSERT INTO servicerequest (`ServiceStartDate`,`ServiceHours`,`ExtraHours`, `Comments`, `ServiceHourlyRate`,`HasPets`) VALUES ('$date','$ServiceHour','$checksum','$comments','20','$HasPet')";
+
+
+        $sql =  "INSERT INTO servicerequest (`ServiceStartDate`,`ServiceHours`,`ExtraHours`, `Comments`, `ServiceHourlyRate`,`HasPets`,`SubTotal`,`TotalCost`) VALUES ('$date','$ServiceHour','$checksum','$comments','20','$HasPet','$total','$total')";
         $res = mysqli_query($conn,$sql);
         if($res==1){
             echo 'true';
@@ -38,6 +42,7 @@ include 'config.php';
         }    
     }
 
+     
     if(isset($_POST['streetName']) || isset($_POST['houseNo']) || isset($_POST['postalCode']) || isset($_POST['city']) || isset($_POST['mobileNo'])  ){
         $streetName = $_POST['streetName'];
         $postalCode = $_POST['postalCode'];
@@ -46,6 +51,7 @@ include 'config.php';
         $houseNo = $_POST['houseNo'];
         $sql = "INSERT INTO useraddress (AddressLine1, AddressLine2, PostalCode, State, City, Mobile, Email) VALUES('$streetName', '$houseNo', '$postalCode', 'Gujarat',  '$city', '$mobileNo', null)"; 
         $res = mysqli_query($conn,$sql);
+        // echo $res;
         if($res==1){
             echo 'true';
         }
@@ -59,10 +65,10 @@ include 'config.php';
         $cardMonth = $_POST['cardMonth'];
         $cardYear = $_POST['cardYear'];
         $cardCVV = $_POST['cardCVV'];
-        ?>
-        <script>
-            alert("Booking is Succefully Completed.");
-        </script>
-        <?php
+        
+        // $Query = "SELECT `ServiceRequestId` FROM `servicerequest` WHERE cvv = '$cardCVV'";
+        $query = "INSERT INTO servicerequest (cvv)  VALUES('$cardCVV')";
+        $result = mysqli_query($conn,$query); 
+        
     }
 ?>

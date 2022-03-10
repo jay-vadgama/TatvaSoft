@@ -18,32 +18,23 @@ class ContactModel{
             }
     }
 
-    public function insert($array){
-        $firstname = $array['firstname']; 
-	    $lastname = $array['lastname']; 
-	    $MobileNo = $array['MobileNo']; 
-	    $email = $array['email']; 
-	    $subject = $array['subject'];
-	    $message = $array['message']; 
-	    $file = $array['tname'];
-
-            
-        // inserting into database
-	$query =  "INSERT INTO contactus (`Firstname`, `Lastname`, `Email`, `Subject`, `PhoneNumber`, `Message`,`UploadFileName`) VALUES ('$firstname','$lastname','$email','$subject','$MobileNo','$message','$tname')";
-	$stmt= $conn->prepare($query);
-	$stmt->execute($array);
-	if($res){
+    public function insert($firstname,$lastname,$MobileNo,$email,$subject,$message,$file){
+                   
+    // inserting into database
+	$query =  "INSERT INTO contactus (`Firstname`, `Lastname`, `Email`, `Subject`, `PhoneNumber`, `Message`,`UploadFileName`) VALUES ('$firstname','$lastname','$email','$subject','$MobileNo','$message')";
+	$stmt=  $this->conn->prepare($query);
+	if($stmt){
 		?>
 		<script>
 			alert("Data Inserted Successfully!");
-			window.location='Contact.php';
+			
 			</script>
 			<?php
 	}else{
 		?>
 		<script>
 			alert("Data Not Inserted");
-			window.location='Contact.php';
+			// window.location='Contact.php';
 			</script>
 			<?php
 	}
