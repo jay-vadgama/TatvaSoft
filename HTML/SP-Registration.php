@@ -2,53 +2,17 @@
 <html>
 <head>
     <title>Helperland | Become a Service Provider</title>
-    <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <?php include('include/links.php'); ?>
     <link rel="stylesheet" href="CSS/style1.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="JS/main.js"></script>
     <script src="JS/main3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body style="scroll-behavior: smooth;">
     <div class="img-fluid" id="top">
-        <section class="Header">
-            <nav class="navbar navbar-expand-lg bgcolor fixed-top">
-                <a class="navbar-brand" href="#"><img class="logo" src="Images/Logo_Helperland.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white;font-size: 28px;"></i></span>
-                </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item round">
-                        <a class="nav-link" href="#">Book a Cleaner</a>
-                    </li>
-                    <li class="nav-item r1">
-                        <a class="nav-link" href="Price.html">Prices</a>
-                    </li>
-                    <li class="nav-item r2">
-                        <a class="nav-link" href="#">Our Guarrantee</a>
-                    </li>
-                    <li class="nav-item r3">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item r4">
-                        <a class="nav-link" href="#">Contact us</a>
-                    </li>
-                    <li class="nav-item round">
-                        <a class="nav-link li-modal" href="Home.html" >Login</a>
-                    </li>
-                    <li class="nav-item round">
-                        <a class="nav-link " href="#">Beacome a Helper</a>
-                    </li>
-                </ul>
-            </div>
-            </nav>
-        </section>
+    <?php 
+        include 'include/home_navbar.php';
+        include 'include/login-forgot-Modal.php';
+    ?>
 
 <section class="become-pro-section" id="top">
     <div class="container-fluid">
@@ -134,67 +98,69 @@
         <div class="container-fluid">
             <p class="txt">How it works</p>
         </div>
-    
 
-
-<section class="how-it-works-services">
-    <div class="container steps">
-        <div class="row justify-content-center">
-            <div class="step1">
-                <div class="step1-left">
-                    <p class="how-it-works-services-title">Register yourself</p>
-                    <p class="how-it-works-services-content">Provide your basic information to register yourself as a service provider.</p>
-                </div>
-                <div class="step1-right">
-                    <img class="step-img" src="Images/Page-6-Img-1.png">
-                </div>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="step2">
-                <div class="step2-left">
-                    <img class="step-img" src="Images/Page-6-Img-2.png">
-                </div>
-                <div class="step2-right">
-                    <p class="how-it-works-services-title">Get service requests</p>
-                    <p class="how-it-works-services-content">You will get service requests from customes depend on service area and profile.</p>
+        <!-- How-it-works-Steps Starts -->
+        <section class="how-it-works-services">
+            <div class="container steps">
+                <div class="row justify-content-center">
+                    <div class="step1">
+                        <div class="step1-left">
+                            <p class="how-it-works-services-title">Register yourself</p>
+                            <p class="how-it-works-services-content">Provide your basic information to register yourself as a service provider.</p>
+                        </div>
+                        <div class="step1-right">
+                            <img class="step-img" src="Images/Page-6-Img-1.png">
+                        </div>
+                    </div>
                 </div>
                 
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="step3">
-                <div class="step3-left">
-                    <p class="how-it-works-services-title">Complete service</p>
-                    <p class="how-it-works-services-content">Accept service requests from your customers and just complete your work.</p>
+                <div class="row justify-content-center">
+                    <div class="step2">
+                        <div class="step2-left">
+                            <img class="step-img" src="Images/Page-6-Img-2.png">
+                        </div>
+                        <div class="step2-right">
+                            <p class="how-it-works-services-title">Get service requests</p>
+                            <p class="how-it-works-services-content">You will get service requests from customes depend on service area and profile.</p>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="step3-right">
-                    <img class="step-img" src="Images/Page-6-Img-3.png">
+                
+                <div class="row justify-content-center">
+                    <div class="step3">
+                        <div class="step3-left">
+                            <p class="how-it-works-services-title">Complete service</p>
+                            <p class="how-it-works-services-content">Accept service requests from your customers and just complete your work.</p>
+                        </div>
+                        <div class="step3-right">
+                            <img class="step-img" src="Images/Page-6-Img-3.png">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- How-it-works-Steps Ends -->
+
     </div>
 </section>
-</div>
-</section>
 
 
 
-<a href="#top" class="to-top">
+<!-- <a href="#top" class="to-top">
     <img src="Images/forma-111.png">
-</a>
+</a> -->
 
 <?php include 'include/comman_footer.php' ?>
 
-  
-    <!-- <script >
-        $('.li-modal').on('click', function(e){
-    e.preventDefault();
-    $('#loginModal').modal('show').find('.modal').load($(this).attr('href'));
+<script>
+    $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".fixed-top");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
   });
-    </script> -->
-    
+</script>
+
 </body>
 </html>

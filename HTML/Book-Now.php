@@ -320,8 +320,15 @@
             <form action="" method="post" class="was-validated">
               <p class="head-text">Enter your contact details, so we can serve you in better way!</p>
               <div class="form-check form-address">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-                  <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="" checked>
+                  <label class="form-check-label" for="radio1">
+                    <p class="p-address"><b>Address:</b> Street 2 40, Troisdorf 53844</p>
+                    <p class="p-address"><b>Phone no:</b> 9624527786</p>
+                  </label>
+              </div>
+              <div class="form-check form-address">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="" >
+                  <label class="form-check-label" for="radio2">
                     <p class="p-address"><b>Address:</b> Street 2 40, Troisdorf 53844</p>
                     <p class="p-address"><b>Phone no:</b> 9624527786</p>
                   </label>

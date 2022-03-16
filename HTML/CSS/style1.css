@@ -13,11 +13,11 @@
     height: 100%;
 }
 .logo{
-    max-height: 130px;
-    max-width: 175px;
+    max-height: 130px !important;
+    max-width: 175px  !important;
 }
 .navbar{
-    background-color: transparent;
+    background-color: transparent ;
 }
 
 .navbar-nav{
@@ -49,51 +49,52 @@
 .navbar-light .navbar-toggler{
     border: 2px solid white !important;
 }
+
 .bgcolor.scrolled{
     background-color: rgb(63, 63, 63);
-    transition: ease .3s;
+    transition: ease-in-out .2s;
     height: auto;
     opacity: 0.9;
 }
 .bgcolor.scrolled .navbar-brand img{
     height: 50%;
     width: 50%;
-    transition: ease .3s;
+    transition:ease-in-out .5s;
 } 
 .round{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 }
 .round:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     background-color: #29626D !important;
-    transition: 0.4s;
+    transition: ease-out 0.8s;
 }
 .r1:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 }
 .r2:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 
 }
 .r3:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
 }
 .r4:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5)  !important;
     border-radius: 22px;
     text-align: center;
     margin-right: 5px !important;
@@ -102,10 +103,10 @@
 @media(max-width:992px) {
     .navbar{
         height: auto ;
-        background-color:rgb(115, 112, 108);
+        background-color: #73706C;
         opacity: 0.9;
     }
-    .right-text{
+    .left-text{
         padding-top: auto;
     }
 }
@@ -121,6 +122,7 @@
         max-height: 80px !important;
         max-width: 125px !important;
     }
+    
     .round{
         border:transparent !important;
         text-align: right;
@@ -180,6 +182,7 @@
     }
 }
 
+
 .txt{
     text-align: center;
     color: #4F4F4F; 
@@ -193,6 +196,7 @@
 
 .form-check-label{
     font-family: roboto;
+    color: #4f4f4f !important;
 }
 .left-side-text{
     padding: 250px 40px 0px 60px;

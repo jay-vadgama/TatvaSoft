@@ -3,15 +3,15 @@
   <div class="container-fluid footer" >
     <div class="row" style="margin:0px !important;">
       <div class="col-sm-3 col-md-3 col-lg-3 logo_position">
-        <a href=#><img src="Images/logo1.png" class="footer_logo"></a>
+        <a href=Home.php><img src="Images/logo1.png" class="footer_logo"></a>
       </div>
       
       <div class="col-sm-6 col-md-6 col-lg-6 footer_links">
         <p class="footer_p">
-          <a href="#" class="footer_link_decoration">HOME</a>
-          <a href="#" class="footer_link_decoration">ABOUT</a>
+          <a href="Home.php" class="footer_link_decoration">HOME</a>
+          <a href="About.php" class="footer_link_decoration">ABOUT</a>
           <a href="#" class="footer_link_decoration">TESTIMONIALS</a>
-          <a href="#" class="footer_link_decoration">FAQS</a>
+          <a href="FAQ.php" class="footer_link_decoration">FAQS</a>
           <a href="#" class="footer_link_decoration">INSURANCE</a>
           <a href="#" class="footer_link_decoration">POLICY</a>
           <a href="#" class="footer_link_decoration">IMPRESSUM</a>

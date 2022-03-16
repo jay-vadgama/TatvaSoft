@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(isset($_SESSION['FirstName'])){
+  if(isset($_SESSION['FirstName']) ){
     header("Location: Customer-Service-History.php");
   }
 
@@ -9,114 +9,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/S.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="JS/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <title>Helperland | Welcome to homepage.</title>
-    <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
+  <title>Helperland | Welcome to homepage.</title>
+  <?php include('include/links.php'); ?>
+  <link rel="stylesheet" href="CSS/S.css">
+  <script src="JS/main.js"></script>
 </head>
+
 <body style="scroll-behavior: smooth !important;">
-  <div class="img-fluid">
 
-  <?php include 'include/home_navbar.php' ?>
+<div class="img-fluid">
+  <?php 
+    include 'include/home_navbar.php';
+    include 'include/login-forgot-Modal.php'; 
+  ?>
+  
 
-<!-- Login-Modal Starts -->
-<section class="Login-Modal">
-
-  <!-- The Modal -->
-  <div class="modal fade" id="loginModal">
-    <div class="modal-dialog modal-md modal-dialog-centered">
-      <div class="modal-content" >
-
-        <!-- Modal body -->
-        <div class="modal-body" >
-          <h3 class="title">Login to your account</h3>
-          <button type="button" class="btn close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-          <div class="row justify-content-center">
-            <div class="col-10">
-              <form action="loginCheck.php" method="post">
-
-                <div class="form-group">
-                  <span class="input-icon"><i class="fa fa-user"></i></span>
-                  <input type="email" class="form-control" value="" name="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <span class="input-icon"><i class="fas fa-key"></i></span>
-                  <input type="password" class="form-control" value="" name="pass" placeholder="Password">
-                </div>
-                <div class="after-form">
-                  <div class="form-check">
-                    <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="">Remember me</label>
-                  </div>
-                  <div class="forgot">
-                    <a href="" data-toggle="modal" data-target="#ForgotModal" data-dismiss="modal" class="forgot-pass"><p>Forgot Password?</p></a>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <button class="btn btn-login" name="login">Login</button>
-                </div>
-                <div class="after-btn">
-                  <p>Don't have an account?<a href="Customer-Registration.php"> Create an account</a></p>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Login-Modal Ends -->
-
-
-<!-- Forgot-Modal Starts -->
-<section class="Forgot-Modal">
-
-  <!-- The Modal -->
-    <div class="modal fade" id="ForgotModal" >
-      <div class="modal-dialog modal-md modal-dialog-centered">
-        <div class="modal-content">
-
-          <!-- Modal body -->
-          <div class="modal-body">
-            <h3 class="title">Forgot password</h3>
-            <button type="button" class="btn close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-            <div class="row justify-content-center">
-              <div class="col-10">
-                <form action="" method="post">
-
-                  <div class="form-group">
-                    <span class="input-icon"><i class="fa fa-user"></i></span>
-                    <input type="email" class="form-control" name="email" placeholder="Enter email">
-                  </div>
-
-                  <div class="d-flex justify-content-center">
-                    <button class="btn btn-send" name="send">Send</button>
-                  </div>
-                  <div class="after-btn">
-                    <a href=""><p>Login Now!</p></a>
-                  </div>
-
-                </form>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-</section>
-<!-- Forgot-Modal Ends -->
 
         <section class="part1">
           <!-- left-Side Text: Starts-->
@@ -133,7 +40,7 @@
         <!-- Right-Side Text: Ends-->
 
         <!-- Center Button: Starts -->
-          <button class="btn btn-home"> Let's Book a Cleaner</button>
+          <a href="Book-Now.php" style="text-decoration: none !important;"><button class="btn btn-home"> Let's Book a Cleaner</button></a>
         <!-- Center Button: Ends -->
 
         <!-- Image Steps: Starts -->
@@ -301,19 +208,17 @@
 
 
 
-<?php 
-  include 'include/home_footer.php';
-?>
+<?php include 'include/home_footer.php'; ?>
 
 
 
 <script>
-    $(function () {
-  $(document).scroll(function () {
-    var $nav = $(".fixed-top");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".fixed-top");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
   });
-});
 </script>
 </body>
 </html>

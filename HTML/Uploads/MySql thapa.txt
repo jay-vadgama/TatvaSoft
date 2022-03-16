@@ -1,0 +1,56 @@
+MySql main data types.
+Numeric
+String
+Date&Time
+
+------------------------------
+INT - upto 11 digits
+max- 10 digits
+
+VARCHAR(0 - 255 length) String
+Ex. 'Jay' - 3 length
+Ex. '652566' - 6 length
+
+DATE - YYYY-MM-DD
+------------------------------
+NULL - the value is not known
+null means not zero.
+ 
+if there is 3 column in 
+the table and if you 
+insert value of only 
+1 column then other 
+two column will take 
+value as null.
+------------------------------
+ NOT NULL
+it willl take 0. if 1 record
+is empty.
+-------------------------------
+with NOT NULL DEFAULT Constraint
+by changing 0
+create table studentform(
+name varchar(100) not null default 'unnamed',
+age int not null default 18);
+
+------------------------------
+KEY is attribute which uniquely identifies the two rows(tupples) j same hoi e
+
+CANDIDATE KEY- group of keys jemathi 1 key primary key tarike use thai
+baki ni key ALTERNATE KEY
+Candidate key ne Super key pn kai sakay
+
+SUPER KEY - koi 1 minimum candidate key hovi joie
+
+COMPOSITE KEY - Primary key sathe biji column use krine bne
+2 k enathi vadhu column merge kri skay
+
+PRIMARY KEY - constraint
+must have unique,
+can not cantain null value
+
+FOREIGN KEY - link two tables
+primary key can be only one in one table
+but foreign key can be more than one in one table
+foreign key is only used when primary key is assigned
+ koi ek table nu primary key bija table mate use thai e foreign key bne

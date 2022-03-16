@@ -3,6 +3,8 @@
 use function PHPSTORM_META\map;
 
 include 'config.php';
+
+
     if(isset($_POST['zipcode']))
     {
         $postalcode = $_POST['zipcode'];

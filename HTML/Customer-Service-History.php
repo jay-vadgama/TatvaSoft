@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['FirstName'])){
+if(!isset($_SESSION['uName'])){
   header("Location: Home.php");
 
 }
@@ -70,7 +70,7 @@ if(!isset($_SESSION['FirstName'])){
                 <img src="Images/user_logo.png" alt=""><i class="fa fa-angle-down" aria-hidden="true"></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <h5 class="dropdown-header">Welcome,<p class="uname"> <b><?php echo $_SESSION['FirstName'];?></b> </p></h5>
+                <h5 class="dropdown-header">Welcome,<p class="uname"> <b><?php echo $_SESSION['uName'];?></b> </p></h5>
                 <hr>
                 <a class="dropdown-item" href="#" onclick="openMyDashboard()">My Dashboard</a>
                 <a class="dropdown-item" href="#" onclick="openMySetting()">My Setting</a>
@@ -89,7 +89,7 @@ if(!isset($_SESSION['FirstName'])){
 
 
 <div class="container-fluid welcome">
-  <p class="head-title">Welcome,<?php echo $_SESSION['FirstName'];?></p>
+  <p class="head-title">Welcome, <b><?php echo $_SESSION['uName'];?></b></p>
 </div>
 
 
@@ -131,9 +131,9 @@ if(!isset($_SESSION['FirstName'])){
           <tbody>
           <?php 
             include 'config.php';
-            
-            $selectquery = "SELECT `ServiceRequestId`, date_format(ServiceStartDate, '%d-%m-%Y') as `date`, date_format(ServiceStartDate, '%H:%i:%s') as `time`, `TotalCost`  FROM `servicerequest`";
-            
+            $id = $_SESSION['uID'];
+            $selectquery = "SELECT `ServiceRequestId`, date_format(ServiceStartDate, '%d-%m-%Y') as `date`, date_format(ServiceStartDate, '%H:%i:%s') as `time`, `TotalCost`  FROM `servicerequest` ";
+            // WHERE UserID='$id'
             $query =mysqli_query($conn,$selectquery);
             $num = mysqli_num_rows($query);
             

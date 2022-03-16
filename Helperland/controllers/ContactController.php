@@ -21,7 +21,7 @@ class ContactController{
                 $subject = $_POST['subject'];
                 $message = $_POST['message'];
                 $file = $_FILES['file'];
-            
+                
                 $pname = $_FILES["file"]["name"];
             
                 // temp location

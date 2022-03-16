@@ -1,20 +1,6 @@
 <?php
 
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "helperland";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: "
-		. $conn->connect_error);
-}
+include 'config.php';
 
 
 
@@ -28,37 +14,55 @@ if(isset($_POST['btnStart']))
 	$MobileNo = $_POST['MobileNo'];
 
 
-	if($Pass == $ChangePass){
+	$emailQuery = " SELECT * FROM `user` WHERE Email = '$email' ";
+	$query = mysqli_query($conn,$emailQuery);
+	$emailCount = mysqli_num_rows($query);
 
-		// inserting into database
-	$query =  "INSERT INTO user (`FirstName`, `Lastname`, `Email`, `Password`, `Mobile`) VALUES ('$firstname','$lastname','$email','$Pass','$MobileNo')";
-
-	$res = mysqli_query($conn,$query);
-	if($res){
-		?>
-		<script>
-			alert("User Registration Successfully!");
-			window.location='become.php';
-			</script>
-			<?php
-	}else{
-		?>
-		<script>
-			alert("Oops! Something Went Wrong.");
-			window.location='become.php';
-			</script>
-			<?php
-	}
-
-
-
-	}else{
-		echo 
-		"<script>
-		alert('Password Not Matched.');
-		window.location='become.php';
-		</script>";
-	}
+		if($emailCount>0)
+		{
+			?>
+					<script>
+						alert('Opps ! email already exist!');
+						window.location.href='SP-Registration.php';
+					</script>
+					<?php
+		}
+		else
+		{
+			if($Pass === $ChangePass)
+			{
+				$password = password_hash($Pass,PASSWORD_BCRYPT);
+				$insertquery = "INSERT INTO user (`FirstName`, `Lastname`, `Email`, `Password`, `Mobile`,`UserTypeId`) VALUES ('$firstname','$lastname','$email','$password','$MobileNo','2')";
+				$iquery = mysqli_query($conn,$insertquery);
+				if($iquery)
+				{
+					?>
+					<script>
+						alert('User Registerd Successfully!');
+						window.location.href='Home.php';
+					</script>
+					<?php
+				}
+				else
+				{
+					?>
+					<script>
+						alert('Something Went Wrong!');
+						window.location.href='SP-Registration.php';
+					</script>
+					<?php
+				}
+			}
+			else
+			{
+				?>
+					<script>
+						alert('Password are not match!');
+						window.location.href='SP-Registration.php';
+					</script>
+					<?php
+			}
+		}
 
 	
 }

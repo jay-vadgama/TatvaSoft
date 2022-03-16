@@ -43,7 +43,7 @@
     border: 2px solid white !important;
 }
 .round{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5) !important;
     border-radius: 22px;
     text-align: center;
     background-color: #29626D !important;
@@ -51,7 +51,7 @@
     margin:0px 5px !important;
 }
 .r1:hover{
-    border: 1px solid white !important;
+    border: 1px solid rgba(255,255,255,.5) !important;
     border-radius: 22px;
     text-align: center;
     background-color: transparent !important;
