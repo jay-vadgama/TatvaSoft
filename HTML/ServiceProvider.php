@@ -10,79 +10,17 @@ if(!isset($_SESSION['uName'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/style31.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="main.js"></script>
-    <title>Service Provider Dashboard</title>
-    <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
+  <title>Service Provider Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="NavCSS/CustCommanNav.css">
+  <?php include('include/links.php'); ?>
+  
+  <link rel="stylesheet" type="text/css" href="CSS/style31.css">
+  
+  <script src="main.js"></script>
 </head>
 <body style="height: auto;">
 
-<section id="navbar">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top w-100">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="Home.php">
-        <img src="Images/logo1.png" alt="logo" style="width:74px; height: 54px;" >
-      </a>
-      <div class="center-icon justify-content" >
-        <a href="#" ><img src="Images/notification_logo.png"  style=" border-left: 1px solid white;border-right: 1px solid white;padding-left: 10px;padding-right: 10px;"></a>
-      </div>
-      <button class="navbar-toggler modal-btn" data-toggle="modal" data-target="#collapsiblemodal">
-        <span class="navbar-toggler-icon">
-          <i class="fas fa-bars" style="color: white;font-size: 28px;"></i>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item Rounded-Rectangle">
-            <a class="nav-link" aria-current="page" href="#">Book now</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="Price.html">Prices & services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Warranty</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item vertical-line remove">
-            <a href="#" >
-              <img class="dropdown-toggle" data-toggle="dropdown" src="Images/notification_logo.png" alt="">
-            </a>
-          </li>
-          <li class="nav-item remove">
-            <div class="dropdown show">
-              <a class="dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="Images/user_logo.png" alt=""><i class="fa fa-angle-down" aria-hidden="true"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <h5 class="dropdown-header">Welcome,<p class="uname"> <b><?php echo $_SESSION['uName'];?></b> </p></h5>
-                <hr>
-                <a class="dropdown-item" href="#" onclick="openMyDashboard()">My Dashboard</a>
-                <a class="dropdown-item" href="#" onclick="openMySetting()">My Setting</a>
-                <a class="dropdown-item" href="logout.php">Logout</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</section>
+<?php include('Navbar/SpCommanNav.php'); ?> 
 
 
 
@@ -96,7 +34,7 @@ if(!isset($_SESSION['uName'])){
 <div class="container-fluid">
   <div class="content">
 
-    <div class="leftPart" style="">
+    <div class="leftPart" >
       <div class="sidebar">
         <!-- <a href="#" id="side1" class="activeSidebar" onclick="dashboard()">Dashboard</a> -->
         <a href="#" id="side1" class="activeSidebar" onclick="Service_History()">New Service Request</a>
@@ -164,7 +102,7 @@ if(!isset($_SESSION['uName'])){
           <!-- Reschedule Modal-->
           <section class="Res">
             <div class="modal fade" id="Reschedule">
-              <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-dialog ">
                 <div class="modal-content">
                   
                   <div class="modal-header">

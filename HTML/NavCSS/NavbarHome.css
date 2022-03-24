@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+.img-fluid{
+    background-image: url("HTML/Images/Home_BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.logo{
+    max-height: 130px !important;
+    max-width: 175px  !important;
+}
+.navbar{
+    background-color: transparent ;
+}
+
+.navbar-nav{
+    font-family: Roboto;
+    text-decoration-color: #000;
+    text-align: right;
+    font-size: 17px;
+  
+}
+.navbar-toggler{
+    border: 1px solid white !important;
+}
+
+.navbar-nav .nav-link{
+    color: #FFFFFF!important;
+    font-size: 17px !important;
+    padding: 8px 23px !important;
+}
+@media(max-width:1200px) {
+    .navbar-nav .nav-link{
+        padding: 8px 15px !important;
+    }
+}
+@media(max-width:1030px) {
+    .navbar-nav .nav-link{
+        padding: 8px 10px !important;
+    }
+}
+.navbar-light .navbar-toggler{
+    border: 2px solid white !important;
+}
+
+.bgcolor.scrolled{
+    background-color: rgb(63, 63, 63);
+    transition: ease-in-out .2s;
+    height: auto;
+    opacity: 0.9;
+}
+.bgcolor.scrolled .navbar-brand img{
+    height: 50%;
+    width: 50%;
+    transition:ease-in-out .5s;
+} 
+.round{
+    border: 1px solid rgba(255,255,255,.5)  !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+.round:hover{
+    border: 1px solid rgba(255,255,255,.5)  !important;
+    border-radius: 22px;
+    text-align: center;
+    background-color: #29626D !important;
+}
+.r1:hover{
+    border: 1px solid rgba(255,255,255,.5)  !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+.r2:hover{
+    border: 1px solid rgba(255,255,255,.5)  !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+
+}
+.r3:hover{
+    border: 1px solid rgba(255,255,255,.5)  !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+.r4:hover{
+    border: 1px solid rgba(255,255,255,.5)  !important;
+    border-radius: 22px;
+    text-align: center;
+    margin-right: 5px !important;
+}
+
+@media(max-width:992px) {
+    .navbar{
+        height: auto ;
+        background-color: #73706C;
+        opacity: 0.9;
+    }
+    .left-text{
+        padding-top: auto;
+    }
+}
+@media(max-width:1015px){
+    .logo{
+        height: 60% !important;
+        width: 60% !important;
+    }
+}
+
+@media(max-width:991px){
+    .logo{
+        max-height: 80px !important;
+        max-width: 125px !important;
+    }
+    
+    .round{
+        border:transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        margin-right: 0px !important;
+    }
+    .round:hover{
+        border: transparent !important;
+        background-color: transparent !important;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    }
+    .r1:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    
+    }
+    .r2:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    
+    
+    }
+    .r3:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    
+    }
+    .r4:hover{
+        border: transparent !important;
+        background-color: transparent;
+        text-align: right;
+        padding-left: 0px !important;
+        padding-right: 0px !important ;
+        margin-right: 0px !important;
+    }
+    .navbar-nav .nav-link{
+        color: #FFFFFF!important;
+        font-size: 17px !important;
+        background-color: transparent;
+    }
+}

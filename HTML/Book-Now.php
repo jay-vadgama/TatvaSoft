@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helperland | Book Now</title>
     <link rel="stylesheet" href="CSS/Style6.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
     <script src="JS/main2.js"></script>
     <script src="JS/main3.js"></script>
-    <title>Helperland | Book Now</title>
-    <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <meta charset="UTF-8">
+    <?php include('include/links.php'); ?>
+    
+    
+    
 </head>
 <body style="height: auto;">
 
-<!-- Navbar Starts -->
-  <section class="header">
-    <div class="container-fluid">  
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="Home.php"><img class="logo" src="Images/Logo_Helperland.png"></a>
+<!-- Navbar -->
+<section class="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <a class="navbar-brand" href="Home.php"><img class="logo" src="Images/Logo_Helperland.png"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item round" >
-                  <a class="nav-link" href="Book-Now.php">Book now</a>
+                <li class="nav-item round">
+                    <a class="nav-link link1 text-white active" href="#">Book Now</a>
+                  </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white" href="Price.php">Prices & Services</a>
                 </li>
-              <li class="nav-item r1">
-                <a class="nav-link" href="#">Prices & Services</a>
-              </li>
-              <li class="nav-item r1">
-                <a class="nav-link" href="#">Warrenty</a>
-              </li>
-              <li class="nav-item r1">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item r1">
-                <a class="nav-link" href="Contact.php">Contact</a>
-              </li>
-              <li class="nav-item round">
-                <a class="nav-link " href="#">Login</a>
-              </li>
-              <li class="nav-item round">
-                <a class="nav-link " href="#">Beacome a Helper</a>
-              </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white " href="Warrenty.php">Warrenty</a>
+                </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white" href="#">Blog</a>
+                </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white " href="Contact.php">Contact</a>
+                </li>
+                <li class="nav-item round">
+                  <a class="nav-link link1 text-white"  data-toggle="modal" data-target="#loginModal" href="#">Login</a>
+                </li>
+                <li class="nav-item round">
+                  <a class="nav-link link1 text-white" href="SP-Registration.php">Beacome a Helper</a>
+                </li>
             </ul>
           </div>
         </nav>
     </div>
-  </section>
-<!-- Navbar Ends -->
+</section>
+
+
 
 <!-- Book-now BG img  -->
 <div class="bg-book">
@@ -123,7 +123,21 @@
 
             </form>
             <script>
-              
+              // const zipcode = $('[name="CheckZipcode"]').val();
+              // const zipcode = $('[name="CheckZipcode"]').val();
+              // const zipcode = $('[name="CheckZipcode"]').val();
+              // const zipcode = $('[name="CheckZipcode"]').val();
+              // const zipcode = $('[name="CheckZipcode"]').val();
+              // const form = new FormData();
+              // form.append('zipcode', zipcode);
+              // form.append('zipcode', zipcode);
+              // form.append('zipcode', zipcode);
+              // form.append('zipcode', zipcode);
+              // form.append('zipcode', zipcode);
+              // form.append('zipcode', zipcode);
+              // if(zipcode!==""){
+                
+              // }
               $("#tab-form1").submit(function (e){
                 e.preventDefault();
                 $.ajax({
@@ -526,6 +540,7 @@
           </div>
           <!-- tab-body 4 ends -->
           <script>
+
                 $("#tab-form4").submit(function (e){
                 e.preventDefault();
                 $.ajax({
@@ -533,11 +548,12 @@
                   method:"post",
                   data:$('#tab-form4').serialize(),
                   success:function(res){
-                    if(res=='true'){
+                    if(res){
                       document.getElementById("tabbtn2").removeAttribute('disabled');
                       document.getElementById("tabbtn3").removeAttribute('disabled');
                       document.getElementById("tabbtn4").removeAttribute('disabled');
                       console.log(res);                    
+                      alert(res);
                     }
                     else{
                       console.log(res);
@@ -860,8 +876,7 @@
  
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+     
     <script>
       $('.cardNo').on('keyup', function() {
       var foo = $(this).val().split(" ").join(""); 

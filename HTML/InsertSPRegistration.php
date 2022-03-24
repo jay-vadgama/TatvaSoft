@@ -36,6 +36,7 @@ if(isset($_POST['btnStart']))
 				$iquery = mysqli_query($conn,$insertquery);
 				if($iquery)
 				{
+					
 					?>
 					<script>
 						alert('User Registerd Successfully!');

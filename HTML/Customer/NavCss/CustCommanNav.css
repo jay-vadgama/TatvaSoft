@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+
+/* Navbar CSS Starts */
+.logo{
+    max-height: 54px !important;
+    max-width:74px  !important;
+    margin-left: 15px !important;
+}
+.navbar{
+    background-color: #5f5f5f;
+    padding: 0px !important;
+    opacity: 1;
+}
+.navbar-nav{
+    font-family: Roboto;
+    text-align: right;
+    font-size: 17px;
+}
+.center-icon{
+    display: none;
+    margin: auto;
+}
+@media(max-width:767px){
+    .center-icon{
+        display: flex;
+    }
+}
+.navbar-toggler{
+    border: 1px solid white !important;
+    margin-right: 15px !important;
+}
+.fa-bars{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.navbar-light .navbar-toggler{
+    border: 2px solid white !important;
+}
+.nav-item{
+    margin-right: 10px;
+}
+.nav-link{
+    margin: auto !important;
+    font-size: 17px !important;
+    padding:  8px 23px!important;
+}
+.link1:hover{
+    color: #29626D !important;
+}
+
+@media(max-width:1200px){
+    .navbar-nav .nav-link{
+        padding:  8px 10px!important;
+    }
+    .dropdown{
+        padding-left: 5px !important;
+    }
+}
+.round{
+    border:  1px solid rgba(255,255,255,.5);
+    border-radius: 22px;
+    text-align: center;
+    background-color: #29626D ;
+}
+.round:hover{
+    border: 1px solid #29626D ;
+    border-radius: 22px;
+    text-align: center;
+    color: #29626D !important;
+    background-color: white;
+    transition: ease-in .2s;
+}
+.r{
+    border: 1px solid rgba(255,255,255,.5) !important;
+    border-radius: 22px;
+    text-align: center;
+    background-color: transparent !important;
+}
+.r1:hover{
+    border: 1px solid rgba(255,255,255,.5) !important;
+    border-radius: 22px;
+    color: white !important;
+    text-align: center;
+    background-color: transparent;   
+}
+
+.vertical-line{
+    border-left: 1px solid white;
+    border-right:  1px solid white;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropdown{
+    padding: 0px 0px 0px 15px ;
+}
+.navbar-nav .dropdown-menu{
+    margin-top: 20px !important;
+    padding: 0px !important;
+    box-shadow: 0px 0px 19px 1px rgba(148,135,135,0.68) !important;
+}
+.dropdown-header{
+    font-family: roboto !important;
+    font-size: 16px !important;
+    color: #4f4f4f !important;
+    padding: 1rem 1.5rem 0rem 1.5rem!important ;
+}
+.uname{
+    margin-bottom: 0px !important;
+}
+.dropdown-item{
+    color: #4f4f4f !important;
+    font-weight: 500 !important;
+}
+a.dropdown-item:hover{
+    color: white !important;
+    background-color: #929292 !important;
+}
+.dropdown-toggle::after{
+    display: none !important;
+}
+.fa-angle-down:before{
+    content: "\f107";
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 10px;
+    color: white;
+}
+
+@media(max-width:767px){
+
+    .remove{
+        display: none;
+    }
+    .round{
+        border: transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+        
+    }
+    .r{
+        border: transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+    }
+    .r1:hover{
+        border: transparent !important;
+        text-align: right;
+        background-color: transparent !important;
+    }
+    .active{
+        text-decoration: underline;
+    }
+}
+
+
+/* Navbar CSS Ends */
+

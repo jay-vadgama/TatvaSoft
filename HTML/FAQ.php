@@ -12,43 +12,42 @@
 <body>
 
 
-<!-- Navbar Starts -->
-  <section class="header">
+<!-- Navbar -->
+<section class="header">
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="Home.html"><img class="logo" src="Images/Logo_Helperland.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item round" >
-            <a class="nav-link" href="#">Book now</a>
-          </li>
-          <li class="nav-item r1">
-            <a class="nav-link" href="#">Prices & Services</a>
-          </li>
-          <li class="nav-item r1">
-            <a class="nav-link" href="#">Warrenty</a>
-          </li>
-          <li class="nav-item r1">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item r1">
-            <a class="nav-link" href="Contact.html">Contact</a>
-          </li>
-          <li class="nav-item round">
-            <a class="nav-link " href="#">Login</a>
-          </li>
-          <li class="nav-item round">
-            <a class="nav-link " href="#">Beacome a Helper</a>
-          </li>
-        </ul>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <a class="navbar-brand" href="Home.php"><img class="logo" src="Images/Logo_Helperland.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item round">
+                    <a class="nav-link link1 text-white " href="#">Book Now</a>
+                  </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white" href="Price.php">Prices & Services</a>
+                </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white " href="Warrenty.php">Warrenty</a>
+                </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white" href="#">Blog</a>
+                </li>
+                <li class="nav-item r1">
+                  <a class="nav-link text-white " href="Contact.php">Contact</a>
+                </li>
+                <li class="nav-item round">
+                  <a class="nav-link link1 text-white"  data-toggle="modal" data-target="#loginModal" href="#">Login</a>
+                </li>
+                <li class="nav-item round">
+                  <a class="nav-link link1 text-white" href="SP-Registration.php">Beacome a Helper</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
     </div>
-  </section>
-<!-- Navbar Ends -->
+</section>
 
 <div class="bg-faq">
 	<img src="Images/FAQ-BG.png" class="img-responsive price-bg" alt="faq" >

@@ -33,7 +33,7 @@ function sendmail($email,$reset_token){
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Password Reset Link from Helperland';
-        $mail->Body    = "We got a request from you to reset your password!<br>Click on the link <a href='http://localhost/LogIn_SignUp/updatePass.php?email=$email&reset_token=$reset_token'>Reset Password</a>";
+        $mail->Body    = "We got a request from you to reset your password!<br>Click on the link <a href='http://localhost/TatvaSoft/HTML/updatePass.php?email=$email&reset_token=$reset_token'>Reset Password</a>";
         
     
         $mail->send();
@@ -59,21 +59,21 @@ if(isset($_POST['send']))
             $reset_token = bin2hex(random_bytes(16));
             date_default_timezone_set('Asia/kolkata');
             $date = date("Y-m-d");
-            $update_query= "UPDATE `signup` SET `reset_token`='$reset_token',`token_expire`='$date'";
+            $update_query= "UPDATE `user` SET `reset_token`='$reset_token',`token_expire`='$date'";
             $update_res = mysqli_query($conn,$update_query);
             if($update_res && sendmail($email,$reset_token))
             {
                 ?>
                 <script>
                     alert('Password Reset Link Sent to mail.');
-                    window.location.href='login.php';
+                    window.location.href='Home.php';
                 </script>
                 <?php
             }else{
                 ?>
                 <script>
                     alert('Opps! Server goes Down.');
-                    window.location.href='login.php';
+                    window.location.href='Home.php';
                 </script>
                 <?php
             }
@@ -84,7 +84,7 @@ if(isset($_POST['send']))
             ?>
             <script>
                 alert('Email not found!');
-                window.location.href='login.php';
+                window.location.href='Home.php';
             </script>
             <?php
         }
@@ -95,7 +95,7 @@ if(isset($_POST['send']))
         ?>
         <script>
             alert('Opps! Server goes Down.');
-            window.location.href='login.php';
+            window.location.href='Home.php';
         </script>
         <?php
     }

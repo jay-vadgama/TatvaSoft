@@ -10,10 +10,11 @@
 <body style="scroll-behavior: smooth;">
     <div class="img-fluid" id="top">
     <?php 
-        include 'include/home_navbar.php';
-        include 'include/login-forgot-Modal.php';
+        include('include/home_navbar.php');
+        include('include/login-forgot-Modal.php');
     ?>
 
+<!-- SP-Form -->
 <section class="become-pro-section" id="top">
     <div class="container-fluid">
         <div class="row">
@@ -90,7 +91,7 @@
 
 
 
-
+<!-- Steps -->
 <section class="how-it-works">
     <div class="container-fluid right-left-img" id="how">
         <img src="Images/blog-left-bg.png" class="left-img">
@@ -147,19 +148,33 @@
 
 
 
-<!-- <a href="#top" class="to-top">
+<a href="#top" class="to-top">
     <img src="Images/forma-111.png">
-</a> -->
+</a>
 
 <?php include 'include/comman_footer.php' ?>
 
 <script>
     $(function () {
-    $(document).scroll(function () {
-      var $nav = $(".fixed-top");
-      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if(window.pageYOffset > 300) 
+            {
+                toTop.classList.add("active");
+            }
+            else
+            {
+                toTop.classList.remove("active");
+            }
+        })
+
+        $(document).scroll(function () {
+            var $nav = $(".fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
     });
-  });
+
 </script>
 
 </body>

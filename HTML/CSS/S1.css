@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Navbar CSS Starts */
 .logo{
     max-height: 54px !important;
     max-width:74px  !important;
@@ -23,16 +25,21 @@
     color: #FFFFFF;
     font-size: 30px;
 }
-
-.navbar-nav .nav-link{
-    color: #FFFFFF!important;
+.nav-item{
+    margin-right: 10px;
+}
+.nav-link{
+    margin: auto !important;
     font-size: 17px !important;
     padding:  8px 23px!important;
+}
+.link1:hover{
+    color: #29626D !important;
 }
 
 @media(max-width:1200px){
     .navbar-nav .nav-link{
-        padding:  8px 15px!important;
+        padding:  8px 10px!important;
     }
 }
 .navbar-light .navbar-toggler{
@@ -40,27 +47,33 @@
 }
 
 .round{
-    border: 1px solid rgba(255,255,255,.5) !important;
+    border:  1px solid rgba(255,255,255,.5);
     border-radius: 22px;
     text-align: center;
-    background-color: #29626D !important;
-    margin:0px 5px !important;
+    background-color: #29626D ;
 }
+
+.round:hover{
+    border: 1px solid #29626D ;
+    border-radius: 22px;
+    text-align: center;
+    color: #29626D !important;
+    background-color: white;
+    transition: ease-in .2s;
+}
+
 .r{
     border: 1px solid rgba(255,255,255,.5) !important;
     border-radius: 22px;
     text-align: center;
     background-color: transparent !important;
-    margin:0px 5px !important;
-    transition: transform 0.5s;
 }
 .r1:hover{
     border: 1px solid rgba(255,255,255,.5) !important;
     border-radius: 22px;
+    color: white !important;
     text-align: center;
-    background-color: transparent !important;
-    margin:0px 5px !important;
-    transition: transform 0.5s;
+    background-color: transparent;   
 }
 @media(max-width:991px){
     .active{
@@ -70,21 +83,24 @@
         border: transparent !important;
         text-align: right;
         background-color: transparent !important;
-        margin:0px !important;
+        
     }
     .r{
         border: transparent !important;
         text-align: right;
         background-color: transparent !important;
-        margin:0px !important;
     }
     .r1:hover{
         border: transparent !important;
         text-align: right;
         background-color: transparent !important;
-        margin:0px !important;
     }
 }
+/* Navbar CSS Ends */
+
+
+
+
 .price-bg{
     width: 100%; 
     height:auto;

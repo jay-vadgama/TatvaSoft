@@ -10,93 +10,32 @@ if(!isset($_SESSION['uName'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/style31.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="main.js"></script>
-    <title>Helperland | Customer Service History</title>
-    <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
+  <title>Helperland | Customer Service History</title>
+  <?php include('include/links.php'); ?>
+  <link rel="stylesheet" type="text/css" href="CSS/CustCommanNav.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style31.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="NavCSS/CustCommanNav.css">
+  
 </head>
 <body style="height: auto;">
 
-<section id="navbar">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top w-100">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="Home.php">
-        <img src="Images/logo1.png" alt="logo" style="width:74px; height: 54px;" >
-      </a>
-      <div class="center-icon justify-content" >
-        <a href="#" ><img src="Images/notification_logo.png"  style=" border-left: 1px solid white;border-right: 1px solid white;padding-left: 10px;padding-right: 10px;"></a>
-      </div>
-      <button class="navbar-toggler modal-btn" data-toggle="modal" data-target="#collapsiblemodal">
-        <span class="navbar-toggler-icon">
-          <i class="fas fa-bars" style="color: white;font-size: 28px;"></i>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item Rounded-Rectangle">
-            <a class="nav-link" aria-current="page" href="#">Book now</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="Price.html">Prices & services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Warranty</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item vertical-line remove">
-            <a href="#" >
-              <img class="dropdown-toggle" data-toggle="dropdown" src="Images/notification_logo.png" alt="">
-            </a>
-          </li>
-          <li class="nav-item remove">
-            <div class="dropdown show">
-              <a class="dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="Images/user_logo.png" alt=""><i class="fa fa-angle-down" aria-hidden="true"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <h5 class="dropdown-header">Welcome,<p class="uname"> <b><?php echo $_SESSION['uName'];?></b> </p></h5>
-                <hr>
-                <a class="dropdown-item" href="#" onclick="openMyDashboard()">My Dashboard</a>
-                <a class="dropdown-item" href="#" onclick="openMySetting()">My Setting</a>
-                <a class="dropdown-item" href="logout.php">Logout</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</section>
-
-
-
+<!-- Navbar -->
+<?php include('Navbar/CustCommanNav.php'); ?>
 
 
 <div class="container-fluid welcome">
-  <p class="head-title">Welcome, <b><?php echo $_SESSION['uName'];?></b></p>
+  <p class="head-title">Welcome, <b><?php echo $_SESSION['uID']; echo $_SESSION['uName'];?></b></p>
 </div>
 
 
 <div class="container-fluid">
   <div class="content">
 
-    <div class="leftPart" style="">
+    <div class="leftPart">
       <div class="sidebar">
         <a href="#" id="side1" class="activeSidebar" onclick="dashboard()">Dashboard</a>
         <a href="#" id="side2" class="" onclick="Service_History()">Service History</a>
@@ -129,35 +68,7 @@ if(!isset($_SESSION['uName'])){
                 
           </thead>
           <tbody>
-          <?php 
-            include 'config.php';
-            $id = $_SESSION['uID'];
-            $selectquery = "SELECT `ServiceRequestId`, date_format(ServiceStartDate, '%d-%m-%Y') as `date`, date_format(ServiceStartDate, '%H:%i:%s') as `time`, `TotalCost`  FROM `servicerequest` ";
-            // WHERE UserID='$id'
-            $query =mysqli_query($conn,$selectquery);
-            $num = mysqli_num_rows($query);
-            
-            while($res = mysqli_fetch_assoc($query))
-            {
-              // echo $res['TotalCost'] . "<br>";
-              ?>
-              
-              <tr>
-                <td class="tr1"><?php echo $res['ServiceRequestId']; ?></td>
-                <td style="text-align: left;"><span> <img src="Images/calendar2.png" alt="">   <?php echo $res['date']; ?></span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt="">   <?php echo $res['time']; ?></span></p></td>
-                <td></td>
-                <td style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;"><?php echo $res['TotalCost']; ?> €</td>
-                <td>
-                  <div class="d-flex justify-content-center">
-                    <a class="btn btn-sm btn-res text-white" data-toggle="modal" data-target="#Reschedule">Reschedule</a>
-                    <a class="btn btn-sm btn-cnl text-white" data-toggle="modal" data-target="#CancelRequest">cancel</a>
-                  </div>
-                </td>
-            </tr>
-            <?php
-            }
-            ?>
-            
+
           <!-- Reschedule Modal-->
           <section class="Res">
             <div class="modal fade" id="Reschedule">
@@ -212,32 +123,90 @@ if(!isset($_SESSION['uName'])){
               </div>
             </div>
           </section>
-          
-        <!-- Cancel Request Modal-->
-        <section class="CancelRes">
-          <div class="modal fade" id="CancelRequest">
-              <div class="modal-dialog modal-md modal-dialog-centered">
-                <div class="modal-content">
-                  
-                  <div class="modal-header">
-                    <h4 class="modal-title">Cancel Service Request</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-        
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <p class="Delet-modal-text">Why you want to cancel the service request?</p>
-                    <form class="was-validated" action="">
-                    <div class="form-group ">
-                      <textarea class="form-control" style="height: 100px;" type="text" id="message" name="message" placeholder="Message" required></textarea>
+
+          <!-- Cancel Request Modal-->
+          <section class="CancelRes">
+            <div class="modal fade" id="CancelRequest">
+                <div class="modal-dialog modal-md modal-dialog-centered">
+                  <div class="modal-content">
+                    
+                    <div class="modal-header">
+                      <h4 class="modal-title">Cancel Service Request</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <button class="btn text-center button-blue1" type="submit">Cancel Now</button>
-                    </form>
+          
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <p class="Delet-modal-text">Why you want to cancel the service request?</p>
+                      <form class="was-validated" action="">
+                      <div class="form-group ">
+                        <textarea class="form-control" style="height: 100px;" type="text" id="message" name="message" placeholder="Message" required></textarea>
+                      </div>
+                      <button class="btn text-center button-blue1" type="submit">Cancel Now</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
-              </div>
-          </div>
-        </section>
+            </div>
+          </section>
+
+          <!-- ServiceDetails Modal -->
+          <section class="ServiceDetails">
+          <div class="modal fade" id="ServiceDetail">
+                <div class="modal-dialog modal-md modal-dialog-centered">
+                  <div class="modal-content">
+                    
+                    <div class="modal-header">
+                      <h4 class="modal-title">Service Details</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+          
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      
+                      <form class="was-validated" action="">
+                      
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+
+
+          <?php 
+            include 'config.php';
+            $id = $_SESSION['uID'];
+            $selectquery = "SELECT `ServiceRequestId`, date_format(ServiceStartDate, '%d-%m-%Y') as `date`, date_format(ServiceStartDate, '%H:%i:%s') as `time`, `TotalCost`  FROM `servicerequest` ";
+            // WHERE UserID='$id'
+            $query =mysqli_query($conn,$selectquery);
+            $num = mysqli_num_rows($query);
+            
+            while($res = mysqli_fetch_assoc($query))
+            {
+              // echo $res['TotalCost'] . "<br>";
+              ?>
+              
+              <tr>
+                <td style="cursor: pointer;" class="tr1" data-toggle="modal" data-target="#ServiceDetail"><?php echo $res['ServiceRequestId']; ?></td>
+                <td style="text-align: left; cursor: pointer;" data-toggle="modal" data-target="#ServiceDetail"><span> <img src="Images/calendar2.png" alt="">   <?php echo $res['date']; ?></span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt="">   <?php echo $res['time']; ?></span></p></td>
+                <td></td>
+                <td style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;cursor: pointer;" data-toggle="modal" data-target="#ServiceDetail"><?php echo $res['TotalCost']; ?> €</td>
+                <td>
+                  <div class="d-flex justify-content-center">
+                    <a class="btn btn-sm btn-res text-white" data-toggle="modal" data-target="#Reschedule">Reschedule</a>
+                    <a class="btn btn-sm btn-cnl text-white" data-toggle="modal" data-target="#CancelRequest">cancel</a>
+                  </div>
+                </td>
+            </tr>
+            <?php
+            }
+          ?>
+            
+          
+          
+        
 
           </tbody>
        
@@ -337,115 +306,11 @@ if(!isset($_SESSION['uName'])){
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-xl-5">
-                <div class="row">
-                  <div class="col-lg-3 col-md-4 col-sm-4 col-4">
-                    <label class="lable-text" for="">DoB</label>
-                    <div class="form-group">
-                      <select class="day form-control" name="DoB">
-                        <option value="" hidden>Day</option>
-                        <option value='01'>01</option>
-                        <option value='02'>02</option>
-                        <option value='03'>03</option>
-                        <option value='04'>04</option>
-                        <option value='05'>05</option>
-                        <option value='06'>06</option>
-                        <option value='07'>07</option>
-                        <option value='08'>08</option>
-                        <option value='09'>09</option>
-                        <option value='10'>10</option>
-                        <option value='11'>11</option>
-                        <option value='12'>12</option>
-                        <option value='13'>13</option>
-                        <option value='14'>14</option>
-                        <option value='15'>15</option>
-                        <option value='16'>16</option>
-                        <option value='17'>17</option>
-                        <option value='18'>18</option>
-                        <option value='19'>19</option>
-                        <option value='20'>20</option>
-                        <option value='21'>21</option>
-                        <option value='22'>22</option>
-                        <option value='23'>23</option>
-                        <option value='24'>24</option>
-                        <option value='25'>25</option>
-                        <option value='26'>26</option>
-                        <option value='27'>27</option>
-                        <option value='28'>28</option>
-                        <option value='29'>29</option>
-                        <option value='30'>30</option>
-                        <option value='31'>31</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-4 col-sm-4 col-4">
-                    <label class="lable-text" for="">Month</label>
-                    <div class="form-group">
-                      <select class="month form-control" name="MoB">
-                        <option value="" hidden>Month</option>
-                        <option value='1'>Janaury</option>
-                        <option value='2'>February</option>
-                        <option value='3'>March</option>
-                        <option value='4'>April</option>
-                        <option value='5'>May</option>
-                        <option value='6'>June</option>
-                        <option value='7'>July</option>
-                        <option value='8'>August</option>
-                        <option value='9'>September</option>
-                        <option value='10'>October</option>
-                        <option value='11'>November</option>
-                        <option value='12'>December</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-4 col-4">
-                    <label for="">Year</label>
-                    <div class="form-group">
-                      <select class="year form-control" name="YoB">
-                        <option value="" hidden>Year</option>
-                        <option value=''>2015</option>
-                        <option value=''>2014</option>
-                        <option value=''>2013</option>
-                        <option value=''>2012</option>
-                        <option value=''>2011</option>
-                        <option value=''>2010</option>
-                        <option value=''>2009</option>
-                        <option value=''>2008</option>
-                        <option value=''>2007</option>
-                        <option value=''>2006</option>
-                        <option value=''>2005</option>
-                        <option value=''>2004</option>
-                        <option value=''>2003</option>
-                        <option value=''>2002</option>
-                        <option value=''>2001</option>
-                        <option value=''>1999</option>
-                        <option value=''>1998</option>
-                        <option value=''>1997</option>
-                        <option value=''>1996</option>
-                        <option value=''>1995</option>
-                        <option value=''>1994</option>
-                        <option value=''>1993</option>
-                        <option value=''>1992</option>
-                        <option value=''>1991</option>
-                        <option value=''>1990</option>
-                        <option value=''>1989</option>
-                        <option value=''>1988</option>
-                        <option value=''>1987</option>
-                        <option value=''>1986</option>
-                        <option value=''>1985</option>
-                        <option value=''>1984</option>
-                        <option value=''>1983</option>
-                        <option value=''>1982</option>
-                        <option value=''>1981</option>
-                        <option value=''>1980</option>
-                        <option value=''>1979</option>
-                        <option value=''>1978</option>
-                        <option value=''>1976</option>
-                        <option value=''>1975</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="form-group">
+                  <label class="lable-text" for="">Date of Birth:</label>
+                  <input class="form-control form-check-inline date" name="DoB" id="datepicker" type="date" >
+                 </div>
               </div>
             </div>
 
@@ -701,13 +566,12 @@ if(!isset($_SESSION['uName'])){
 
   
 
-<div class="container modal-menu">
-  <!-- The Modal -->
+<!-- <div class="container modal-menu">
+  
   <div class="modal fade" id="collapsiblemodal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
 
-        <!-- Modal Header -->
         <div class="modal-header">
             <div class="container">
                 <div>
@@ -720,7 +584,6 @@ if(!isset($_SESSION['uName'])){
             <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
-        <!-- Modal body -->
         <div class="modal-body">
           <div class="container">
                       <a href="#" >Dashboard</a>
@@ -735,7 +598,6 @@ if(!isset($_SESSION['uName'])){
             </div>
         </div>
 
-        <!-- Modal footer -->
         <div  class="modal-footer">
           <div class="container">
           <a href="#" >Prices & Services</a>
@@ -753,7 +615,7 @@ if(!isset($_SESSION['uName'])){
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 

@@ -69,8 +69,8 @@ include 'config.php';
         $cardCVV = $_POST['cardCVV'];
         
         // $Query = "SELECT `ServiceRequestId` FROM `servicerequest` WHERE cvv = '$cardCVV'";
-        $query = "INSERT INTO servicerequest (cvv)  VALUES('$cardCVV')";
+        $query = "INSERT INTO servicerequest (cvv)  VALUES ('$cardCVV')";
         $result = mysqli_query($conn,$query); 
-        
+        echo mysqli_insert_id($conn);        
     }
 ?>

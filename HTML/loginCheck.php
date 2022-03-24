@@ -33,7 +33,7 @@
             $db_pass = $email_pass['Password'];
             // echo $pass;
             // print_r($db_pass);
-
+            $_SESSION['typeId'] = $email_pass['UserTypeId'];
             $typeId = $email_pass['UserTypeId'];
             echo $typeId;
             
@@ -41,11 +41,18 @@
             {
                 if($typeId=='1')
                 {
-                    header("Location: Customer-Service-History.php");
+                    header("Location: Customer.php");
+                    // header("Location: Home.php");
                 }
                 elseif($typeId=='2')
                 {
-                    echo " SP Done";
+                    ?>
+                    
+                    <script>
+                        console.log("SP Done");
+                    </script>
+                    <?php
+                    
                     header("Location: ServiceProvider.php");
                 }
             } 
