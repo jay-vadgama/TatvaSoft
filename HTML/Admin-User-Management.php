@@ -32,7 +32,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link img" href="#"><img src="Images/logout.png" alt=""></a>
+              <a class="nav-link img" data-toggle="tooltip" data-placement="bottom" title="Logout" href="logout.php"><img src="Images/logout.png" alt=""></a>
             </li>
           </ul>
         </div>
@@ -40,8 +40,8 @@
 
 
     <div class="sidebar">
-      <a href="Admin-Service_Request.html" >Service Requests</a>
-      <a href="Admin-User_Management.html" class="active">User Management</a>
+      <a href="Admin-Service-Request.php" >Service Requests</a>
+      <a href="Admin-User-Management.php" class="active">User Management</a>
     </div>
 
       <div class="content">

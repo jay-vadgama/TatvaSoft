@@ -42,45 +42,36 @@
                 if($typeId=='1')
                 {
                     header("Location: Customer.php");
-                    // header("Location: Home.php");
                 }
                 elseif($typeId=='2')
                 {
                     ?>
-                    
                     <script>
                         console.log("SP Done");
                     </script>
                     <?php
                     
                     header("Location: ServiceProvider.php");
+                }elseif($typeId=='3')
+                {
+                    header("Location: Admin-Service-Request.php");
+                }
+                else{
+                    ?>
+                        <script>
+                            console.log("Something went wrong   !");
+                        </script>
+                    <?php
                 }
             } 
-            // else {
-            //     echo 'Invalid password.';
-            // }
-            // if($verify)
-            // {
-            //     echo "hello";
-                
-                    
-            //             header("Location: Customer-Service-History.php");
-                
-            // }
+            else{
+                ?>
+                    <script>
+                        console.log("Invalid Password!");
+                    </script>
+                <?php
+            }
             
-            // if(password_verify($pass,$db_pass) && $typeId=='2'){
-            //     echo "hello";
-            // }
-        //     else{
-        //         
-        //     }
-             
-        //         // header("Location: Up-Coming-Service.html");
-            
-        // }
-        // else
-        // {
-        //     
         }
 
     }

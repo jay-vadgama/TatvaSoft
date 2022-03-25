@@ -13,48 +13,38 @@ if(!isset($_SESSION['uName'])){
   <title>Service Provider Dashboard</title>
   <link rel="stylesheet" type="text/css" href="NavCSS/CustCommanNav.css">
   <?php include('include/links.php'); ?>
-  
   <link rel="stylesheet" type="text/css" href="CSS/style31.css">
-  
-  <script src="main.js"></script>
+  <script src="JS/sp.js"></script>
 </head>
 <body style="height: auto;">
 
+<!-- Navbar -->
 <?php include('Navbar/SpCommanNav.php'); ?> 
 
-
-
-
-
+<!-- Title -->
 <div class="container-fluid welcome">
   <p class="head-title">Welcome, <b><?php echo $_SESSION['uName']; ?></b></p>
 </div>
 <!-- echo $_SESSION['uName']; -->
+
 
 <div class="container-fluid">
   <div class="content">
 
     <div class="leftPart" >
       <div class="sidebar">
-        <!-- <a href="#" id="side1" class="activeSidebar" onclick="dashboard()">Dashboard</a> -->
-        <a href="#" id="side1" class="activeSidebar" onclick="Service_History()">New Service Request</a>
-        <a href="#" id="side2" class="" onclick="Service_History()">Upcoming Services</a>
-        <!-- <a href="#" id="side3" class="" onclick="Service_Schedule()">Service Schedule</a> -->
-        <a href="#" id="side3" class="" onclick="Favourite_Pros()">Service History</a>
-        <a href="#" id="side5" class="" onclick="Invoices()">My Ratings</a>
-        <a href="#" id="side6" class="" onclick="Notifications()">Block Customer</a>
-        <!-- <a href="#" id="side6" class="" onclick="Notifications()">Invoices</a> -->
-        <!-- <a href="#" id="side6" class="" onclick="Notifications()">Notifications</a> -->
+        <a href="#" id="side1" class="activeSidebar" onclick="New_Service_Request()">New Service Request</a>
+        <a href="#" id="side2" class="" onclick="Upcoming_Services()">Upcoming Services</a>
+        <a href="#" id="side3" class="" onclick="Service_History()">Service History</a>
+        <a href="#" id="side4" class="" onclick="My_Ratings()">My Ratings</a>
+        <a href="#" id="side5" class="" onclick="Block_Customer()">Block Customer</a>
       </div>
     </div>
 
     <div class="rightPart">
       <div class="dashboard" id="tab1_Dashboard">
           <div class="tbl-left">
-            <p>Current Service Requests</p>
-          </div>
-          <div class="tbl-right">
-            <a href="Book-Now.php" class="btn btn-add-new">Add New Service Request</a>
+            <p>New Service Requests</p>
           </div>
         
 
@@ -63,7 +53,7 @@ if(!isset($_SESSION['uName'])){
               <tr>
                   <th style="text-align: center;">Service Id</th>
                   <th>Service Date</th>
-                  <th>Service Provider</th>
+                  <th>Customer Details</th>
                   <th>Payment</th>
                   <th style="text-align: center;">Actions</th>
                 </tr>
@@ -73,116 +63,76 @@ if(!isset($_SESSION['uName'])){
           <?php 
             include 'config.php';
             $id = $_SESSION['uID'];
+            // echo $id;
             $selectquery = "SELECT `ServiceRequestId`, date_format(ServiceStartDate, '%d-%m-%Y') as `date`, date_format(ServiceStartDate, '%H:%i:%s') as `time`, `TotalCost`  FROM `servicerequest` ";
             // WHERE UserID='$id'
-            $query =mysqli_query($conn,$selectquery);
+            $query = mysqli_query($conn,$selectquery);
             $num = mysqli_num_rows($query);
+            
             
             while($res = mysqli_fetch_assoc($query))
             {
+              
               // echo $res['TotalCost'] . "<br>";
               ?>
               
               <tr>
                 <td class="tr1"><?php echo $res['ServiceRequestId']; ?></td>
                 <td style="text-align: left;"><span> <img src="Images/calendar2.png" alt="">   <?php echo $res['date']; ?></span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt="">   <?php echo $res['time']; ?></span></p></td>
-                <td></td>
+                <td style="text-align: left;"> 
+                <?php 
+                    // echo $id;
+                    $select = "SELECT * FROM `user` LEFT JOIN `servicerequest` ON servicerequest.UserId = user.UserId ";
+                    $q = mysqli_query($conn,$select);
+                    $n = mysqli_num_rows($q);
+                    // echo $n;
+                    $data = mysqli_fetch_assoc($q);
+                    echo $data['FirstName'];
+                   
+                    
+                ?>
+                </td>
                 <td style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;"><?php echo $res['TotalCost']; ?> €</td>
                 <td>
                   <div class="d-flex justify-content-center">
-                    <a class="btn btn-sm btn-res text-white" data-toggle="modal" data-target="#Reschedule">Reschedule</a>
-                    <a class="btn btn-sm btn-cnl text-white" data-toggle="modal" data-target="#CancelRequest">cancel</a>
+                    <a class="btn btn-sm btn-res text-white" data-toggle="modal" data-target="#Reschedule">Accept</a>
                   </div>
                 </td>
             </tr>
             <?php
             }
-            ?>
+          ?>
             
-          <!-- Reschedule Modal-->
-          <section class="Res">
-            <div class="modal fade" id="Reschedule">
-              <div class="modal-dialog ">
-                <div class="modal-content">
-                  
-                  <div class="modal-header">
-                    <h4 class="modal-title">Reschedule Service Request</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-        
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <p class="Delet-modal-text">Select New Date & Time</p>
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="form-group">
-                          <input class="form-control form-check-inline date" name="ServiceDate" id="datepicker" type="date" required>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="form-group">
-                          <select class="form-control" onclick="" id="time" name="ServiceStartTime" required>
-                            <option value="8:00">8:00</option>
-                            <option>8:30</option>
-                            <option>9:00</option>
-                            <option>9:30</option>
-                            <option>10:00</option>
-                            <option>10:30</option>
-                            <option>11:00</option>
-                            <option>11:30</option>
-                            <option>12:00</option>
-                            <option>12:30</option>
-                            <option>13:00</option>
-                            <option>13:30</option>
-                            <option>14:00</option>
-                            <option>14:30</option>
-                            <option>15:00</option>
-                            <option>15:30</option>
-                            <option>16:00</option>
-                            <option>16:30</option>
-                            <option>17:00</option>
-                            <option>17:30</option>
-                            <option>18:00</option>
-                          </select>
-                        </div>
-                      </div>
+          
+          
+          <!-- Cancel Request Modal-->
+          <section class="CancelRes">
+            <div class="modal fade" id="CancelRequest">
+                <div class="modal-dialog modal-md modal-dialog-centered">
+                  <div class="modal-content">
+                    
+                    <div class="modal-header">
+                      <h4 class="modal-title">Cancel Service Request</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <button class="btn button-blue btn-reschedule" type="submit">Reschedule</button>
+          
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <p class="Delet-modal-text">Why you want to cancel the service request?</p>
+                      <form class="was-validated" action="">
+                      <div class="form-group ">
+                        <textarea class="form-control" style="height: 100px;" type="text" id="message" name="message" placeholder="Message" required></textarea>
+                      </div>
+                      <button class="btn text-center button-blue1" type="submit">Cancel Now</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
-              </div>
             </div>
           </section>
-          
-        <!-- Cancel Request Modal-->
-        <section class="CancelRes">
-          <div class="modal fade" id="CancelRequest">
-              <div class="modal-dialog modal-md modal-dialog-centered">
-                <div class="modal-content">
-                  
-                  <div class="modal-header">
-                    <h4 class="modal-title">Cancel Service Request</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-        
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <p class="Delet-modal-text">Why you want to cancel the service request?</p>
-                    <form class="was-validated" action="">
-                    <div class="form-group ">
-                      <textarea class="form-control" style="height: 100px;" type="text" id="message" name="message" placeholder="Message" required></textarea>
-                    </div>
-                    <button class="btn text-center button-blue1" type="submit">Cancel Now</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </section>
 
           </tbody>
-       
-      </table>
+        </table>
       </div>
 
 
@@ -191,13 +141,8 @@ if(!isset($_SESSION['uName'])){
 
 
 <div class="ServiceHistory" id="tab2_ServiceHistory">
-  <div class="dashboard" id="tab1_Dashboard">
-    <div class="tbl-left">
-      <p>Service History</p>
-    </div>
-    <div class="tbl-right">
-      <a href="Book-Now.php" class="btn btn-add-new">Export</a>
-    </div>     
+  <div class="tbl-left">
+    <p>Upcoming Services</p>
   </div>
 
   <table id="example1" class="table" style="width:80%">
@@ -205,25 +150,55 @@ if(!isset($_SESSION['uName'])){
       <tr>
         <th style="text-align: center;">Service Id</th>
         <th>Service Date</th>
-        <th>Service Provider</th>
+        <th>Customer Details</th>
         <th>Payment</th>
-        <th style="text-align: center;">Status</th>
-        <th style="text-align: center;">Rate SP</th>
+        <th style="text-align: center;">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="tr1"></td>
-        <td style="text-align: left;"><span> <img src="Images/calendar2.png" alt="">   </span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt="">   </span></p></td>
-        <td></td>
-        <td style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;"> €</td>
-        <td></td>
-        <td>
-          <div class="d-flex justify-content-center">
-            <a class="btn btn-sm btn-res text-white" data-toggle="modal" data-target="#RateSP">Rate SP</a>
-          </div>
-        </td>
-      </tr>
+    <?php 
+            include 'config.php';
+            $id = $_SESSION['uID'];
+            // echo $id;
+            $selectquery = "SELECT `ServiceRequestId`, date_format(ServiceStartDate, '%d-%m-%Y') as `date`, date_format(ServiceStartDate, '%H:%i:%s') as `time`, `TotalCost`  FROM `servicerequest` ";
+            // WHERE UserID='$id'
+            $query = mysqli_query($conn,$selectquery);
+            $num = mysqli_num_rows($query);
+            
+            
+            while($res = mysqli_fetch_assoc($query))
+            {
+              
+              // echo $res['TotalCost'] . "<br>";
+              ?>
+              
+              <tr>
+                <td class="tr1"><?php echo $res['ServiceRequestId']; ?></td>
+                <td style="text-align: left;"><span> <img src="Images/calendar2.png" alt="">   <?php echo $res['date']; ?></span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt="">   <?php echo $res['time']; ?></span></p></td>
+                <td style="text-align: left;"> 
+                <?php 
+                    // echo $id;
+                    $select = "SELECT * FROM `user` LEFT JOIN `servicerequest` ON servicerequest.UserId = user.UserId ";
+                    $q = mysqli_query($conn,$select);
+                    $n = mysqli_num_rows($q);
+                    // echo $n;
+                    $data = mysqli_fetch_assoc($q);
+                    echo $data['FirstName'];
+                   
+                    
+                ?>
+                </td>
+                <td style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;"><?php echo $res['TotalCost']; ?> €</td>
+                <td>
+                  <div class="d-flex justify-content-center">
+                    <a class="btn btn-sm btn-cnl text-white" data-toggle="modal" data-target="#CancelRequest">Cancel</a>
+                  </div>
+                </td>
+            </tr>
+            <?php
+            }
+          ?>
+      
     </tbody>
   </table>
 </div>
