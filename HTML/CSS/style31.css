@@ -418,7 +418,7 @@ button:focus{
 
 /* footer  CSS */
 
-/* .footer{
+.footer{
   background-color: black !important;
   padding: 30px 0px; 
   margin-top: 20px;
@@ -508,4 +508,4 @@ button:focus{
   .footer_media_icon{
     padding: 10px 0px;
   }
-} */
+}
