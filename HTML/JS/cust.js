@@ -154,35 +154,7 @@ function openMySetting(){
 
 
 // MySetting tab Functions
-function hover1(){
-    document.getElementById("tab1head").style.color = "#1D7A8C";
-    document.getElementById("tb1").style.borderBottom = "4px solid #1D7A8C";
-    
-}
-function normal1(){
-    document.getElementById("tab1head").style.color = "#646464";
-    document.getElementById("tb1").style.borderBottom = "4px solid #cccccc";
-}
 
-function hover2(){
-    document.getElementById("tab2head").style.color = "#1D7A8C";
-    document.getElementById("tb2").style.borderBottom = "4px solid #1D7A8C";
-    
-}
-function normal2(){
-    document.getElementById("tab2head").style.color = "#646464";
-    document.getElementById("tb2").style.borderBottom = "4px solid #cccccc";
-}
-
-function hover3(){
-    document.getElementById("tab3head").style.color = "#1D7A8C";
-    document.getElementById("tb3").style.borderBottom = "4px solid #1D7A8C";
-    
-}
-function normal3(){
-    document.getElementById("tab3head").style.color = "#646464";
-    document.getElementById("tb3").style.borderBottom = "4px solid #cccccc";
-}
 function tab1_show(){
     var element1 = document.getElementById("tb1");
     var element2 = document.getElementById("tb2");

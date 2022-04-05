@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +15,43 @@
 	<link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
 </head>
 <body>
+
+<?php
+if(isset($_SESSION['typeId']))
+{
+
+
+if($_SESSION['typeId'] == 1) {
+    ?>
+        
+    <?php
+        include('Navbar/CustCommanNav.php');
+    ?>
+    <!-- <script>
+            alert("type id = 1");
+        </script> -->
+        <style>
+            <?php include('NavCSS/CustCommanNav.css'); ?>
+        </style>
+    <?php
+}elseif($_SESSION['typeId'] == 2 )
+{
+    ?>
+        <!-- <script>
+            alert("type id = 2");
+        </script> -->
+    <?php
+        // echo "2";
+        include('Navbar/SpCommanNav.php');
+    ?>
+        <style>
+            <?php include('NavCSS/CustCommanNav.css'); ?>
+        </style>
+    <?php
+}
+
+}else{
+?>
 
 <!-- Navbar -->
 <section class="header">
@@ -47,6 +89,11 @@
         </nav>
     </div>
 </section>
+<?php
+}
+
+?>
+
 
 <div class="bg-price">
 	<img src="Images/bg-price.png" class="img-responsive price-bg" alt="faq" >

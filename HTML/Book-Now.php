@@ -1,18 +1,61 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['uName'])){
+  header("Location: Home.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Helperland | Book Now</title>
     <link rel="stylesheet" href="CSS/Style6.css">
     <script src="JS/main2.js"></script>
-    <script src="JS/main3.js"></script>
+    <script src="JS/main3.js"></script> 
+    <?php include('include/links.php'); ?> 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-    <meta charset="UTF-8">
-    <?php include('include/links.php'); ?>
-    
-    
-    
 </head>
 <body style="height: auto;">
+
+<?php
+if(isset($_SESSION['typeId']))
+{
+
+
+if($_SESSION['typeId'] == 1) {
+    ?>
+        
+    <?php
+        include('Navbar/CustCommanNav.php');
+    ?>
+    <!-- <script>
+            alert("type id = 1");
+        </script> -->
+        <style>
+            <?php include('NavCSS/CustCommanNav.css'); ?>
+        </style>
+    <?php
+}elseif($_SESSION['typeId'] == 2 )
+{
+    ?>
+        <!-- <script>
+            alert("type id = 2");
+        </script> -->
+    <?php
+        // echo "2";
+        include('Navbar/SpCommanNav.php');
+    ?>
+        <style>
+            <?php include('NavCSS/CustCommanNav.css'); ?>
+        </style>
+    <?php
+}
+
+}else{
+?>
+
 
 <!-- Navbar -->
 <section class="header">
@@ -50,6 +93,10 @@
         </nav>
     </div>
 </section>
+<?php
+}
+
+?>
 
 
 
@@ -75,7 +122,7 @@
 
 <!-- Book-now body Starts -->
 <div class="container-fluid">
-  <div class=" d-flex justify-content-center">
+<div class=" d-flex justify-content-center">
     
     <!-- left-side starts -->
     <section class="left-side">
@@ -102,6 +149,7 @@
         <!-- tabs-Body Starts -->
         <div class="tabs-body">
 
+          <!-- -----------TAB1----------- -->
           <!-- tab-body 1 starts -->
           <div class="tab-body1" id="body1">
             <div id="tab-err1"></div>
@@ -111,7 +159,7 @@
               
                 <div class="checkZipDiv">
                   <div class="form-group">
-                    <input type="text" pattern="[0-9]{6}" class="form-control" placeholder="Postal Code" name="zipcode" id="Zipcode" required>
+                    <input type="text" pattern="[0-9]{6}" maxlength="6" minlength="6" class="form-control" placeholder="Postal Code" name="zipcode" id="Zipcode" required>
                   </div>
                 </div>
 
@@ -122,42 +170,28 @@
                 </div>  
 
             </form>
+            <!-- -----------TAB1-SCRIPTS----------- -->
             <script>
-              // const zipcode = $('[name="CheckZipcode"]').val();
-              // const zipcode = $('[name="CheckZipcode"]').val();
-              // const zipcode = $('[name="CheckZipcode"]').val();
-              // const zipcode = $('[name="CheckZipcode"]').val();
-              // const zipcode = $('[name="CheckZipcode"]').val();
-              // const form = new FormData();
-              // form.append('zipcode', zipcode);
-              // form.append('zipcode', zipcode);
-              // form.append('zipcode', zipcode);
-              // form.append('zipcode', zipcode);
-              // form.append('zipcode', zipcode);
-              // form.append('zipcode', zipcode);
-              // if(zipcode!==""){
-                
-              // }
               $("#tab-form1").submit(function (e){
                 e.preventDefault();
-                $.ajax({
-                  url:"http://localhost/TatvaSoft/HTML/insertBooknow.php",
-                  method:"post",
-                  data:$('#tab-form1').serialize(),
-                  success:function(res){
-                    console.log(res);
-                    $('#tab-err1').html("");
-                    if(res=='<div class="alert alert-danger"><strong>Sorry!</strong> Service is available not at this Zipcode.</div>'){
-                      $('#tab-err1').html(res);
-                    }else{
-                      $('#tab-err1').html(res);
-                      document.getElementById("tabbtn2").removeAttribute('disabled');
-                      show2();
+                  $.ajax({
+                    url:"http://localhost/TatvaSoft/HTML/db/checkZipCode.php",
+                    method:"post",
+                    data:$('#tab-form1').serialize(),
+                    success:function(res){
+                      // console.log(res);
+                      if(res==1){
+                          msg = '<div class="alert alert-success"><strong>Hurray!</strong> Service is available at this Zipcode.</div>';
+                          $('#tab-err1').html(msg);
+                          document.getElementById("tabbtn2").removeAttribute('disabled');
+                          show2();
+                      }
+                      else{
+                        msg = '<div class="alert alert-danger"><strong>Sorry!</strong> Service is available not at this Zipcode.</div>';
+                        $('#tab-err1').html(msg);                      
+                      }
                     }
-                  }
-
-
-                });
+                  });
               });
 
               
@@ -169,7 +203,8 @@
 
 
 
-          <!-- tab-body 2 strats  -->
+          <!-- -----------TAB2----------- -->
+          <!-- tab-body 2 starts  -->
           <div class="tab-body2" id="body2">
           
             <form class="was-validated" id="tab-form2" action="" method="post">
@@ -180,12 +215,12 @@
                     <div class="row">
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input class="form-control form-check-inline date" name="ServiceDate" id="datepicker" type="date" required>
+                          <input class="form-control form-check-inline date" name="ServiceDate" id="SeviceDate" type="date" required>
                         </div>
                       </div>
                       <div class="col-sm-4">
                         <div class="form-group">
-                          <select class="form-control" onclick="" id="time" name="ServiceStartTime" required>
+                          <select class="form-control" onclick="" id="ServiceStarttime" name="ServiceStartTime" required>
                             <option value="8:00">8:00</option>
                             <option>8:30</option>
                             <option>9:00</option>
@@ -216,7 +251,7 @@
                 <div class="col-lg-6">
                   <label class="form-label">How long do you need your cleaner to stay?</label>
                   <div class="form-group">
-                    <select class="form-control" id="HourSelected" onclick="Hour()" name="ServiceHour">
+                    <select class="form-control" id="ServiceHour" onclick="Hour()" name="ServiceHour">
                       <option value="3">3.0 Hrs</option>
                       <option value="3.5">3.5 Hrs</option>
                       <option value="4">4.0 Hrs</option>
@@ -246,35 +281,35 @@
               <label class="form-label">Extra Services</label>
               <div class="justify-content-center custom-checkboxes">
                 <div class="Cust-checkbox">
-                    <input type="checkbox" name="check[]" value="0.5" class="CustomBox" id="Check1">
+                    <input type="checkbox" name="check" value="1" class="CustomBox" id="Check1">
                     <label for="Check1" class="label1" onclick="Check1();">
                         <img src="Images\price-1.png" id="CheckImg1" >
                       </label>
                     <p class="check-text">Inside cabinets</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" name="check[]" value="0.5" class="CustomBox" id="Check2" >
+                    <input type="checkbox" name="check" value="2" class="CustomBox" id="Check2" >
                     <label for="Check2" class="label1" onclick="Check2();">
                         <img src="Images\price-2.png" id="CheckImg2" >
                     </label>
                     <p class="check-text">Inside Fridge</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" name="check[]" value="0.5" class="CustomBox" id="Check3" >
+                    <input type="checkbox" name="check" value="3" class="CustomBox" id="Check3" >
                     <label for="Check3" class="label1" onclick="Check3();">
                         <img src="Images\price-3.png" id="CheckImg3" >
                     </label>
                     <p class="check-text">Inside Oven</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" name="check[]" value="0.5" class="CustomBox" id="Check4" >
+                    <input type="checkbox" name="check" value="4" class="CustomBox" id="Check4" >
                     <label for="Check4" class="label1" onclick="Check4();">
                         <img src="Images\price-4.png" id="CheckImg4" >
                     </label>
                     <p class="check-text">Laundry Wash & Dry</p>
                 </div>
                 <div class="Cust-checkbox">
-                    <input type="checkbox" name="check[]" value="0.5" class="CustomBox" id="Check5">
+                    <input type="checkbox" name="check" value="5" class="CustomBox" id="Check5">
                     <label for="Check5" class="label1" onclick="Check5();">
                         <img src="Images\price-5.png" id="CheckImg5" >
                     </label>
@@ -299,31 +334,14 @@
               <button class="btn-cnt" value="true" name="ContinueToTab3" >Continue</button>
         
             </form>
+            <!-- -----------TAB2-SCRIPTS----------- -->
             <script>
-              
               $("#tab-form2").submit(function (e){
                 e.preventDefault();
-                $.ajax({
-                  url:"http://localhost/TatvaSoft/HTML/insertBooknow.php",
-                  method:"post",
-                  data:$('#tab-form2').serialize(),
-                  success:function(res){
-                    console.log(res);
-                    if(res=='true'){
-                      document.getElementById("tabbtn2").removeAttribute('disabled');
-                      document.getElementById("tabbtn3").removeAttribute('disabled');
-                      show3();
-                    }
-                    else{
-                      alert('Something went Wrong!');
-                    }
-                  }
-                });
+                document.getElementById("tabbtn2").removeAttribute('disabled');
+                document.getElementById("tabbtn3").removeAttribute('disabled');
+                show3();
               });
-
-              
-
-
               </script>
           </div>
           <!-- tab-body 2 ends -->
@@ -331,29 +349,48 @@
 
           <!-- tab-body 3 starts -->
           <div class="tab-body3" id="body3">
-            <form action="" method="post" class="was-validated">
+            <form id="addressFormTab3" method="post" class="was-validated">
               <p class="head-text">Enter your contact details, so we can serve you in better way!</p>
-              <div class="form-check form-address">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="" checked>
-                  <label class="form-check-label" for="radio1">
-                    <p class="p-address"><b>Address:</b> Street 2 40, Troisdorf 53844</p>
-                    <p class="p-address"><b>Phone no:</b> 9624527786</p>
-                  </label>
-              </div>
-              <div class="form-check form-address">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="" >
-                  <label class="form-check-label" for="radio2">
-                    <p class="p-address"><b>Address:</b> Street 2 40, Troisdorf 53844</p>
-                    <p class="p-address"><b>Phone no:</b> 9624527786</p>
-                  </label>
+              <div id="userAddressContainer">
+                <!-- DYNAMIC GENERATED BY JS -->
               </div>
             </form>
+
+              <script>
+                function loadCustomerAddress(){
+                  $.ajax({
+                    type: "get",
+                    url: "db/retriveAddress.php",
+                    success: function (res) {
+                      const data = JSON.parse(res);
+                      console.log(data);
+                      let content = ``;
+                      for(let i=0; i<data.length; i++){
+                        content +=`<div class="form-check form-address">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="radio${data[i].AddressId}" value="${data[i].AddressId}" checked required>
+                                      <label class="form-check-label" for="radio">
+                                        <p class="p-address"><b>${data[i].AddressId} Address:</b> ${data[i].AddressLine1} ${data[i].AddressLine2}, ${data[i].City} ${data[i].PostalCode} </p>
+                                        <p class="p-address"><b>Phone no:</b> ${data[i].Mobile}</p>
+                                      </label>
+                                    </div>`;
+                      }
+                      $('#userAddressContainer').html(content);
+                    }
+                  });
+                  
+                }
+                loadCustomerAddress();
+              </script>
+
+
+
+            
             <div class="add-btn">
               <button class="btn-address" onclick="addnewAddress()" id="Addnew">+ Add New Address</button>
             </div>
         
             <div class="newAdd" id="newAdd">
-              <form id="tab-form3" action="">
+              <form id="tab-form3" method="POST">
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
@@ -373,7 +410,7 @@
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label class="lable-text">Postal Code</label>
-                      <input class="form-control" type="text" id="postalCode" name="postalCode">
+                      <input class="form-control" type="text" id="postalCode" name="postalCode" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
@@ -398,7 +435,7 @@
                 </div>
                 <div class="btns">
                   <button class="btn-save" name="tab-btn3" onclick="">Save</button>
-                  <button class="btn-cancel"  onclick="btnclose()">Cancel</button>
+                  <button class="btn-cancel" onclick="btnclose()">Cancel</button>
                 </div>
               </form>
             </div>
@@ -423,28 +460,39 @@
             
             <hr>
             
-            <button class="btn-cnt">Continue</button>
+            <button class="btn-cnt" id ="tab3CntBTN">Continue</button>
           </div>
           <!-- tab-body 3 ends -->
             <script>
-                $("#tab-form3").submit(function (e){
-                e.preventDefault();
+              
+              $("#tab-form3").submit(function (e){
+                  // console.log("form submmit");
+                  e.preventDefault();
                 $.ajax({
                   url:"http://localhost/TatvaSoft/HTML/insertBooknow.php",
                   method:"post",
                   data:$('#tab-form3').serialize(),
                   success:function(data){
                     if(data=='true'){
-                      document.getElementById("tabbtn4").removeAttribute('disabled');
-                      show4();                    
+                      // alert("success");
+                      btnclose();
+                      loadCustomerAddress();
                     }
                     else{
-                      console.log(data);
+                      // console.log(data);
                       alert('Something went Wrong!');
                     }
                   }
                 });
               });
+
+
+              $("#tab3CntBTN").click(function (e) { 
+                e.preventDefault();
+                document.getElementById("tabbtn4").removeAttribute('disabled');
+                show4(); 
+              });
+
             </script>   
             
             
@@ -466,7 +514,7 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="form-label">Month</label>
-                      <select class="form-control" id="Expmonth" name="cardMonth" required>
+                      <select class="form-control" id="Expmonth" name="cardMonth" readonly required>
                         <option value="" hidden>--</option>
                         <option>1</option>
                         <option>2</option>
@@ -486,7 +534,7 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="form-label">Expiry year</label>
-                      <select class="form-control" name="cardYear" id="Expyear" required>
+                      <select class="form-control" name="cardYear" id="Expyear" readonly>
                         <option value="" hidden>--</option>
                         <option>2022</option>
                         <option>2023</option>
@@ -508,7 +556,7 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="form-label">CVV/CVC</label>
-                      <input type="password" class="form-control" name="cardCVV" placeholder="***" minlength="3" maxlength="3" required>
+                      <input type="password" class="form-control" name="cardCVV" placeholder="***" minlength="3" maxlength="3" required readonly>
                     </div>
                   </div>
                 </div>
@@ -533,35 +581,68 @@
               <label class="form-check-label checkbox-lable"><p>I accepted <a href="">terms and conditions</a>, the <a href="">cancellation policy</a> and the <a href="">privacy policy</a>. I confirm that Helperland starts to execute the contract before the expiry of the withdrawal period and I lose my right of withdrawal as a consumer with full performance of the contract.</p></label>
             </div>
           
-            <button class="btn-cnt">Complete Booking</button>
+            <button class="btn-cnt" id="CompleteBookingBTN">Complete Booking</button>
             
               
           </form>
           </div>
           <!-- tab-body 4 ends -->
-          <script>
 
-                $("#tab-form4").submit(function (e){
-                e.preventDefault();
-                $.ajax({
-                  url:"http://localhost/TatvaSoft/HTML/insertBooknow.php",
-                  method:"post",
-                  data:$('#tab-form4').serialize(),
-                  success:function(res){
-                    if(res){
-                      document.getElementById("tabbtn2").removeAttribute('disabled');
-                      document.getElementById("tabbtn3").removeAttribute('disabled');
-                      document.getElementById("tabbtn4").removeAttribute('disabled');
-                      console.log(res);                    
-                      alert(res);
+          <script>
+                $("#CompleteBookingBTN").click(function (e) { 
+                  let zipcode = $('#Zipcode').val();
+                  let SeviceDate = $('#SeviceDate').val();
+                  let ServiceStarttime = $('#ServiceStarttime').val();
+                  let ServiceHour = $('#ServiceHour').val();
+                  // var ServiceHour = $('#ServiceHour :selected').text();
+                  var checkExtra = [];
+                  $.each($("input[name='check']:checked"), function(){            
+                    checkExtra .push($(this).val());
+                  });
+                  // checkExtra = checkExtra.toString();
+                  // console.log(checkExtra);
+                  let comments = $('#comments').val();
+                  let checkPet = $('#checkPet').val();
+                  
+                  const address = $('input[name="exampleRadios"]:checked').val();
+                  
+                  let bookServiceData = {
+                                          zipcode : zipcode,
+                                          SeviceDate: SeviceDate,
+                                          ServiceStarttime: ServiceStarttime,
+                                          ServiceHour: ServiceHour,
+                                          checkExtra: checkExtra,
+                                          comments: comments,
+                                          checkPet: checkPet,
+                                          address: address
+                                      };
+                
+                  console.log(bookServiceData);
+
+             
+
+                  e.preventDefault();
+                  $.ajax({
+                    url:"http://localhost/TatvaSoft/HTML/insertBooknow.php",
+                    method:"post",
+                    data:bookServiceData,
+                    success:function(res){
+                      const id = JSON.parse(res);
+                      // alert(id);
+                      // alert(res);
+                      if(res)
+                      {
+                        alert("Successfully Booked Service.\nYour Booking Id :" + id);
+                      }else
+                      {
+                        alert("Service Not Booked! Try again later.");
+                      }
                     }
-                    else{
-                      console.log(res);
-                      alert('Something went Wrong!');
-                    }
-                  }
-                });
+                  });
               });
+                
+
+       
             </script>    
         </div>
         <!-- tabs-Body Ends -->

@@ -16,13 +16,13 @@
                     <a class="nav-link link1 text-white " href="Book-now.php">Book Now</a>
                   </li>
                 <li class="nav-item r1">
-                  <a class="nav-link text-white" href="#">Prices & Services</a>
+                  <a class="nav-link text-white" href="Price.php">Prices & Services</a>
+                </li>
+                <li class="nav-item r1" >
+                  <a class="nav-link text-white" href="Warrenty.php">Warrenty</a>
                 </li>
                 <li class="nav-item r1">
-                  <a class="nav-link text-white " href="#">Warrenty</a>
-                </li>
-                <li class="nav-item r1">
-                  <a class="nav-link text-white" href="#">Blog</a>
+                  <a class="nav-link text-white"  href="#">Blog</a>
                 </li>
                 <li class="nav-item r1">
                   <a class="nav-link text-white active" href="">Contact</a>
@@ -38,9 +38,9 @@
                             <img src="Images/user_logo.png" alt=""><i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                            <h5 class="dropdown-header">Welcome,<p class="uname"> <b>echo $_SESSION['uName'];</b> </p></h5>
+                            <h5 class="dropdown-header">Welcome,<p class="uname"> <b><?php echo $_SESSION['uName']; ?></b> </p></h5>
                             <hr>
-                            <a class="dropdown-item" href="#" onclick="openMyDashboard()">My Dashboard</a>
+                            <a class="dropdown-item" href="Customer.php" onclick="openMyDashboard()">My Dashboard</a>
                             <a class="dropdown-item" href="#" onclick="openMySetting()">My Setting</a>
                             <a class="dropdown-item" href="logout.php">Logout</a>
                         </div>

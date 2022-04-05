@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
 .img-fluid{
-    background-image: url("HTML/Images/Home_BG.png");
+    background-image: url("../Images/Home_BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

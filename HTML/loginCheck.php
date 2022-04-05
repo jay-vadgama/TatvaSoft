@@ -26,6 +26,7 @@
 
             $_SESSION['uID'] = $email_pass['UserId'];
             $_SESSION['uName'] = $email_pass['FirstName'];
+            $_SESSION['uEmail'] = $email_pass['Email'];
 
             // $id = $email_pass['UserId'];
             // echo $id;
@@ -35,7 +36,7 @@
             // print_r($db_pass);
             $_SESSION['typeId'] = $email_pass['UserTypeId'];
             $typeId = $email_pass['UserTypeId'];
-            echo $typeId;
+            // echo $typeId;
             
             if (password_verify($pass, $db_pass)) 
             {
@@ -56,22 +57,40 @@
                 {
                     header("Location: Admin-Service-Request.php");
                 }
-                else{
+                else
+                {
+                    session_unset();
                     ?>
                         <script>
-                            console.log("Something went wrong   !");
+                            alert("Something went wrong!");
                         </script>
                     <?php
                 }
             } 
-            else{
+            else
+            {
+                session_unset();
                 ?>
                     <script>
-                        console.log("Invalid Password!");
+                        alert("Invalid Password!");
+                        window.location.href = "Home.php";
                     </script>
                 <?php
+                
+                
             }
             
+        
+            
+        }else
+        {
+            session_unset();
+            ?>
+                <script>
+                    alert("Opps! This email not registered!");
+                    window.location.href = "Home.php";
+                </script>
+            <?php
         }
 
     }

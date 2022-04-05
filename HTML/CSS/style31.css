@@ -276,7 +276,9 @@
 
 
 /* DataTable CSS for DASHBOARD */
-
+#record_table{
+  margin-top: 20px !important;
+}
 
 .table{
   width: 100% !important;
@@ -301,26 +303,38 @@
   padding: 10px 15px !important;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
+  
 }
 
 .btn-res{
   background-color: #1D7A8C !important;
   border-radius: 27px !important;
+  font-family: roboto;
 }
 
 .btn-cnl{
   background: #ff6b6b !important;
   border-radius: 27px !important;
+  font-family: roboto;
 }
 
-
-
+.fa-edit,.fa-trash-alt{
+  color: #9c9c9c;
+  cursor: pointer;
+  font-size: 25px;
+  align-items: center;
+  text-align: center;
+}
+.fa-edit:hover ,.fa-trash-alt:hover{
+  color: #4f4f4f;
+  transition: ease-in-out .3s;
+}
 
 .dashboard{
 
 }
 
-#tab2_ServiceHistory , #tab_mySettings{
+#tab2_ServiceHistory ,#tab3_ServiceHistory ,#tab_mySettings{
   display: none;
 }
 
@@ -491,13 +505,81 @@ button:focus{
   font-weight: 500;
 }
 
+/* ServiceDetails MODAL CSS */
+.SDmodaldate{
+  font-family: roboto;
+  color: #4f4f4f;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0px !important;
+}
+.SDmodalDuration{
+  font-family: roboto;
+  color: #646464;
+  font-weight: 600;
+  margin-bottom: 0px !important;
+  font-size: 18px;
+}
+.SDmodalDurationTxt{
+  font-family: roboto;
+  font-size: 18px;
+  color: #6d6d6d;
+  font-weight: 400;
+  margin-bottom: 0px !important;
+}
+.SDmodalPaymentTxt{
+  color: #146371;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: roboto;
+}
+.closeIcon{
+  background: red !important;
+}
+.AgreeIcon{
+  color: #4fc401bf !important;
+}
+.btn-AcceptServiceRequest{
+  border-radius: 27px !important;
+  background-color: #4fc401bf;
+  font-family: roboto;
+}
+
+/* SP CSS */
+.avtarRow-left{
+  align-items: center;
+  vertical-align: middle;
+  display: grid;
+}
+.avtarRow{
+  justify-content: space-between;
+}
 
 
+/* New Avtar CSS */
 
+input[type="radio"][id^="avatar"] {
+  display: none;
+}
+.check-label1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  border: 1px solid #C8C8C8;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0px 15px;
+}
 
-
-
-
+:checked + label {
+  border: 3px solid #1d7a8c;
+}
+.avtarImg{
+  width: 80px;
+  height: 80px;
+}
 
 
 

@@ -2,7 +2,7 @@
 
 
 .img-fluid{
-    background-image: url("imges/Home_BG.png");
+    background-image: url("../Images/Home_BG.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

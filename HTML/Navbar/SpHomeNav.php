@@ -8,9 +8,6 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item round" >
-                    <a class="nav-link" href="Book-Now.php">Book a Cleaner</a>
-                </li>
                 <li class="nav-item r1">
                     <a class="nav-link" href="Price.php">Prices</a>
                 </li>
@@ -36,8 +33,8 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                             <h5 class="dropdown-header">Welcome,<p class="uname"> <b>echo $_SESSION['uName'];</b> </p></h5>
                             <hr>
-                            <a class="dropdown-item" href="Customer.php" onclick="openMyDashboard()">My Dashboard</a>
-                            <a class="dropdown-item" href="Customer.php" onclick="openMySetting()">My Setting</a>
+                            <a class="dropdown-item" href="ServiceProvider.php" onclick="openMyDashboard()">My Dashboard</a>
+                            <a class="dropdown-item" href="#" onclick="openMySetting()">My Setting</a>
                             <a class="dropdown-item" href="logout.php">Logout</a>
                         </div>
                     </div>

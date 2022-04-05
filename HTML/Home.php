@@ -1,7 +1,7 @@
 <?php
-  session_start();
+   session_start();
   
-  // if(isset($_SESSION['uName']) ){
+  // if(isset($_SESSION['uName']) && isset($_SESSION['typeId']) ){
   //   header("Location: Home.php");
   // }
   
@@ -12,15 +12,11 @@
 <head>
   <title>Helperland | Welcome to homepage.</title>
   <?php include('include/links.php'); ?>
-  <style>
-    <?php include('NavCSS/NavbarHome.css'); ?>
-  </style>
-    
-  
-
-
   <link rel="stylesheet" href="CSS/S.css">
- 
+  <style>
+    <?php include('NavCSS/CustHomeNav.css'); ?>
+  </style>
+  <link rel="stylesheet" href="NavCSS/NavbarHome.css">
   <script src="JS/main.js"></script>
   
 </head>
@@ -28,22 +24,51 @@
 <body style="scroll-behavior: smooth !important;">
 
 <div class="img-fluid">
-  <?php
-    if(isset($_SESSION['typeId']) =='1'){
-      include('Navbar/SpCommanNav.php');
-    }elseif(isset($_SESSION['typeId']) =='2'){
+
+<?php
+
+  if(isset($_SESSION['typeId']) && isset($_SESSION['uName']))
+  {
+
+    if($_SESSION['typeId'] == 1) 
+    {
       include('Navbar/CustHomeNav.php');
-    }else{
-      include('Navbar/NavbarHome.php');
-    } 
-  ?>
+      ?>
+        <!-- <script>
+          alert("type id = 1");
+        </script> -->
+        
+        <?php
+    }elseif($_SESSION['typeId'] == 2 )
+    {
+      include('Navbar/SpHomeNav.php');
+        ?>
+            
+            <!-- <style>
+                <?php include('NavCSS/CustHomeNav.css'); ?>
+            </style> -->
+            <!-- <script>
+                alert("type id = 2");
+            </script> -->
+        <?php
+    }
+
+  }
+  else{
+    
+    include('Navbar/NavbarHome.php');
+
+  }
+
+?>
+  
   
 
+<!-- Modal Included -->
+<?php include 'include/login-forgot-Modal.php';  ?>
 
-<?php 
-    
-    include 'include/login-forgot-Modal.php'; 
-  ?>
+
+
   <!-- Let's Book Cleaner -->
   <section class="part1">
     

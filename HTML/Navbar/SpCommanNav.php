@@ -15,8 +15,8 @@
                 <li class="nav-item r1">
                   <a class="nav-link text-white" href="#">Prices & Services</a>
                 </li>
-                <li class="nav-item r1">
-                  <a class="nav-link text-white " href="#">Warrenty</a>
+                <li class="nav-item r1" onclick="warrenty()">
+                  <a class="nav-link text-white "  href="Warrenty.php">Warrenty</a>
                 </li>
                 <li class="nav-item r1">
                   <a class="nav-link text-white" href="#">Blog</a>
@@ -35,7 +35,7 @@
                             <img src="Images/user_logo.png" alt=""><i class="fa fa-angle-down" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                            <h5 class="dropdown-header">Welcome,<p class="uname"> <b>echo $_SESSION['uName'];</b> </p></h5>
+                            <h5 class="dropdown-header">Welcome,<p class="uname"> <b><?php echo $_SESSION['uName']; ?></b> </p></h5>
                             <hr>
                             <a class="dropdown-item" href="#" onclick="openMyDashboard()">My Dashboard</a>
                             <a class="dropdown-item" href="#" onclick="openMySetting()">My Setting</a>

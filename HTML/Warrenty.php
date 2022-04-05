@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +12,45 @@
     <link rel="stylesheet" href="CSS/warrenty.css">
     <link rel="stylesheet" href="CSS/warrenty.css">
     <?php include('include/links.php'); ?>
+    <script src="JS\nav.js"></script>
 </head>
 <body>
+<?php
+if(isset($_SESSION['typeId']))
+{
 
-<!-- Navbar -->
+
+if($_SESSION['typeId'] == 1) {
+    ?>
+        
+    <?php
+        include('Navbar/CustCommanNav.php');
+    ?>
+    <!-- <script>
+            alert("type id = 1");
+        </script> -->
+        <style>
+            <?php include('NavCSS/CustCommanNav.css'); ?>
+        </style>
+    <?php
+}elseif($_SESSION['typeId'] == 2 )
+{
+    ?>
+        <!-- <script>
+            alert("type id = 2");
+        </script> -->
+    <?php
+        // echo "2";
+        include('Navbar/SpCommanNav.php');
+    ?>
+        <style>
+            <?php include('NavCSS/CustCommanNav.css'); ?>
+        </style>
+    <?php
+}
+
+}else{
+?>
 <section class="header">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg fixed-top">
@@ -44,6 +86,14 @@
         </nav>
     </div>
 </section>
+<?php
+}
+
+
+
+?>
+
+
 
 <!-- BG -->
 <div class="bg-warrenty">
@@ -52,7 +102,7 @@
 
 <!-- Heading -->
 <div class="container-fluid">
-	<p class="txt">Our Guarantee</p>
+	<p class="txt">Our Guarantee<?php if(isset($_SESSION['typeId'])) {echo $_SESSION['typeId']; }?></p>
 </div>
 <div class="line-div">
     <hr class="left-line">

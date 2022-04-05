@@ -18,9 +18,9 @@ function Check1(){
     
     // console.log(addS1);
     // console.log(addR1);
-    var c1 = document.getElementById("Check1").value;
-    h = document.getElementById("HourSelected").value;
-    bt = document.getElementById("BasicNewHour").innerHTML = parseFloat(h) + parseFloat(c1) + " Hrs";
+    // var c1 = document.getElementById("Check1").value;
+    // h = document.getElementById("HourSelected").value;
+    // bt = document.getElementById("BasicNewHour").innerHTML = parseFloat(h) + parseFloat(c1) + " Hrs";
 
 
 
@@ -31,8 +31,8 @@ function Check1(){
     addR11.innerHTML = "30 minutes";
   }
   else{
-    h = document.getElementById("HourSelected").value;
-    bt = document.getElementById("BasicNewHour").innerHTML = h + " Hrs";
+    // h = document.getElementById("HourSelected").value;
+    // bt = document.getElementById("BasicNewHour").innerHTML = h + " Hrs";
 
     document.getElementById("CheckImg1").src="Images/price-1.png";
     addS1.innerHTML = "";
@@ -55,9 +55,9 @@ function Check2(){
     
     if(!document.getElementById("Check2").checked){
 
-    c2 = document.getElementById("Check2").value;
-    h = document.getElementById("HourSelected").value;
-    bt = document.getElementById("BasicNewHour").innerHTML = parseFloat(h) + parseFloat(c2) + " Hrs";
+    // c2 = document.getElementById("Check2").value;
+    // h = document.getElementById("HourSelected").value;
+    // bt = document.getElementById("BasicNewHour").innerHTML = parseFloat(h) + parseFloat(c2) + " Hrs";
 
     document.getElementById("CheckImg2").src="Images/2-green.png";
     addS2.innerHTML = "Inside Fridge";
