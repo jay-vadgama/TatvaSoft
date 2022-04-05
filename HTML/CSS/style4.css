@@ -217,39 +217,53 @@ table.dataTable tbody th, table.dataTable tbody td{
   background-color: #646464 !important;
 }
 
-.three-dots:after {
+/* DropDown */
+.more {
   cursor: pointer;
-  color: #646464;
-  content: '\2807';
-  font-size: 20px;
-  padding: 0 5px;
-  }
-    
-  .dropdown {
+  border: none;
+  background: transparent;
+}
+
+.more span {
+  display: block;
+  width: .25rem;
+  height: .25rem;
+  background: #363636;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.more span:not(:last-child) {
+  margin-bottom: .125rem;
+}
+
+.dropout {
+  z-index: 9001;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dropout ul {
   position: absolute;
-  right: 20px;
+  top: 1.5rem;
+  right: -1.5rem;
   background-color: white;
-  box-shadow: 0px 0px 6px 0px #00000040;
-  outline: none;
-  opacity: 0;
-  z-index: -1;
-  transition: ease 0.2s, 
-  }
-  
-  .dropdown-container a{
-      text-decoration: none;
-      font-family: Roboto;
-      font-size: 16px;
-      color: #646464;
-  }
-  
-  .dropdown-container:focus {
-  outline: none;
-  }
-  
-  .dropdown-container:focus .dropdown {
-  opacity: 1;
-  z-index: 100; 
-  height:100%;
-  transition: ease 0.2s, 
-  }
+  border: 1px solid gray;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.12s ease;
+  padding-left: 0px !important;
+}
+
+.dropout.active ul {
+  transform: scaleX(1);
+}
+ul li{
+  list-style: none !important;
+}
+ul li:hover{
+  background-color: gray;
+  color: rgb(255, 255, 255);
+}

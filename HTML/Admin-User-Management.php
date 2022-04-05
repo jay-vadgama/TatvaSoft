@@ -17,322 +17,154 @@
 </head>
 <body style="height: 100% !important;  background-color: #f9f9f9 !important;">
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-default fixed-top">
+  <a class="navbar-brand" href="HomePage.html">heperland</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+            <img src="Images/admin-user.png" alt="adminUser">
+            <p style="display: inline;"> Jay Vadgama </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link img" data-toggle="tooltip" data-placement="bottom" title="Logout" href="logout.php"><img src="Images/logout.png" alt=""></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-    <nav class="navbar navbar-expand-md navbar-default fixed-top">
-        <a class="navbar-brand" href="HomePage.html">heperland</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                  <img src="Images/admin-user.png" alt="adminUser">
-                  <p style="display: inline;"> Jay Vadgama </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link img" data-toggle="tooltip" data-placement="bottom" title="Logout" href="logout.php"><img src="Images/logout.png" alt=""></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="Admin-Service-Request.php" >Service Requests</a>
+  <a href="Admin-User-Management.php" class="active">User Management</a>
+</div>
 
-    <div class="sidebar">
-      <a href="Admin-Service-Request.php" >Service Requests</a>
-      <a href="Admin-User-Management.php" class="active">User Management</a>
+<div class="content">
+  <div class="text">
+    <div class="User">
+      <p class="head">User Management<button class="btn right"> + Add New User</button></p>
     </div>
 
-      <div class="content">
-          <div class="text">
-            <div class="User">
-              <p class="head">User Management<button class="btn right"> + Add New User</button></p>
+    <!-- Filters -->
+    <div class="filter">
+
+      
+        <div class="d-flex">
+
+          <div class="form-group dropdown1">                
+            <select class="form-control select">
+              <option value="" hidden>User Name</option>
+                <option value="Service" >Admin</option>
+                <option value="Contact">Customer</option>
+                <option value="Inquiry">Service Provider</option>
+              </select>
+          </div>
+          <div class="form-group">                
+            <select class="form-control select1">
+              <option value="" hidden>User Type</option>
+                <option value="Admin" >Admin</option>
+                <option value="Customer">Customer</option>
+                <option value="Service">Service Provider</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">+91</div>
+              </div>
+                <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number">
             </div>
-            <!-- Filter Section - Start-->
-            <div class="filter">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Zipcode">
+        </div>
+          <button type="button" class="btn btn3">Search</button>
+          <button type="submit" class="btn btn4">Clear</button>
+      
+        </div>
+      </form>
+    </div>
+    
+    
 
-              <form action="">
-                <div class="d-flex">
-
-                  <div class="form-group dropdown1">                
-                    <select class="form-control select">
-                      <option value="" hidden>User Name</option>
-                        <option value="Service" >Admin</option>
-                        <option value="Contact">Customer</option>
-                        <option value="Inquiry">Service Provider</option>
-                      </select>
-                  </div>
-                  <div class="form-group">                
-                    <select class="form-control select1">
-                      <option value="" hidden>User Type</option>
-                        <option value="Admin" >Admin</option>
-                        <option value="Customer">Customer</option>
-                        <option value="Service">Service Provider</option>
-                      </select>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group mb-2">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">+91</div>
-                      </div>
-                        <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number">
-                    </div>
-                </div>
-                <div class="form-group">
-                  <input class="form-control" type="text" placeholder="Zipcode">
-                </div>
-                  <button type="button" class="btn btn3">Search</button>
-                  <button type="submit" class="btn btn4">Clear</button>
-              
-                </div>
-              </form>
-
-            </div>
-            <!-- Filter Section - End -->
-
-
-            <table id="example" class="table" style="width:100%">
-              <thead>
-                  <tr>
-                      <th>User Name</th>
-                      <th>Role</th>
-                      <th style="text-align: center;">Date of Registration</th>
-                      <th>User Type</th>
-                      <th>Phone</th>
-                      <th style="text-align: center;">Postal Code</th>
-                      <th>User Status</th>
-                      <th>Action</th>
-                      
-                  </tr>
-              </thead>
-              <tbody>
-                 
-                  <tr>
-                      <td>Michael Silva</td>
-                      <td></td>
-                      <td style="text-align: center;"> <img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-                      <td>Customer</td>
-                      <td>9624527786</td>
-                      <td style="text-align: center;">362002</td>
-                      <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-                      <td>
-                        <div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div>
-                      </td>
-                      
-                  </tr>
-                  <tr>
-                    <td>Michael Silva</td>
-                    <td></td>
-                    <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-                    <td>Customer</td>
-                    <td>9624527786</td>
-                    <td style="text-align: center;">362002</td>
-                    <td><button style=" font-size: 13px; text-align: center; width: 63px; border: 1px solid #FF6B6B; background-color: #FF6B6B; color: white;">Deactive</button></td>
-                    <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-                    
-                </tr>
-                <tr>
-                  <td>Michael Silva</td>
-                  <td></td>
-                  <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-                  <td>Customer</td>
-                  <td>9624527786</td>
-                  <td style="text-align: center;">362002</td>
-                  <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-                  <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-                  
-              </tr>
-              <tr>
-                <td>Michael Silva</td>
-                <td></td>
-                <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-                <td>Customer</td>
-                <td>9624527786</td>
-                <td style="text-align: center;">362002</td>
-                <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-                <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-                
-            </tr>
-            <tr>
+    <!-- TABLE -->
+    <table id="UserDetails" class="table" style="width:100%">
+      <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Role</th>
+            <th>Date of Registration</th>
+            <th>User Type</th>
+            <th>Phone</th>
+            <th>Postal Code</th>
+            <th style="text-align: center;">User Status</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+          <tr>
               <td>Michael Silva</td>
               <td></td>
-              <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
+              <td style="text-align: left;"> <img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
               <td>Customer</td>
               <td>9624527786</td>
-              <td style="text-align: center;">362002</td>
-              <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-              <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-              
-          </tr>
-          <tr>
-            <td>Michael Silva</td>
-            <td></td>
-            <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-            <td>Customer</td>
-            <td>9624527786</td>
-            <td style="text-align: center;">362002</td>
-            <td><button style=" font-size: 13px; text-align: center; width: 63px; border: 1px solid #FF6B6B; background-color: #FF6B6B; color: white;">Deactive</button></td>
-            <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-            
-        </tr>
-        <tr>
-          <td>Michael Silva</td>
-          <td></td>
-          <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-          <td>Customer</td>
-          <td>9624527786</td>
-          <td style="text-align: center;">362002</td>
-          <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-          <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-          
-      </tr>
-      <tr>
-        <td>Michael Silva</td>
-        <td></td>
-        <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/23</td>
-        <td>Customer</td>
-        <td>9624527786</td>
-        <td style="text-align: center;">362002</td>
-        <td><button style=" font-size: 13px; text-align: center; width: 63px; border: 1px solid #FF6B6B; background-color: #FF6B6B; color: white;">Deactive</button></td>
-        <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-        
-    </tr>
-    <tr>
-      <td>Michael Silva</td>
-      <td></td>
-      <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/29</td>
-      <td>Customer</td>
-      <td>9624527786</td>
-      <td style="text-align: center;">3622</td>
-      <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-      <td><div class="dropdown-container" tabindex="-1">
-                          <div class="three-dots"></div>
-                          <div class="dropdown">
-                            <a href="#"><div>Delete</div></a>
-                          </div>
-                        </div></td>
-      
-  </tr>
-  <tr>
-    <td>Michael Silva</td>
-    <td></td>
-    <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/28</td>
-    <td>Customer</td>
-    <td>9624527786</td>
-    <td style="text-align: center;">3622</td>
-    <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-    <td><div class="dropdown-container" tabindex="-1">
-                        <div class="three-dots"></div>
-                        <div class="dropdown">
-                          <a href="#"><div>Delete</div></a>
-                        </div>
-                      </div></td>
+              <td >362002</td>
+              <td style="text-align: center;"><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
+              <td style="text-align: left;">
+                <div class="dropout">
+                  <button class="more">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+                  <ul>
+                    <li><a class="btn btn-sm ACTIVEbtn"> Active </a></li>
+                    <li><a class="btn btn-sm InACTIVEbtn"> Inactive </a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+<script>
+$(document).ready(function () {
+  
+  $('.ACTIVEbtn').click(function (e) { 
+   console.log("active btn clicked");
     
-</tr>
-<tr>
-  <td>Michael Silva</td>
-  <td></td>
-  <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-  <td>Customer</td>
-  <td>9624527786</td>
-  <td style="text-align: center;">3622</td>
-  <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-  <td><div class="dropdown-container" tabindex="-1">
-                      <div class="three-dots"></div>
-                      <div class="dropdown">
-                        <a href="#"><div>Delete</div></a>
-                      </div>
-                    </div></td>
-  
-</tr>
-<tr>
-  <td>Michael Silva</td>
-  <td></td>
-  <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-  <td>Customer</td>
-  <td>9624527786</td>
-  <td style="text-align: center;">3622</td>
-  <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-  <td><div class="dropdown-container" tabindex="-1">
-                      <div class="three-dots"></div>
-                      <div class="dropdown">
-                        <a href="#"><div>Delete</div></a>
-                      </div>
-                    </div></td>
-  
-</tr>
-<tr>
-  <td>Michael Silva</td>
-  <td></td>
-  <td style="text-align: center;"><img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-  <td>Customer</td>
-  <td>9624527786</td>
-  <td style="text-align: center;">3622</td>
-  <td><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-  <td>
-    <div class="dropdown-container" tabindex="-1">
-    <div class="three-dots"></div>
-    <div class="dropdown">
-      <a href="#"><div>Delete</div></a>
-    </div>
-  </div>
-</td>
-  
-</tr>
-  
-              </tbody>
-           
-          </table>
+  });
 
-          <p style="color: #4d4d4d9a !important; font-size: 14px; margin-top: 0px !important;">©2018 Helperland. All rights reserved.</p>
-          </div>
-        </div> 
+});
+
+
+
+</script>
+    <p style="color: #4d4d4d9a !important; font-size: 14px; margin-top: 0px !important;">©2018 Helperland. All rights reserved.</p>
+  </div>
+</div> 
 
 
 <script>
+
+document.querySelector('table').onclick = ({
+  target
+  }) => {
+  if (!target.classList.contains('more')) return
+  document.querySelectorAll('.dropout.active').forEach(
+    (d) => d !== target.parentElement && d.classList.remove('active')
+  )
+  target.parentElement.classList.toggle('active')
+}
+
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#UserDetails').DataTable();
   } );
 </script>
 </body>

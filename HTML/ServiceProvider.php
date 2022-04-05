@@ -491,9 +491,9 @@ $('#BODYServiceDetailSP').on("click", ".SDmodalCompleteBTN" , function(){
         let content = ``;
         for(let i=0; i<data.length; i++){
           content +=  `<tr>
-                        <td class="SDmodalID" data-sid="${data[i].ServiceRequestId}" data-toggle="modal" data-target="#ServiceDetailSP"> ${data[i].ServiceRequestId} </td>
-                        <td class="SDmodalID" style="text-align: left;" data-sid="${data[i].ServiceRequestId}" data-toggle="modal" data-target="#ServiceDetailSP"><span> <img src="Images/calendar2.png" alt="">  ${data[i].date} </span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt=""> ${data[i].time} </span></p></td>
-                        <td class="SDmodalID" style="text-align: left;" data-sid="${data[i].ServiceRequestId}" data-toggle="modal" data-target="#ServiceDetailSP"> 
+                        <td class="SDmodalID" data-sid="${data[i].ServiceRequestId}" > ${data[i].ServiceRequestId} </td>
+                        <td class="SDmodalID" style="text-align: left;" data-sid="${data[i].ServiceRequestId}" ><span> <img src="Images/calendar2.png" alt="">  ${data[i].date} </span> <p style="margin-bottom: 0px !important;"><span><img src="Images/clock.png" alt=""> ${data[i].time} </span></p></td>
+                        <td class="SDmodalID" style="text-align: left;" data-sid="${data[i].ServiceRequestId}" > 
                           ${data[i].FirstName} ${data[i].LastName} <br> 
                           <img src="Images/home.png"> ${data[i].AddressLine1} ${data[i].AddressLine2}, ${data[i].City} ${data[i].PostalCode}. 
                         </td>

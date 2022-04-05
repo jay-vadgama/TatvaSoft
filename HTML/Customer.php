@@ -177,29 +177,8 @@ if(!isset($_SESSION['uName'])){
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body">
-                  <p class="SDmodaldate">07/10/2021 <span>08:00 - 11:00</span></p>
-                  <p class="SDmodalDuration">Duration :<span class="SDmodalDurationTxt"> 3 Hrs</span> </p>
-                  <hr>
-                  <p class="SDmodalDuration">Service Id:<span class="SDmodalDurationTxt"> 8845</span> </p>
-                  <p class="SDmodalDuration">Extras :<span class="SDmodalDurationTxt"> Inside Fridge</span> </p>
-                  <p class="SDmodalDuration">Net Amount:<span class="SDmodalPaymentTxt"> 54 €</span> </p>
-                  <hr>
-                  <p class="SDmodalDuration">Service Address:<span class="SDmodalDurationTxt"> 101, shivnagar, Ahmedabad, 362001</span> </p>
-                  <p class="SDmodalDuration">Mobile :<span class="SDmodalDurationTxt"> cust 884648648</span> </p>
-                  <p class="SDmodalDuration">Email :<span class="SDmodalDurationTxt"> cust 884648648</span> </p>
-                  <hr>
-                  <p class="SDmodalDuration">Comments</p>
-                  <p class="SDmodalDurationTxt"><i class="fad fa-window-close closeIcon text-white"></i> I don't have pets at home.</p>
-                  <p class="SDmodalDurationTxt"><i class="fas fa-check-square AgreeIcon "></i> I have pets at home.</p>
-                  <hr>
-                  <button class="btn btn-res btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#Reschedule"> <i class="fas fa-redo-alt"></i> Reschedule</button>
-                  <button class="btn btn-cnl btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#CancelRequest"> <i class="fas fa-times"></i> Cancel</button>
-                  
+                <div class="modal-body" id="SDModalBody">
 
-                  <!-- <form class="was-validated" action="">
-                  
-                  </form> -->
                 </div>
               </div>
             </div>
@@ -264,8 +243,8 @@ $(document).ready(function () {
           // console.log(EndTime);
           // ${    timeNew.addHours(4)}
           content +=  `<tr>
-                        <td class="SDmodal" data-sid="${data[i].ServiceRequestId}" style="cursor: pointer;"  data-toggle="modal" data-target="#ServiceDetailCust"> ${data[i].ServiceRequestId} </td>
-                        <td class="SDmodal" data-sid="${data[i].ServiceRequestId}" style="text-align: left; cursor: pointer;" data-toggle="modal" data-target="#ServiceDetailCust">
+                        <td class="SDmodal" data-sid="${data[i].ServiceRequestId}" style="cursor: pointer;" > ${data[i].ServiceRequestId} </td>
+                        <td class="SDmodal" data-sid="${data[i].ServiceRequestId}" style="text-align: left; cursor: pointer;">
                           <span> 
                             <img src="Images/calendar2.png" alt=""> ${data[i].date}
                           </span> 
@@ -285,7 +264,7 @@ $(document).ready(function () {
                             </div>
                           </div>
                         </td>
-                        <td class="SDmodal" data-sid="${data[i].ServiceRequestId}" style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;cursor: pointer;" data-toggle="modal" data-target="#ServiceDetailCust">${data[i].TotalCost} €</td>
+                        <td class="SDmodal" data-sid="${data[i].ServiceRequestId}" style="text-align: left;color: #146371;font-size: 25px;font-weight: bold;cursor: pointer;" >${data[i].TotalCost} €</td>
                         <td>
                           <div class="d-flex justify-content-center">
                             <a class="btn btn-sm btn-res RescheduleBtnAction text-white" data-sid="${data[i].ServiceRequestId}" data-toggle="modal" data-target="#Reschedule">Reschedule</a>
@@ -301,18 +280,40 @@ $(document).ready(function () {
   }
   DashboardTable();
 
+  // <p class="SDmodaldate">07/10/2021 <span>08:00 - 11:00</span></p>
+  // <p class="SDmodalDuration">Duration :<span class="SDmodalDurationTxt"> 3 Hrs</span> </p>
+  // <hr>
+  // <p class="SDmodalDuration">Service Id:<span class="SDmodalDurationTxt"> 8845</span> </p>
+  // <p class="SDmodalDuration">Extras :<span class="SDmodalDurationTxt"> Inside Fridge</span> </p>
+  // <p class="SDmodalDuration">Net Amount:<span class="SDmodalPaymentTxt"> 54 €</span> </p>
+  // <hr>
+  // <p class="SDmodalDuration">Service Address:<span class="SDmodalDurationTxt"> 101, shivnagar, Ahmedabad, 362001</span> </p>
+  // <p class="SDmodalDuration">Mobile :<span class="SDmodalDurationTxt"> cust 884648648</span> </p>
+  // <p class="SDmodalDuration">Email :<span class="SDmodalDurationTxt"> cust 884648648</span> </p>
+  // <hr>
+  // <p class="SDmodalDuration">Comments</p>
+  // <p class="SDmodalDurationTxt"><i class="fad fa-window-close closeIcon text-white"></i> I don't have pets at home.</p>
+  // <p class="SDmodalDurationTxt"><i class="fas fa-check-square AgreeIcon "></i> I have pets at home.</p>
+  // // <hr>
+  // <button class="btn btn-res btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#Reschedule"> <i class="fas fa-redo-alt"></i> Reschedule</button>
+  // <button class="btn btn-cnl btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#CancelRequest"> <i class="fas fa-times"></i> Cancel</button>
+                  
+
+
+
+
   $("tbody").on("click", ".SDmodal" , function(){
     console.log("Service modal clicked");
-    let ModalId = $(this).attr("data-sid");
-    // alert(ModalId);
-    console.log(ModalId);
+    let rowId = $(this).attr("data-sid");
+    // alert(rowId);
+    console.log(rowId);
 
     $.ajax({
       type: "post",
-      url: "db/FetchSDmodalSP.php",
-      data:{ RowId :ClickId }, 
+      url: "db/FetchSDmodalCUST.php",
+      data:{ RowId :rowId }, 
       success: function (res) {
-        console.log(res);
+        // console.log(res);
         data = JSON.parse(res);
         // alert(data);
         console.log(data);
@@ -356,15 +357,18 @@ $(document).ready(function () {
                           <p class="SDmodalDuration">Comments</p>
                           ${petmsg}
                           <hr>
-                          <button data-toggle="modal" data-dismiss="modal" data-target="#CancelRequest" class="btn btn-md btn-cnl SDmodalCancelBTN text-center text-white">Cancel</button>
-                          <button type="submit" data-sid="${data[0].ServiceRequestId}"  class=" SDmodalCompleteBTN btn btn-md btn-res text-center text-white">Complete</button>
+                          <button class="btn btn-res btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#Reschedule"> <i class="fas fa-redo-alt"></i> Reschedule</button>
+                          <button class="btn btn-cnl btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#CancelRequest"> <i class="fas fa-times"></i> Cancel</button>
+                          
                         `;
+                        DashboardTable();
+
           
         }else {
           alert("Something went wrong!");
         }
-          $('#BODYServiceDetailSP').html(modalData);
-          $('#ServiceDetailSP').modal('show');
+          $('#SDModalBody').html(modalData);
+          $('#ServiceDetailCust').modal('show');
       }
     
     });
@@ -374,11 +378,11 @@ $(document).ready(function () {
 
 
   $("tbody").on("click", ".RescheduleBtnAction" , function(){
-  console.log("RescheduleBtnAction clicked");
+    console.log("RescheduleBtnAction clicked");
   
-  let resId = $(this).attr("data-sid");
-  // console.log(resId);
-  $('.RescheduleBTN').attr('data-sid', resId);
+    let resId = $(this).attr("data-sid");
+    // console.log(resId);
+    $('.RescheduleBTN').attr('data-sid', resId);
   });
   
   $('#RescheduleForm').submit(function (e) { 
@@ -553,14 +557,15 @@ $(document).ready(function () {
           }
           let SPstatus = ``;
           let SPratebtn = ``;
+          // status= 2 means Cancelled 
           if(data[i].Status == '2')
-          {
-            SPstatus = `<button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button>`;
-            SPratebtn = `<button  class="btn btn-sm btn-res text-white" id="ratingBTN" data-toggle="modal" data-target="#RateSP">Rate SP</button>`;
-          }else if(data[i].Status == '3')
           {
             SPstatus = `<button style="border: 1px solid rgb(255, 65, 65); background-color: rgb(255, 65, 65); color: white;">Cancelled</button>`;
             SPratebtn = `<button disabled="disabled" class="btn btn-sm btn-res text-white" id="ratingBTN" data-toggle="modal" data-target="#RateSP">Rate SP</button>`;
+          }else if(data[i].Status == '3')
+          {
+            SPstatus = `<button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button>`;
+            SPratebtn = `<button  class="btn btn-sm btn-res text-white" id="ratingBTN" data-toggle="modal" data-target="#RateSP">Rate SP</button>`;
           }else{
             SPratebtn = `<button disabled="disabled" class="btn btn-sm btn-res text-white" id="ratingBTN" data-toggle="modal" data-target="#RateSP">Rate SP</button>`;
 
