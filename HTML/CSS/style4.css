@@ -113,6 +113,13 @@ div.text{
     border: 1px solid #E1E1E1;
     border-radius: 4px;
   }
+  .filter1{
+    padding: 20px;
+    background-color: white !important;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+  }
+
 
   .dropbtn{
     height: 46px;
@@ -125,7 +132,10 @@ div.text{
     margin: 20px 0px 20px 15px;
     text-align: left;
   }
-
+  .btnclassdflex{
+    display: flex;
+    justify-content: space-around;
+  }
 .btn3{
   width: 84px;
   height: 46px;
@@ -135,6 +145,17 @@ div.text{
   margin: 20px 10px 20px 15px;
 }
 .btn3:hover{
+  background-color: #29aaeb !important;
+}
+.btnserchFilter{
+  width: 84px;
+  height: 46px;
+  font-family: roboto;
+  background-color: #1FB6FF !important;
+  color: white !important;
+  
+}
+.btnserchFilter:hover{
   background-color: #29aaeb !important;
 }
 .btn4{
@@ -150,6 +171,19 @@ div.text{
   border: 1px solid #29aaeb !important;
   color: #29aaeb !important;
 }
+.btnClearFilter{
+  width: 84px;
+  height: 46px;
+  font-family: roboto;
+  background-color: white !important;
+  color: #646464 !important;
+  border: 1px solid #E1E1E1 !important;
+
+}
+.btnClearFilter:hover{
+  border: 1px solid #29aaeb !important;
+  color: #29aaeb !important;
+}
 .form-group{
   padding: 20px 10px 20px 15px;
   font-family: roboto;
@@ -157,13 +191,9 @@ div.text{
 .form-control{
   height: 46px;
 }
-.select{
-  height: 46px !important;
-  width: 205px !important;
-}
+
 .select1{
   height: 46px !important;
-  width: 215px !important;
 }
 .table{
   color: #646464;
@@ -180,9 +210,7 @@ table.dataTable tbody th, table.dataTable tbody td{
   padding: 15px 10px 15px 20px !important;
 }
 
-/* table.dataTable tbody tr{
-  height: 60px !important;
-} */
+
 .dataTables_wrapper .dataTables_length{
   margin-top: 30px !important;
   color: #646464;
@@ -190,7 +218,7 @@ table.dataTable tbody th, table.dataTable tbody td{
 }
 .dataTables_filter{
   margin-top: 20px !important;
-  display: none;
+  
 }
 .dataTables_info{
   color: #646464;
@@ -232,7 +260,10 @@ table.dataTable tbody th, table.dataTable tbody td{
   border-radius: 50%;
   pointer-events: none;
 }
-
+.more:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
 .more span:not(:last-child) {
   margin-bottom: .125rem;
 }
@@ -247,8 +278,8 @@ table.dataTable tbody th, table.dataTable tbody td{
 
 .dropout ul {
   position: absolute;
-  top: 1.5rem;
-  right: -1.5rem;
+  top: 0rem;
+  right: 1.5rem;
   background-color: white;
   border: 1px solid gray;
   transform: scaleY(0);
@@ -263,7 +294,50 @@ table.dataTable tbody th, table.dataTable tbody td{
 ul li{
   list-style: none !important;
 }
-ul li:hover{
+.hoverLI:hover{
   background-color: gray;
   color: rgb(255, 255, 255);
+}
+
+.UserActiveStatus {
+  font-size: 13px; 
+  text-align: center !important; 
+  font-family: roboto;
+  width: 75px; 
+  border: none;
+  background-color: rgb(139, 247, 39); 
+  color: white;
+  padding: 2px 0px;
+  margin-bottom: 0px !important;
+}
+
+.UserInactiveStatus {
+  font-size: 13px; 
+  text-align: center !important; 
+  font-family: roboto;
+  width: 75px; 
+  border: none;
+  background-color: rgb(247, 39, 39); 
+  color: white;
+  padding: 2px 0px;
+  margin-bottom: 0px !important;
+  
+}
+
+.UserInactiveStatus:focus + .UserActiveStatus:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+.tdcosttext{
+  font-family: roboto;
+  text-align: left;
+  color: #146371;
+  font-size: 25px;
+  font-weight: bold;
+}
+.form-check-inline{
+  padding-left: 15px !important;
 }

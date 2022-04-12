@@ -280,28 +280,6 @@ $(document).ready(function () {
   }
   DashboardTable();
 
-  // <p class="SDmodaldate">07/10/2021 <span>08:00 - 11:00</span></p>
-  // <p class="SDmodalDuration">Duration :<span class="SDmodalDurationTxt"> 3 Hrs</span> </p>
-  // <hr>
-  // <p class="SDmodalDuration">Service Id:<span class="SDmodalDurationTxt"> 8845</span> </p>
-  // <p class="SDmodalDuration">Extras :<span class="SDmodalDurationTxt"> Inside Fridge</span> </p>
-  // <p class="SDmodalDuration">Net Amount:<span class="SDmodalPaymentTxt"> 54 €</span> </p>
-  // <hr>
-  // <p class="SDmodalDuration">Service Address:<span class="SDmodalDurationTxt"> 101, shivnagar, Ahmedabad, 362001</span> </p>
-  // <p class="SDmodalDuration">Mobile :<span class="SDmodalDurationTxt"> cust 884648648</span> </p>
-  // <p class="SDmodalDuration">Email :<span class="SDmodalDurationTxt"> cust 884648648</span> </p>
-  // <hr>
-  // <p class="SDmodalDuration">Comments</p>
-  // <p class="SDmodalDurationTxt"><i class="fad fa-window-close closeIcon text-white"></i> I don't have pets at home.</p>
-  // <p class="SDmodalDurationTxt"><i class="fas fa-check-square AgreeIcon "></i> I have pets at home.</p>
-  // // <hr>
-  // <button class="btn btn-res btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#Reschedule"> <i class="fas fa-redo-alt"></i> Reschedule</button>
-  // <button class="btn btn-cnl btn-AcceptServiceRequest text-white" data-dismiss="modal" data-toggle="modal" data-target="#CancelRequest"> <i class="fas fa-times"></i> Cancel</button>
-                  
-
-
-
-
   $("tbody").on("click", ".SDmodal" , function(){
     console.log("Service modal clicked");
     let rowId = $(this).attr("data-sid");

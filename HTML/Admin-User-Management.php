@@ -1,19 +1,33 @@
+<?php
+
+session_start();
+if(!isset($_SESSION['uName'])){
+  header("Location: Home.php");
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/style4.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/style4.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-    <title>Admin | User Management</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Datatable Scripts -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+
+    
+  <title>Admin | User Management</title>
+  <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
 </head>
 <body style="height: 100% !important;  background-color: #f9f9f9 !important;">
 
@@ -28,7 +42,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#">
             <img src="Images/admin-user.png" alt="adminUser">
-            <p style="display: inline;"> Jay Vadgama </p>
+            <p style="display: inline;"><?php echo $_SESSION['uName']; ?></p>
         </a>
       </li>
       <li class="nav-item">
@@ -52,44 +66,56 @@
     </div>
 
     <!-- Filters -->
-    <div class="filter">
+     
+      <div class="filter">
+      <div class="d-flex">
+        
+          <form id="FormFilter">
 
-      
-        <div class="d-flex">
-
-          <div class="form-group dropdown1">                
-            <select class="form-control select">
-              <option value="" hidden>User Name</option>
-                <option value="Service" >Admin</option>
-                <option value="Contact">Customer</option>
-                <option value="Inquiry">Service Provider</option>
-              </select>
-          </div>
-          <div class="form-group">                
-            <select class="form-control select1">
-              <option value="" hidden>User Type</option>
+          <div class="row">
+            <div class="col-lg-2">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="User Name">
+            </div>
+            </div>
+            <div class="col-lg-2">
+            <div class="form-group">                
+              <select class="form-control select1">
+                <option value="" hidden>User Type</option>
                 <option value="Admin" >Admin</option>
                 <option value="Customer">Customer</option>
                 <option value="Service">Service Provider</option>
               </select>
-          </div>
-          <div class="form-group">
-            <div class="input-group mb-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text">+91</div>
-              </div>
-                <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number">
             </div>
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="text" placeholder="Zipcode">
-        </div>
-          <button type="button" class="btn btn3">Search</button>
-          <button type="submit" class="btn btn4">Clear</button>
-      
-        </div>
-      </form>
-    </div>
+            </div>
+            <div class="col-lg-3">
+
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">+91</div>
+                </div>
+                  <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number">
+              </div>
+            </div>
+            </div>
+            <div class="col-lg-2">
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Zipcode">
+            </div>
+            </div>
+            <div class="col-lg-3">
+
+            <button type="button" class="btn btn3">Search</button>
+            <button type="submit" class="btn btn4">Clear</button>
+            </div>
+            </div>
+          </form>
+        
+      </div> 
+      </div>
+   
     
     
 
@@ -98,74 +124,162 @@
       <thead>
         <tr>
             <th>User Name</th>
-            <th>Role</th>
             <th>Date of Registration</th>
             <th>User Type</th>
             <th>Phone</th>
-            <th>Postal Code</th>
+            <th style="text-align: center;">Postal Code</th>
             <th style="text-align: center;">User Status</th>
             <th>Action</th>
         </tr>
       </thead>
-      <tbody>
-          
-          <tr>
-              <td>Michael Silva</td>
-              <td></td>
-              <td style="text-align: left;"> <img src="Images/calendar2.png" alt="" srcset=""> 2012/11/27</td>
-              <td>Customer</td>
-              <td>9624527786</td>
-              <td >362002</td>
-              <td style="text-align: center;"><button style="font-size: 13px; text-align: center; width: 63px; border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Active</button></td>
-              <td style="text-align: left;">
-                <div class="dropout">
-                  <button class="more">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  </button>
-                  <ul>
-                    <li><a class="btn btn-sm ACTIVEbtn"> Active </a></li>
-                    <li><a class="btn btn-sm InACTIVEbtn"> Inactive </a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-<script>
-$(document).ready(function () {
-  
-  $('.ACTIVEbtn').click(function (e) { 
-   console.log("active btn clicked");
-    
-  });
-
-});
+      <tbody id="UserTableBody">
+        <!-- Daynamic data from AdminUserTable() function -->
+      </tbody>
+    </table>
 
 
-
-</script>
     <p style="color: #4d4d4d9a !important; font-size: 14px; margin-top: 0px !important;">©2018 Helperland. All rights reserved.</p>
   </div>
 </div> 
 
 
-<script>
 
-document.querySelector('table').onclick = ({
-  target
-  }) => {
+<script>
+  $(document).ready(function() {
+
+
+  function AdminUserTable(){
+  var  x = $('#UserDetails').DataTable();
+
+  $.ajax({
+      type: "get",
+      url: "db/FetchAdminUserTable.php",
+      success: function (response) {
+        // console.log(response);
+
+        const data = JSON.parse(response);
+        console.log(data);
+        
+          for(let i=0; i<data.length; i++)
+          {
+          
+            let UserType = ``;
+            if(data[i].UserTypeId == '1' )
+            {
+              UserType =  `Customer`;            
+            }else if(data[i].UserTypeId == '2')
+            {
+              UserType =  `Service Provider`;
+            }
+
+            let UserActiveStatus = ``;
+            if(data[i].Status == '1')
+            {
+              UserActiveStatus = `<p class="UserActiveStatus">Active</p>`;
+            }else if(data[i].Status == null || data[i].Status == 0)
+            {
+              UserActiveStatus  = `<p class="UserInactiveStatus">Inactive</p>`;
+            }
+            var counter = 1;
+            const tr = $(`<tr>
+                          <td>${data[i].FirstName +` `+ data[i].LastName}</td>
+                          <td><img src="Images/calendar2.png" alt="" srcset=""> ${data[i].date}</td>
+                          <td>${UserType}</td>
+                          <td>${data[i].Mobile}</td>
+                          <td style="text-align: center;">${data[i].ZipCode}</td>
+                          <td style="text-align: center;">
+                            <div class="d-flex  justify-content-center">
+                              ${UserActiveStatus}
+                            </div>                        
+                          </td>
+                          <td style="text-align: left;">
+                            <div class="dropout">
+                              <button class="more">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              </button>
+                              <ul>
+                                <li class="hoverLI"><a data-sid="${data[i].UserId}" class="btn btn-sm ACTIVEbtn"> Active </a></li>
+                                <li class="hoverLI"><a data-sid="${data[i].UserId}" class="btn btn-sm InACTIVEbtn"> Inactive </a></li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>`);
+            x.row.add(tr).draw();
+          }
+        }
+      });
+  }
+AdminUserTable();
+
+
+$("tbody").on("click", ".ACTIVEbtn" , function(){
+    console.log("Active btn clicked");
+  
+    let rowId = $(this).attr("data-sid");
+    // console.log(resId);
+
+    $.ajax({
+      type: "post",
+      url: "db/UpdateUserStatusAdmin.php",
+      data: {rowId: rowId},
+      success: function (response) {
+        if(response == 1){
+          AdminUserTable();
+          location.reload()
+        }
+        else{
+          alert('Something Went Wrong!');
+        }
+      }
+    });
+    
+  });
+  
+  $("tbody").on("click", ".InACTIVEbtn" , function(){
+    console.log("Inctive btn clicked");
+  
+    let btnId = $(this).attr("data-sid");
+    // console.log(resId);
+
+    $.ajax({
+      type: "post",
+      url: "db/UpdateUserStatusAdmin.php",
+      data: {btnId: btnId},
+      success: function (response) {
+        if(response == 1){
+          AdminUserTable();
+          location.reload();
+        }
+        else{
+          alert('Something Went Wrong!');
+        }
+      }
+    });
+    
+  });
+
+
+
+});
+      
+
+ 
+  
+
+  document.querySelector('table').onclick = ({
+  target }) => {
   if (!target.classList.contains('more')) return
   document.querySelectorAll('.dropout.active').forEach(
     (d) => d !== target.parentElement && d.classList.remove('active')
   )
   target.parentElement.classList.toggle('active')
-}
+  }
 
-  $(document).ready(function() {
-    $('#UserDetails').DataTable();
-  } );
 </script>
+
+
+
 </body>
 </html>

@@ -29,7 +29,7 @@ include 'config.php';
 			if($password === $Cpassword)
 			{
 				$pass = password_hash($password,PASSWORD_BCRYPT);
-				$insertquery = "INSERT INTO user (`FirstName`, `Lastname`, `Email`, `Password`, `Mobile`,`UserTypeId`) VALUES ('$firstname','$lastname','$email','$pass','$MobileNo','1')";
+				$insertquery = "INSERT INTO user (`FirstName`, `Lastname`, `Email`, `Password`, `Mobile`,`UserTypeId`,`CreatedDate`) VALUES ('$firstname','$lastname','$email','$pass','$MobileNo','1',NOW())";
 				$iquery = mysqli_query($conn,$insertquery);
 				if($iquery)
 				{

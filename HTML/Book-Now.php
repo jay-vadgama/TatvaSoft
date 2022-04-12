@@ -338,6 +338,8 @@ if($_SESSION['typeId'] == 1) {
             <script>
               $("#tab-form2").submit(function (e){
                 e.preventDefault();
+                
+                
                 document.getElementById("tabbtn2").removeAttribute('disabled');
                 document.getElementById("tabbtn3").removeAttribute('disabled');
                 show3();

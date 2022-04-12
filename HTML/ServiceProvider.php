@@ -11,6 +11,7 @@ if(!isset($_SESSION['uName'])){
 <html lang="en">
 <head>
   <title>Service Provider Dashboard</title>
+  <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
   <link rel="stylesheet" type="text/css" href="NavCSS/CustCommanNav.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -664,7 +665,7 @@ $('#BODYServiceDetailSP').on("click", ".SDmodalCompleteBTN" , function(){
             <select class="form-control" id="SPnationality" name="Nationality">
               <option value="" hidden>Choose</option>
               <option value='1' <?php if($FetchRes['NationalityId'] =="1") echo 'selected="selected"'; ?>>Indian</option>
-              <option value='2' <?php if($FetchRes['NationalityId'] =="2") echo 'selected="selected"'; ?>>>Foreigner</option>
+              <option value='2' <?php if($FetchRes['NationalityId'] =="2") echo 'selected="selected"'; ?>>Foreigner</option>
             </select>
           </div>
         </div>
@@ -1162,98 +1163,6 @@ $('#BODYServiceDetailSP').on("click", ".SDmodalCompleteBTN" , function(){
         <button class="btn btn-right">Export</button>
       </div>
 
-
-      <table class="table table-hover ">
-        <thead>
-          <tr>
-            <th>Service Details<img src="Images/sort.png" style="margin-left: 5px;"> </th>
-            <th>Service Provider<img src="Images/sort.png" style="margin-left: 5px;"></th>
-            <th style="text-align: center;">Payment<img src="Images/sort.png" style="margin-left: 5px;"></th>
-            <th style="text-align: center;">Status<img src="Images/sort.png" style="margin-left: 5px;"></th>
-            <th style="text-align: center;">Rate SP<img src="Images/sort.png" style="margin-left: 5px;"></th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td> <img src="Images/calendar.png"> 09/04/2018 <br> 12:00 - 18:00  </td>
-          <td>
-          <div class="row">
-            <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
-            </div>
-            <div class="col-md-6">
-              <p class="text-table">Lyum Watson</p>
-                <span>
-                   <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png"> 5
-                  </span>
-                </div>
-              </div>
-          </td>
-          <td style="text-align: center; color: #146371; font-size: 25px; font-weight: bold;">€20</td>
-          <td style="text-align: center;"><button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button></td>
-          <td style="text-align: center;"> <button class="btn btn-rate">Rate SP</button> </td>
-        </tr>
-
-        <tr>
-          <td> <img src="Images/calendar.png"> 09/04/2018 <br> 12:00 - 18:00  </td>
-          <td>
-          <div class="row">
-            <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
-            </div>
-            <div class="col-md-6">
-              <p class="text-table">Lyum Watson</p>
-                <span>
-                   <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png"> 5
-                  </span>
-                </div>
-              </div>
-          </td>
-          <td style="text-align: center; color: #146371; font-size: 25px; font-weight: bold;">€20</td>
-          <td style="text-align: center;"><button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button></td>
-          <td style="text-align: center;"> <button class="btn btn-rate">Rate SP</button> </td>
-        </tr>
-
-        <tr>
-          <td> <img src="Images/calendar.png"> 09/04/2018 <br> 12:00 - 18:00  </td>
-          <td>
-          <div class="row">
-            <div class="col-md-3">
-              <img src="./Images/cap.png" style=" border: 1px solid gray; border-radius: 50%; padding: 13px;">
-            </div>
-            <div class="col-md-6">
-              <p class="text-table">Lyum Watson</p>
-                <span>
-                   <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png">
-                    <img src="./Images/star1.png"> 5
-                  </span>
-                </div>
-              </div>
-          </td>
-          <td style="text-align: center; color: #146371; font-size: 25px; font-weight: bold;">€20</td>
-          <td style="text-align: center;"><button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button></td>
-          <td style="text-align: center;"> <button class="btn btn-rate">Rate SP</button> </td>
-        </tr>
-
-
-
-
-
-
-
-</tbody>
-</table>
 </div>
 
 </div>
