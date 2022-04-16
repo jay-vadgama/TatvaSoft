@@ -61,8 +61,7 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
   <a href="Admin-User-Management.php" >User Management</a>
 </div>
 
-
-<!-- Cancel Address Modal Starts -->
+<!-- Cancel-Address Modal Starts -->
 <div class="modal fade" id="CancelService">
   <div class="modal-dialog modal-md modal-dialog-centered">
     <div class="modal-content">
@@ -80,8 +79,6 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
     </div>
   </div>
 </div>
-<!-- Cancel Address Modal Ends -->
-
 
 <!-- Reschedule Modal-->
 <section class="Res">
@@ -247,34 +244,44 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
 
 
   function AdminServiceTable(){
-    const x = $('#ServiceRequestTable').DataTable();
+    let x = $('#ServiceRequestTable').DataTable();
 
     $.ajax({
       type: "get",
       url: "db/FetchAdminServiceTable.php",
+      dataType: 'text',
       success: function (response) {
         // console.log(response);
+
         
-        const data = JSON.parse(response);
+        let data = JSON.parse(response);
         console.log(data);
         
           for(let i=0; i<data.length; i++)
           {
             let profileImage = ``;
-            if(data[i].SPprofile == 'male'){
+            if(data[i].SPprofile == 'male' && data[i].ServiceProviderId !== null){
               profileImage = `<img src="./Images/avatar-car.png" style=" width:58px; height:58px;border: 1px solid gray; border-radius: 50%; ">`;
-            }else if(data[i].SPprofile == 'female'){
+            }else if(data[i].SPprofile == 'female' && data[i].ServiceProviderId !== null){
               profileImage = `<img src="./Images/avatar-female.png" style=" width:58px; height:58px;border: 1px solid gray; border-radius: 50%; ">`;
-            }else if(data[i].SPprofile == 'hat'){
+            }else if(data[i].SPprofile == 'hat' && data[i].ServiceProviderId !== null){
               profileImage = `<img src="./Images/avatar-hat.png" style=" width:58px; height:58px;border: 1px solid gray; border-radius: 50%; ">`;
-            }else if(data[i].SPprofile == 'iron'){
+            }else if(data[i].SPprofile == 'iron' && data[i].ServiceProviderId !== null){
               profileImage = `<img src="./Images/avatar-iron.png" style=" width:58px; height:58px;border: 1px solid gray; border-radius: 50%; ">`;
-            }else if(data[i].SPprofile == 'ship'){
+            }else if(data[i].SPprofile == 'ship' && data[i].ServiceProviderId !== null){
               profileImage = `<img src="./Images/avatar-ship.png" style=" width:58px; height:58px;border: 1px solid gray; border-radius: 50%; ">`;
-            }else if(data[i].SPprofile == 'iron'){
+            }else if(data[i].SPprofile == 'iron' && data[i].ServiceProviderId !== null ){
               profileImage = `<img src="./Images/avatar-iron.png" style=" width:58px; height:58px;border: 1px solid gray; border-radius: 50%; ">`;
+            }else {
+              profileImage = ``;
             }
           
+            let spname = ``;
+            if(data[i].ServiceProviderId !== null) {
+              spname = data[i].SPname;
+            }else{
+              spname = ``;
+            }
             
             let dropdown = ``;
             if(data[i].Status == 3){
@@ -348,7 +355,7 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
                                      ${profileImage}
                                   </div>
                                   <div class="col-md-8 d-flex " style="align-items: center;">
-                                    <p class="text-table" style=" color: #646464 !important; font-family: roboto; margin-bottom: 0px !important;">${data[i].SPname}</p>
+                                    <p class="text-table" style=" color: #646464 !important; font-family: roboto; margin-bottom: 0px !important;">${spname}</p>
                                       
                                       </div>
                                     </div>

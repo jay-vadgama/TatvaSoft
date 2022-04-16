@@ -558,29 +558,25 @@ button:focus{
 
 /* New Avtar CSS */
 
-input[type="radio"][id^="avatar"] {
-  display: none;
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.check-label1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85px;
-  height: 85px;
-  border: 1px solid #C8C8C8;
-  border-radius: 50%;
+
+/* IMAGE STYLES */
+[type=radio] + img {
   cursor: pointer;
-  margin: 0px 15px;
 }
 
-:checked + label {
-  border: 3px solid #1d7a8c;
+/* SP Tab-4 CSS */
+.myrating{
+  border: 1px solid #9d9d9d;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
 }
-.avtarImg{
-  width: 80px;
-  height: 80px;
-}
-
 
 
 

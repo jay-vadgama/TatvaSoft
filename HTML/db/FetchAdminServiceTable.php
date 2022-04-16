@@ -28,19 +28,22 @@ $selectquery = "SELECT u.FirstName, u.LastName , sr.ServiceRequestId , sr.Servic
             // echo '<pre>';
             // print_r($res[$i]);
 
-           
-            $spID = $res[$i]['ServiceProviderId'];
-            // echo $spID;
+            if(isset($res[$i]['ServiceProviderId']) ? $res[$i]['ServiceProviderId'] : null)
+            {
+                $spID = $res[$i]['ServiceProviderId'];
+                // echo $spID;
+            }
+            
+
 
             $selectquery2 = "SELECT * FROM `user` WHERE `UserTypeId`='2' AND UserId='$spID' ";
             $query2 = mysqli_query($conn,$selectquery2);
             $res2 = mysqli_fetch_all($query2 , MYSQLI_ASSOC);
             // echo '<pre>';
-            // print_r($res2);
-            $res[$i]['SPname'] = $res2[0]['FirstName'].' '.$res2[0]['LastName'];
             
+            $res[$i]['SPname'] = $res2[0]['FirstName'].' '.$res2[0]['LastName'];
             $res[$i]['SPprofile'] = $res2[0]['UserProfilePicture'];
-        
+            // print_r($res2);
         }
         echo json_encode($res);
     }else

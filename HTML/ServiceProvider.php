@@ -520,10 +520,133 @@ $('#BODYServiceDetailSP').on("click", ".SDmodalCompleteBTN" , function(){
 
 <!-- ------------------ TAB 4 ------------------ -->
 <div class="MyRatings" id="tab4_MyRatings" style="display: none;">
-  <div class="tbl-left" style="margin-bottom: 0px !important;">
-    <p>My Ratings</p>
+  <div class="d-flex">
+    <div class="tbl-left" style="margin-bottom: 0px !important;">
+      <p>My Ratings</p>
+    </div>
+  </div>
+  
+  <div id="tab4_Body">
+  
   </div>
 </div>
+
+<script>
+  $(document).ready(function () {
+  function fetchSPrating(){
+    $.ajax({
+      type: "get",
+      url: "db/FetchSPrating.php",
+      success: function (response) {
+        // console.log(response);
+        data = JSON.parse(response);
+        console.log(data);
+
+        let body = ``;
+        Date.prototype.addHours = function(h) {
+            this.setTime(this.getTime() +
+                         (h * 60 * 60 * 1000));
+            return this;
+        }
+        for(let i=0; i<data.length; i++)
+        {
+
+          let StartTime = data[i].time;
+          // console.log(StartTime);
+          let extraHour = data[i].ExtraHours;
+          let ServiceHour = data[i].ServiceHours;
+          let TotalDuration = parseFloat(extraHour) + parseFloat(ServiceHour); 
+          // console.log(TotalDuration);
+          var a = new Date(data[i].ServiceStartDate);
+          a.addHours(TotalDuration);
+          let EndTime = `${a.getHours()}:${a.getMinutes()}`;
+          // console.log(EndTime);
+
+
+          let stars = ``;
+          let ratingtype = ``;
+          if(data[i].Ratings <= 0.2 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Poor`;
+          }else if(data[i].Ratings <= 0.4 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Fair`;
+          }else if(data[i].Ratings <= 0.6 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Good`;
+          }else if(data[i].Ratings <= 0.8 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Very good`;
+          }else if(data[i].Ratings <= 10 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">`;
+                      
+            ratingtype = `Excellent`;
+          }
+
+
+          body += `<div class="myrating">
+          <div class="row">
+                  <div class="col-3">
+                    <p style="font-family: roboto;color:#646464;">${data[i].ServiceRequestId}</p>
+                    <p style="font-family: roboto;color:#646464; font-weight:700; margin-bottom: 0px !important;">${data[i].FirstName +` `+data[i].LastName}</p>
+                  </div>
+                  <div class="col-5">
+                    <p style="font-family: roboto;color:#646464;"><img src="Images/calendar2.png" style="margin-right:10px;" alt="calender">${data[i].date}</p>
+                    <p style="font-family: roboto;color:#646464;margin-bottom: 0px !important;"><img src="Images/clock.png" style="margin-right:10px;" alt="clock">${StartTime} - ${EndTime}</p>
+                  </div>
+                  <div class="col-4">
+                    <p style="font-family: roboto;color:#646464; font-weight:700; margin-bottom: 0px !important;">Ratings</p>
+                    <div>
+                      ${stars}
+                      <span style="font-family: roboto;color:#646464; margin-left:10px;"> ${ratingtype} </span> 
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div>
+                  <p style="font-family: roboto;color:#646464; font-weight:700; margin-bottom: 0px !important;">Customer Comment</p>
+                  <p style="font-family: roboto;color:#646464; margin-bottom: 0px !important;">${data[i].Comments}</p>
+                </div>
+                </div>`
+        }
+        $('#tab4_Body').append(body);
+      }
+    });
+
+
+  }
+  fetchSPrating();
+
+  });
+  
+</script>
+
+
+
 
 <!-- ------------------ TAB 5 ------------------ -->
 <div class="BlockCustomer" id="tab5_BlockCustomer" style="display: none;">
@@ -954,75 +1077,7 @@ $('#BODYServiceDetailSP').on("click", ".SDmodalCompleteBTN" , function(){
             </div>
           <!-- Add New Address Modal Ends -->
           
-            <!-- <a data-toggle="tooltip" data-placement="bottom" title="Edit">
-              <i class="fas fa-edit" data-toggle="modal" data-target="#EditaddNew"></i>
-            </a> -->
-            <!-- Edit-New Address Modal Starts -->
-            <div class="modal fade" id="EditaddNew">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  
-                  <div class="modal-header">
-                    <h4 class="modal-title">Edit Address</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-        
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    <div class="newAdd" id="newAdd">
-                      <form id="" action="">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="lable-text">Street Name</label>
-                              <input class="form-control" type="text" id="streetName" name="streetName" placeholder="Street Name" required>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="lable-text">House Number</label>
-                              <input class="form-control" type="text" id="houseNo" name="houseNo" placeholder="House No." required>
-                            </div>
-                          </div>
-                        </div>
-        
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="lable-text">Postal Code</label>
-                              <input class="form-control" type="text" id="postalCode" name="postalCode" readonly>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="lable-text">City</label>
-                              <input class="form-control" type="text" id="city" name="city" required>
-                            </div>
-                          </div>
-                        </div>
-                  
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group text-pad-top">
-                              <div class="input-group ">
-                                <div class="input-group-prepend">
-                                  <div class="input-group-text">+91</div>
-                                </div>
-                                <input class="form-control" type="tel" id="MobileNo" name="mobileNo" maxlength="10" placeholder="Mobile Number" required>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                          <button class="btn button-blue1" onclick="">Update</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Edit-New Address Modal Ends -->
+
 
             <!-- <a data-toggle="tooltip" data-placement="bottom" title="Delete">
               <i class="fa-solid fa-trash-can" data-toggle="modal" data-target="#DeleteaddNew"></i>

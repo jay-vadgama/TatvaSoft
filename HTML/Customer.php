@@ -18,7 +18,6 @@ if(!isset($_SESSION['uName'])){
   <link rel = "icon" href = "Images/logo1.png" type = "image/x-icon">
   <link rel="shortcut icon" href="#">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -184,6 +183,8 @@ if(!isset($_SESSION['uName'])){
             </div>
           </div>
         </section>  
+
+        
         
       </tbody>
     </table>
@@ -474,13 +475,137 @@ $(document).ready(function () {
     </thead>
     <tbody id="CustServiceHistoryTableBody">
       
+
+      <!-- Rating Modal-->
+      <section class="RateSP">
+          <div class="modal fade" id="RateSPmodal">
+              <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <p class="Delet-modal-text" style="font-weight: bold;">Rate Your Service Provider</p>
+                    <hr>
+                    <form id="rateSPform" method="POST">
+                      
+                      <div class="row">
+                        <div class="col-4">
+                          <label>On time arrival : </label>
+                        </div>
+                        <div class="col-8">
+                          <div style="display: flex;justify-content:space-around;padding:0px 30px;">
+                            <label>
+                              <input type="radio" name="onTimeArrival" id="radio1" value="1" onclick="star1()">
+                              <img id="radioImg1" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="onTimeArrival" id="radio2" value="2" onclick="star2()">
+                              <img id="radioImg2" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="onTimeArrival" id="radio3" value="3" onclick="star3()">
+                              <img id="radioImg3" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="onTimeArrival" id="radio4" value="4" onclick="star4()">
+                              <img id="radioImg4" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="onTimeArrival" id="radio5" value="5" onclick="star5()">
+                              <img id="radioImg5" src="Images/star2.png">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-4">
+                          <label>Friendly : </label>
+                        </div>
+                        <div class="col-8">
+                          <div style="display: flex;justify-content:space-around;padding:0px 30px;">
+                            <label>
+                              <input type="radio" name="Friendly" id="radio6" value="1" onclick="star6()">
+                              <img id="radioImg6" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="Friendly" id="radio7" value="2" onclick="star7()">
+                              <img id="radioImg7" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="Friendly" id="radio8" value="3" onclick="star8()">
+                              <img id="radioImg8" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="Friendly" id="radio9" value="4" onclick="star9()">
+                              <img id="radioImg9" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="Friendly" id="radio10" value="5" onclick="star10()">
+                              <img id="radioImg10" src="Images/star2.png">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-4">
+                          <label>Quality of Service: </label>
+                        </div>
+                        <div class="col-8">
+                          <div style="display: flex;justify-content:space-around;padding:0px 30px;">
+                            <label>
+                              <input type="radio" name="QualityOfService" id="radio11" value="1" onclick="star11()">
+                              <img id="radioImg11" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="QualityOfService" id="radio12" value="2" onclick="star12()">
+                              <img id="radioImg12" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="QualityOfService" id="radio13" value="3" onclick="star13()">
+                              <img id="radioImg13" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="QualityOfService" id="radio14" value="4" onclick="star14()">
+                              <img id="radioImg14" src="Images/star2.png">
+                            </label>
+                            <label>
+                              <input type="radio" name="QualityOfService" id="radio15" value="5" onclick="star15()">
+                              <img id="radioImg15" src="Images/star2.png">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="form-group">
+                        <textarea class="form-control" style="height: 100px;" type="text" id="FeedbackTxt" name="message" placeholder="Message" required></textarea>
+                      </div>
+
+                      <button class="btn text-center rateSubmitBTN button-blue1"  type="submit">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
     </tbody>
   </table>
 </div>
 
+
+
+
 <script>
   $(document).ready(function () {
     
+
+
     function CustServiceHistoryTbl(){
     $.ajax({
       type: "get",
@@ -499,7 +624,49 @@ $(document).ready(function () {
         }
         for(let i=0; i<data.length; i++)
         {
-
+          let stars = ``;
+          let ratingtype = ``;
+          if(data[i].Ratings <= 0.2 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Poor`;
+          }else if(data[i].Ratings <= 0.4 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Fair`;
+          }else if(data[i].Ratings <= 0.6 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Good`;
+          }else if(data[i].Ratings <= 0.8 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Very good`;
+          }else if(data[i].Ratings <= 10 ){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">`;
+                      
+            ratingtype = `Excellent`;
+          }
 
 
           let StartTime = data[i].time;
@@ -517,18 +684,7 @@ $(document).ready(function () {
             SPname =  `${data[i].FirstName} ${data[i].LastName}`;            
           }
 
-          let SPrate = ``;
-          let Stars = ``;
-          if(data[i].Ratings != '0.0' ){
-            SPrate = data[i].Ratings; 
-            Stars =`<span>
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png"> 
-                    </span>`;           
-          }
+          
           let SPprofile = ``;
           if(data[i].UserProfilePicture != null ){
             SPprofile = `<img style="height: 50px; width: 50px;" src="Images/avatar-${data[i].UserProfilePicture}.png" >`;            
@@ -543,7 +699,7 @@ $(document).ready(function () {
           }else if(data[i].Status == '3')
           {
             SPstatus = `<button style="border: 1px solid rgb(139, 247, 39); background-color: rgb(139, 247, 39); color: white;">Completed</button>`;
-            SPratebtn = `<button  class="btn btn-sm btn-res text-white" id="ratingBTN" data-toggle="modal" data-target="#RateSP">Rate SP</button>`;
+            SPratebtn = `<button  class="btn btn-sm btn-res ratingBTNtable text-white" data-sid="${data[i].ServiceRequestId}" id="ratingBTN" data-toggle="modal" data-target="#RateSPmodal" data-dismiss="modal">Rate SP</button>`;
           }else{
             SPratebtn = `<button disabled="disabled" class="btn btn-sm btn-res text-white" id="ratingBTN" data-toggle="modal" data-target="#RateSP">Rate SP</button>`;
 
@@ -560,8 +716,8 @@ $(document).ready(function () {
                             </div>
                             <div class="col-md-6">
                               <p style="margin-bottom:0px;" >${SPname}</p>
-                              ${Stars}
-                              <p style="margin-bottom:0px;">${SPrate}</p>
+                              ${stars}
+                             
                             </div>
                           </div>
                         </td>
@@ -582,6 +738,62 @@ $(document).ready(function () {
     
   }
   CustServiceHistoryTbl();
+
+
+  $("tbody").on("click", ".ratingBTNtable" , function(){
+    console.log("rating btn table clicked");
+  
+    let rateId = $(this).attr("data-sid");
+    console.log(rateId);
+    $('.rateSubmitBTN').attr('data-sid', rateId);
+  });
+  
+
+  $('#rateSPform').submit(function (e) { 
+    e.preventDefault();
+    console.log("rate form submit clicked");
+    let newRateId = $('.rateSubmitBTN')[0].getAttribute('data-sid');
+    console.log(newRateId);
+
+    let onTimeArrival =  $('input[name="onTimeArrival"]:checked').val();
+    console.log("onTimeArrival : "+ onTimeArrival);
+
+    let Friendly =  $('input[name="Friendly"]:checked').val();
+    console.log("Friendly : "+ Friendly);
+
+    let QualityOfService =  $('input[name="QualityOfService"]:checked').val();
+    console.log("QualityOfService : "+ QualityOfService);
+
+    let comment = $('#FeedbackTxt').val();
+    console.log(comment);
+
+    $.ajax({
+      type: "post",
+      url: "db/UpdateRatingByUser.php",
+      data: { newRateId: newRateId,
+              onTimeArrival: onTimeArrival,
+              Friendly: Friendly,
+              QualityOfService: QualityOfService,
+              comment: comment
+            },
+      success: function (response) {
+        // console.log(response);
+        if(response == 1){
+          alert("Hurray! Rating given successfully");
+          CustServiceHistoryTbl()
+          
+          
+        }
+      }
+    });
+
+
+
+
+
+
+  });
+
 
 
 
@@ -922,50 +1134,6 @@ $(document).ready(function () {
 
   </div> 
 </div>
-
-<!-- <a data-toggle="tooltip" data-placement="bottom" title="Delete">
-        <i class="fa-solid fa-trash-can" data-toggle="modal" data-target="#DeleteaddNew"></i>
-      </a>
-      Delete Address Modal Starts
-      <div class="modal fade" id="DeleteaddNew">
-        <div class="modal-dialog modal-md modal-dialog-centered">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-              <h4 class="modal-title">Delete Address</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <div class="modal-body">
-              <p class="Delet-modal-text">Are you sure you want to delete this address?</p>
-              <button class="btn button-blue1" type="submit">Delete</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      Delete Address Modal Ends
-
-
-      
-      <a href="" data-toggle="modal" data-target="#WarningModal">Warning</a>
-      Warning Address Modal Starts
-      <div class="modal fade" id="WarningModal">
-        <div class="modal-dialog modal-md modal-dialog-centered">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-              <h4 class="modal-title">Warning</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            Modal body
-            <div class="modal-body">
-              <p class="warning-modal-text">To delete this address kindly change your default address to another address.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-Warning Address Modal Starts -->
 
  
 

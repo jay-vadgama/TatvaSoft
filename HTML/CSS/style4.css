@@ -341,3 +341,8 @@ ul li{
 .form-check-inline{
   padding-left: 15px !important;
 }
+.form-check-input{
+  margin-left: 0px !important;
+}
+
+
