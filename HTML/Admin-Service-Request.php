@@ -177,16 +177,16 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
       <form id="SerchFilterForm">
         <div class="row">
           <div class="col-3">
-            <input type="text" class="form-control" id="ServiceIDserch" onkeyup="serchcol0(this.value)" placeholder="Serch Service ID">
+            <input type="text" class="form-control" id="ServiceIDserch" onkeyup="serchcol1(this.value)" placeholder="Serch Service ID">
           </div>
           <div class="col-3">
-            <input type="text" class="form-control" id="CustomerNameSerch" placeholder="Serch Customer name">
+            <input type="text" class="form-control" id="CustomerNameSerch" onkeyup="serchcol2(this.value)" placeholder="Serch Customer name">
           </div>
           <div class="col-3">
-            <input type="text" class="form-control" id="SpNameSerch" placeholder="Serch SP name">
+            <input type="text" class="form-control" id="SpNameSerch" onkeyup="serchcol3(this.value)" placeholder="Serch SP name">
           </div>
           <div class="col-3">
-            <select class="form-control select1">
+            <select class="form-control select1" onchange="serchcol4(this.value)">
               <option value="" hidden>Serch Status</option>
               <option value="New">New</option>
               <option value="Accepted">Accepted</option>
@@ -199,10 +199,10 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
         <div style="margin-top: 20px;">
           <div class="row">
             <div class="col-3">
-              <input type="text" class="form-control" id="AmountSerch" placeholder="Amount">
+              <input type="text" class="form-control" onkeyup="serchcol5(this.value)" id="AmountSerch" placeholder="Amount">
             </div>
             <div class="col-3">
-              <input type="date" class="form-control" placeholder="From Date">
+              <input type="date" class="form-control" onchange="serchcol6(this.value)" placeholder="From Date">
             </div>
             <div class="col-3 btnclassdflex">
               <button type="submit" class="btn btnserchFilter">Search</button>
@@ -238,13 +238,47 @@ if(!isset($_SESSION['uName']) && !isset($_SESSION['typeId'])){
   </div>
 </div> 
 
+<script>
+  $('.btnClearFilter').click(function (e) { 
+    location.reload();
+    console.log("clear btn clicked");
+  });
+  var x = $('#ServiceRequestTable').DataTable();
+  function serchcol1(val) {
+    x.column(0).search(val).draw(); 
+  }
+  function serchcol2(val) {
+    x.column(2).search(val).draw(); 
+  }
+  function serchcol3(val) {
+    x.column(3).search(val).draw(); 
+  }
+  function serchcol4(val) {
+    x.column(5).search(val).draw(); 
+  }
+  function serchcol5(val) {
+    x.column(4).search(val).draw(); 
+  }
+  function serchcol6(val) {
+    // alert(val);
+    var dateAr = val.split('-');
+    var newDate = dateAr[2] + '-' + dateAr[1] + '-' + dateAr[0];
+    // alert(newDate);
+    x.column(1).search(newDate).draw(); 
+  }
+
+
+
+</script>
 
 <script>
+
   $(document).ready(function() {
 
 
   function AdminServiceTable(){
-    let x = $('#ServiceRequestTable').DataTable();
+    
+    x = $('#ServiceRequestTable').DataTable();
 
     $.ajax({
       type: "get",

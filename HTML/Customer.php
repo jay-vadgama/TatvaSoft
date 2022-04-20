@@ -223,18 +223,53 @@ $(document).ready(function () {
           if(data[i].FirstName != null ){
             SPname =  `${data[i].FirstName} ${data[i].LastName}`;            
           }
+
+          let stars = ``;
+          let ratingtype = ``;
+          if(data[i].Ratings <= 0.2 && data[i].FirstName !== null){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Poor`;
+          }else if(data[i].Ratings <= 0.4 && data[i].FirstName !== null){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Fair`;
+          }else if(data[i].Ratings <= 0.6 && data[i].FirstName !== null){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Good`;
+          }else if(data[i].Ratings <= 0.8 && data[i].FirstName !== null){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star2.png" alt="clock">`;
+                      
+            ratingtype = `Very good`;
+          }else if(data[i].Ratings <= 10 && data[i].FirstName !== null){
+            stars = `<img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">
+                      <img src="Images/star1.png" alt="clock">`;
+                      
+            ratingtype = `Excellent`;
+          } 
+
           let SPrate = ``;
-          let Stars = ``;
-          if(data[i].Ratings != '0.0' ){
-            SPrate = data[i].Ratings ; 
-            Stars =`<span>
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png">
-                      <img src="Images/star1.png"> 
-                    </span>`;           
-          }
+          
           let SPprofile = ``;
           if(data[i].UserProfilePicture != null ){
             SPprofile = `<img style="height: 50px; width: 50px;" src="Images/avatar-${data[i].UserProfilePicture}.png" >`;            
@@ -260,8 +295,8 @@ $(document).ready(function () {
                             </div>
                             <div class="col-md-6">
                               <p style="margin-bottom:0px;" >${SPname}</p>
-                              ${Stars}
-                              <p style="margin-bottom:0px;">${SPrate}</p>
+                              ${stars}
+                              
                             </div>
                           </div>
                         </td>

@@ -108,12 +108,12 @@ div.text{
   }
 
   .filter{
-    height: 84px;
+    padding: 20px;
     background-color: white !important;
     border: 1px solid #E1E1E1;
     border-radius: 4px;
   }
-  .filter1{
+.filter1{
     padding: 20px;
     background-color: white !important;
     border: 1px solid #E1E1E1;
@@ -136,17 +136,7 @@ div.text{
     display: flex;
     justify-content: space-around;
   }
-.btn3{
-  width: 84px;
-  height: 46px;
-  font-family: roboto;
-  background-color: #1FB6FF !important;
-  color: white !important;
-  margin: 20px 10px 20px 15px;
-}
-.btn3:hover{
-  background-color: #29aaeb !important;
-}
+
 .btnserchFilter{
   width: 84px;
   height: 46px;
@@ -158,19 +148,7 @@ div.text{
 .btnserchFilter:hover{
   background-color: #29aaeb !important;
 }
-.btn4{
-  width: 84px;
-  height: 46px;
-  font-family: roboto;
-  background-color: white !important;
-  color: #646464 !important;
-  border: 1px solid #E1E1E1 !important;
-  margin: 20px 10px 20px 15px;
-}
-.btn4:hover{
-  border: 1px solid #29aaeb !important;
-  color: #29aaeb !important;
-}
+
 .btnClearFilter{
   width: 84px;
   height: 46px;

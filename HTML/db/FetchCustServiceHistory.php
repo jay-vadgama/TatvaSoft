@@ -10,7 +10,8 @@ include '../config.php';
                         sr.ServiceStartDate, sr.ServiceHours, sr.ExtraHours,
                         date_format(sr.ServiceStartDate, '%d-%m-%Y') as `date`, 
                         date_format(sr.ServiceStartDate, '%H:%i') as `time` , 
-                        sr.TotalCost ,sr.Status, u.FirstName , u.LastName ,u.UserProfilePicture ,r.Ratings 
+                        sr.TotalCost ,sr.Status, u.FirstName , u.LastName ,u.UserProfilePicture ,
+                        r.Ratings
                     FROM user u 
                     RIGHT JOIN servicerequest sr ON sr.ServiceProviderId = u.UserId 
                     RIGHT JOIN rating r ON sr.ServiceRequestId = r.ServiceRequestId

@@ -66,54 +66,51 @@ if(!isset($_SESSION['uName'])){
     </div>
 
     <!-- Filters -->
-     
       <div class="filter">
-      <div class="d-flex">
-        
-          <form id="FormFilter">
-
+        <form id="FormFilter">
           <div class="row">
-            <div class="col-lg-2">
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="User Name">
+            <div class="col-lg-3">
+              <input class="form-control" type="text" onkeyup="serchcol1(this.value)" placeholder="User Name">
             </div>
+            <div class="col-lg-3">
+              <input type="date" class="form-control" onchange="serchcol2(this.value)" placeholder="From Date">
             </div>
-            <div class="col-lg-2">
-            <div class="form-group">                
-              <select class="form-control select1">
+            <div class="col-lg-3">              
+              <select class="form-control select1" onchange="serchcol3(this.value)">
                 <option value="" hidden>User Type</option>
                 <option value="Admin" >Admin</option>
                 <option value="Customer">Customer</option>
                 <option value="Service">Service Provider</option>
               </select>
             </div>
-            </div>
             <div class="col-lg-3">
-
-            <div class="form-group">
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <div class="input-group-text">+91</div>
                 </div>
-                  <input class="form-control" type="tel" id="MobileNo" name="MobileNo" placeholder="Mobile Number">
+                  <input class="form-control" type="tel" onkeyup="serchcol4(this.value)" id="MobileNo" name="MobileNo" placeholder="Mobile Number">
               </div>
             </div>
+          </div>
+          <div style="margin-top: 20px;">
+            <div class="row">
+              <div class="col-lg-3 btnclassdflex">
+                <input class="form-control" type="text" onkeyup="serchcol5(this.value)" placeholder="Postalcode">
+              </div>
+              <div class="col-lg-3 btnclassdflex">                
+                <select class="form-control select1" onchange="serchcol6(this.value)">
+                  <option value="" hidden>User Status</option>
+                  <option value="Active" >Active</option>
+                  <option value="Inactive">Inactive</option>
+                </select>
+              </div>
+              <div class="col-lg-3 btnclassdflex">
+                <button type="button" class="btn btnserchFilter">Search</button>
+                <button type="submit" class="btn btnClearFilter">Clear</button>
+              </div>
             </div>
-            <div class="col-lg-2">
-
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Zipcode">
-            </div>
-            </div>
-            <div class="col-lg-3">
-
-            <button type="button" class="btn btn3">Search</button>
-            <button type="submit" class="btn btn4">Clear</button>
-            </div>
-            </div>
-          </form>
-        
-      </div> 
+          </div>
+        </form>
       </div>
    
     
@@ -142,14 +139,46 @@ if(!isset($_SESSION['uName'])){
   </div>
 </div> 
 
+<script>
+  $('.btnClearFilter').click(function (e) { 
+    location.reload();
+    // console.log("clear btn clicked");
+  });
+  var x = $('#UserDetails').DataTable();
 
+  function serchcol1(val) {
+    x.column(0).search(val).draw(); 
+  }
+
+  function serchcol2(val) {
+    // alert(val);
+    var dateAr = val.split('-');
+    var newDate = dateAr[2] + '-' + dateAr[1] + '-' + dateAr[0];
+    // alert(newDate);
+    x.column(1).search(newDate).draw(); 
+  }
+
+  function serchcol3(val) {
+    x.column(2).search(val).draw(); 
+  }
+  function serchcol4(val) {
+    x.column(3).search(val).draw(); 
+  }
+  function serchcol5(val) {
+    x.column(4).search(val).draw(); 
+  }
+  function serchcol6(val) {
+    x.column(5).search(val).draw(); 
+  }
+  
+</script>
 
 <script>
   $(document).ready(function() {
 
 
   function AdminUserTable(){
-  var  x = $('#UserDetails').DataTable();
+  x = $('#UserDetails').DataTable();
 
   $.ajax({
       type: "get",
